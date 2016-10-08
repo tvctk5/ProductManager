@@ -1,0 +1,4 @@
+# git ignore file
+Lib\bin*/
+VSW.Lib\bin*/
+VSW.Website\bin*/
