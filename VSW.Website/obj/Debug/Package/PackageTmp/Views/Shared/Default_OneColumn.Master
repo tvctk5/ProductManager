@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+    <%
+        //if(Cookies.Exists("VSW.StyleActivate"))
+        var StyleActivate = ModParametersService.Instance.GetByID((int)EnumValue.Parameter.TEMPLATE_ACTIVATE).Value;
+
+        StringBuilder sbScript = new StringBuilder();
+        sbScript.Append("<link rel='stylesheet' type='text/css' href='/Content/html/styles/" + StyleActivate + "/default.css' />");
+        sbScript.Append("<link rel='stylesheet' type='text/css' href='/Content/html/styles/" + StyleActivate + "/style.css' />");
+
+        if (StyleActivate.ToUpper().Equals("STYLE1"))
+        {
+            sbScript.Append("<link href='/Content/html/menu/Menu.css' rel='stylesheet' type='text/css' />");
+        }
+        else {
+            sbScript.Append("<link href='/Content/html/styles/" + StyleActivate + "/Menu.css' rel='stylesheet' type='text/css' />");
+        }
+        
+        
+        string sStyleLink = sbScript.ToString();
+    %>
+    <title></title>
+    <meta name="author" content="trai.it.utehy@gmail.com" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%=sStyleLink %>
+    <link href="/Content/html/styles/general.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Content/html/scripts/add/jQuery/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="/Content/html/scripts/add/jQuery/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Content/html/scripts/add/common.js"></script>
+</head>
+<body id="body">
+    <form id="vswForm" runat="server">
+    <div id="box_main">
+        <div class="box_function_Center">
+        <VSW:DynamicControl ID="DynamicControl1" Code="Top" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <VSW:DynamicControl ID="DynamicControl2" Code="Main" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <VSW:DynamicControl ID="DynamicControl3" Code="Bottom" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <div class="boxfooter">
+                <p style="padding-top: 15px;">
+                    <div style="text-align: center;">
+                        {RS:Web_Footer}
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+    <title></title>
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/html/styles/style.css" />
+    <link href="/Content/html/styles/general.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Content/html/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/Content/html/scripts/validate.js"></script>
+</head>
+<body id="body">
+    <form id="vswForm" runat="server">
+     
+     <div id="box_main">
+        <div class="box_banner">
+            <VSW:StaticControl Code="CAdv" VSWID="vswBanner" runat="server" />
+        </div>
+        <VSW:StaticControl Code="CMenu" VSWID="vswMenuTop" runat="server" />
+        <div class="box-content">
+            <div class="box-flash">
+                <VSW:StaticControl Code="CAdv" VSWID="vswSlide" runat="server" />
+            </div>
+            <div class="box100">
+                <div class="contentleft">
+                   <VSW:DynamicControl ID="DynamicControl1" Code="Main" runat="server" />
+                </div>
+                <div class="contentright">
+                   <VSW:DynamicControl ID="DynamicControl2" Code="Right" runat="server" />
+                </div>
+            </div>
+        </div>
+        <div class="boxfooter">
+            <p style="padding-top: 15px;">
+                <div style="text-align: center;">
+                   {RS:Web_Footer}
+                </div>
+            </p>
+        </div>
+    </div>
+
+    </form>
+</body>
+</html>-->

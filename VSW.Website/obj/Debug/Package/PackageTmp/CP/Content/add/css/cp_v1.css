@@ -1,0 +1,13 @@
+.boder-template{border-color:red;border-style:solid;border-width:1px;margin:5px}
+.cmd-control input{padding-left:5px}
+.border-control{border-color:teal;border-style:solid;border-width:1px;margin:5px}
+.hl-icon{	vertical-align:middle;}
+.RequireValidate{color:Red;}
+#divMessError{background-color:#ad0808 !important;color:White !important;padding-top:10px;padding-bottom:10px;padding-left:10px;padding-right:10px;margin-bottom:10px; font-weight:bold;}
+.DuplicateError{color:White !important;background-color:#ad0808 !important;}
+.readonly{background-color:#e6e91a !important;}
+.margin-top-5px{margin-top: 5px;}
+.margin-bottom-5px{margin-bottom: 5px;}
+input{text-indent:3px;}
+.a-hide{display:none;}
+.button-function{cursor: pointer;}

@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="VSW.Lib.MVC.CPViewTemplate" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Login</title>
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+
+    <link href="/{CPPath}/Content/templates/bluestork/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <script type="text/javascript" src="/{CPPath}/Content/media/system/js/mootools-core.js"></script>
+    <script type="text/javascript" src="/{CPPath}/Content/media/system/js/mootools-more.js"></script>
+    <link rel="stylesheet" href="/{CPPath}/Content/templates/system/css/system.css" type="text/css" />
+    <link href="/{CPPath}/Content/templates/bluestork/css/template.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 7]>
+    <link href="/{CPPath}/Content/templates/bluestork/css/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+        <!--[if lte IE 6]>
+    <link href="/{CPPath}/Content/templates/bluestork/css/ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/{CPPath}/Content/templates/bluestork/css/rounded.css" />
+    <script type="text/javascript">
+        function setFocus() {
+            document.getElementById('loginForm').UserName.select();
+            document.getElementById('loginForm').UserName.focus();
+        }
+    </script>
+</head>
+<body onload="javascript:setFocus()">
+    <form id="vswForm" runat="server">
+        <a href="/{CPPath}/">
+        <%--<img src="/{CPPath}/Content/add/img/logo.jpg" alt="logo" />--%>
+        </a>
+        <div id="header-box" style="height:12px;">
+            <div id="module-status"></div>
+            <div id="module-menu">
+                <ul id="menu"></ul>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div id="content-box">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div id="border-bottom">
+            <div><div></div></div>
+        </div>
+        <div id="footer">
+            <p class="copyright">
+                <a href="http://www.allproject.net/" target="_blank">AllProject.Net</a> © Coppyright 2012.
+            </p>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,649 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2ED2502-B00D-4CA4-B7F1-D31C1BD33FD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSW.Lib</RootNamespace>
+    <AssemblyName>VSW.Libv1.1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax">
+      <HintPath>..\LIB_BIN\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="VSW.Corev1.1, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LIB_BIN\VSW.Corev1.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CAdvController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CChat_HistoryController.cs" />
+    <Compile Include="Controllers\CCountryController.cs" />
+    <Compile Include="Controllers\CDistrictController.cs" />
+    <Compile Include="Controllers\CDT_CapDaiLy_TyLeController.cs" />
+    <Compile Include="Controllers\CDT_DaiLyController.cs" />
+    <Compile Include="Controllers\CDT_KyController.cs" />
+    <Compile Include="Controllers\CDT_Ky_DaiLyController.cs" />
+    <Compile Include="Controllers\CDT_Ky_DaiLy_DonHangController.cs" />
+    <Compile Include="Controllers\CDT_Ky_DaiLy_DonHang_SanPhamController.cs" />
+    <Compile Include="Controllers\CListMailNewsLetterController.cs" />
+    <Compile Include="Controllers\CLoai_DaiLyController.cs" />
+    <Compile Include="Controllers\CMenuController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CMenu_DynamicController.cs" />
+    <Compile Include="Controllers\CMenu_TypeController.cs" />
+    <Compile Include="Controllers\CNewsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CModuleToolController.cs" />
+    <Compile Include="Controllers\CFeedbackController.cs" />
+    <Compile Include="Controllers\CParametersController.cs" />
+    <Compile Include="Controllers\CProduct_Info_CompareController.cs" />
+    <Compile Include="Controllers\CProduct_SurveyGroupController.cs" />
+    <Compile Include="Controllers\CProduct_SurveyGroup_DetailController.cs" />
+    <Compile Include="Controllers\CProvinceController.cs" />
+    <Compile Include="Controllers\CWardController.cs" />
+    <Compile Include="Controllers\MChat_HistoryController.cs" />
+    <Compile Include="Controllers\MCountryController.cs" />
+    <Compile Include="Controllers\MDistrictController.cs" />
+    <Compile Include="Controllers\MDT_CapDaiLy_TyLeController.cs" />
+    <Compile Include="Controllers\MDT_DaiLyController.cs" />
+    <Compile Include="Controllers\MDT_KyController.cs" />
+    <Compile Include="Controllers\MDT_Ky_DaiLyController.cs" />
+    <Compile Include="Controllers\MDT_Ky_DaiLy_DonHangController.cs" />
+    <Compile Include="Controllers\MDT_Ky_DaiLy_DonHang_SanPhamController.cs" />
+    <Compile Include="Controllers\MListMailNewsLetterController.cs" />
+    <Compile Include="Controllers\MLoai_DaiLyController.cs" />
+    <Compile Include="Controllers\MParametersController.cs" />
+    <Compile Include="Controllers\MProduct_CompareController.cs" />
+    <Compile Include="Controllers\MEmptyController.cs" />
+    <Compile Include="Controllers\CResourcesController.cs" />
+    <Compile Include="Controllers\CProduct_Info_RelativeController.cs" />
+    <Compile Include="Controllers\CSiteMapController.cs" />
+    <Compile Include="Controllers\CProductController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CProduct_AgentController.cs" />
+    <Compile Include="Controllers\CProduct_AreaController.cs" />
+    <Compile Include="Controllers\CProduct_Area_PropretyGroupController.cs" />
+    <Compile Include="Controllers\CProduct_CityController.cs" />
+    <Compile Include="Controllers\CProduct_CommentsController.cs" />
+    <Compile Include="Controllers\CProduct_CurrencyController.cs" />
+    <Compile Include="Controllers\CProduct_CustomersController.cs" />
+    <Compile Include="Controllers\CProduct_CustomersGroupsController.cs" />
+    <Compile Include="Controllers\CProduct_Customers_GroupsController.cs" />
+    <Compile Include="Controllers\CProduct_FilterController.cs" />
+    <Compile Include="Controllers\CProduct_FilterGroupsController.cs" />
+    <Compile Include="Controllers\CProduct_FilterValuesController.cs" />
+    <Compile Include="Controllers\CProduct_GroupsController.cs" />
+    <Compile Include="Controllers\CProduct_Groups_PropertiesGroupsController.cs" />
+    <Compile Include="Controllers\CProduct_InfoController.cs" />
+    <Compile Include="Controllers\CProduct_Info_AgentController.cs" />
+    <Compile Include="Controllers\CProduct_Info_AreaInNationalController.cs" />
+    <Compile Include="Controllers\CProduct_Info_CityController.cs" />
+    <Compile Include="Controllers\CProduct_Info_ColorController.cs" />
+    <Compile Include="Controllers\CProduct_Info_DetailsController.cs" />
+    <Compile Include="Controllers\CProduct_Info_OfficeController.cs" />
+    <Compile Include="Controllers\CProduct_Info_ProductGroupsController.cs" />
+    <Compile Include="Controllers\CProduct_Info_PropertyFilterController.cs" />
+    <Compile Include="Controllers\CProduct_Info_SizeController.cs" />
+    <Compile Include="Controllers\CProduct_Info_TypesController.cs" />
+    <Compile Include="Controllers\CProduct_ManufacturerController.cs" />
+    <Compile Include="Controllers\CProduct_NationalController.cs" />
+    <Compile Include="Controllers\CProduct_National_AreaController.cs" />
+    <Compile Include="Controllers\CProduct_OfficeController.cs" />
+    <Compile Include="Controllers\CProduct_OrderController.cs" />
+    <Compile Include="Controllers\CProduct_Order_DetailsController.cs" />
+    <Compile Include="Controllers\CProduct_PaymentController.cs" />
+    <Compile Include="Controllers\CProduct_PriceSale_HistoryController.cs" />
+    <Compile Include="Controllers\CProduct_PropertiesGroupsController.cs" />
+    <Compile Include="Controllers\CProduct_PropertiesListController.cs" />
+    <Compile Include="Controllers\CProduct_PropertiesList_ValuesController.cs" />
+    <Compile Include="Controllers\CProduct_RegisterEmailController.cs" />
+    <Compile Include="Controllers\CProduct_SlideShowController.cs" />
+    <Compile Include="Controllers\CProduct_SupplierController.cs" />
+    <Compile Include="Controllers\CProduct_TransportController.cs" />
+    <Compile Include="Controllers\CProduct_TypesController.cs" />
+    <Compile Include="Controllers\CStaticController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CTestController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\CTextController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MActionController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MCheckoutController.cs" />
+    <Compile Include="Controllers\MContentController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MFeedbackController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MMenu_DynamicController.cs" />
+    <Compile Include="Controllers\MMenu_TypeController.cs" />
+    <Compile Include="Controllers\MNewsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MProductController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MProduct_AgentController.cs" />
+    <Compile Include="Controllers\MProduct_AreaController.cs" />
+    <Compile Include="Controllers\MProduct_Area_PropretyGroupController.cs" />
+    <Compile Include="Controllers\MProduct_CityController.cs" />
+    <Compile Include="Controllers\MProduct_CommentsController.cs" />
+    <Compile Include="Controllers\MProduct_CurrencyController.cs" />
+    <Compile Include="Controllers\MProduct_CustomersController.cs" />
+    <Compile Include="Controllers\MProduct_CustomersGroupsController.cs" />
+    <Compile Include="Controllers\MProduct_Customers_GroupsController.cs" />
+    <Compile Include="Controllers\MProduct_FilterController.cs" />
+    <Compile Include="Controllers\MProduct_FilterGroupsController.cs" />
+    <Compile Include="Controllers\MProduct_FilterValuesController.cs" />
+    <Compile Include="Controllers\MProduct_GroupsController.cs" />
+    <Compile Include="Controllers\MProduct_Groups_PropertiesGroupsController.cs" />
+    <Compile Include="Controllers\MProduct_InfoController.cs" />
+    <Compile Include="Controllers\MProduct_Info_AgentController.cs" />
+    <Compile Include="Controllers\MProduct_Info_AreaInNationalController.cs" />
+    <Compile Include="Controllers\MProduct_Info_CityController.cs" />
+    <Compile Include="Controllers\MProduct_Info_ColorController.cs" />
+    <Compile Include="Controllers\MProduct_Info_DetailsController.cs" />
+    <Compile Include="Controllers\MProduct_Info_OfficeController.cs" />
+    <Compile Include="Controllers\MProduct_Info_ProductGroupsController.cs" />
+    <Compile Include="Controllers\MProduct_Info_PropertyFilterController.cs" />
+    <Compile Include="Controllers\MProduct_Info_SizeController.cs" />
+    <Compile Include="Controllers\MProduct_Info_TypesController.cs" />
+    <Compile Include="Controllers\MProduct_ManufacturerController.cs" />
+    <Compile Include="Controllers\MProduct_NationalController.cs" />
+    <Compile Include="Controllers\MProduct_National_AreaController.cs" />
+    <Compile Include="Controllers\MProduct_OfficeController.cs" />
+    <Compile Include="Controllers\MProduct_OrderController.cs" />
+    <Compile Include="Controllers\MProduct_Order_DetailsController.cs" />
+    <Compile Include="Controllers\MProduct_PaymentController.cs" />
+    <Compile Include="Controllers\MProduct_PriceSale_HistoryController.cs" />
+    <Compile Include="Controllers\MProduct_PropertiesGroupsController.cs" />
+    <Compile Include="Controllers\MProduct_PropertiesListController.cs" />
+    <Compile Include="Controllers\MProduct_PropertiesList_ValuesController.cs" />
+    <Compile Include="Controllers\MProduct_RegisterEmailController.cs" />
+    <Compile Include="Controllers\MProduct_SlideShowController.cs" />
+    <Compile Include="Controllers\MProduct_SupplierController.cs" />
+    <Compile Include="Controllers\MProduct_SurveyGroupController.cs" />
+    <Compile Include="Controllers\MProduct_SurveyGroup_DetailController.cs" />
+    <Compile Include="Controllers\MProduct_TransportController.cs" />
+    <Compile Include="Controllers\MProduct_TypesController.cs" />
+    <Compile Include="Controllers\MProvinceController.cs" />
+    <Compile Include="Controllers\MTagController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MTestController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\MViewCartController.cs" />
+    <Compile Include="Controllers\MWardController.cs" />
+    <Compile Include="CPControllers\AccessDeniedController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\AjaxController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModDT_BaoCaoThongKeController.cs" />
+    <Compile Include="CPControllers\FormDkKyDaiLyDonHangController.cs" />
+    <Compile Include="CPControllers\ModChat_HistoryController.cs" />
+    <Compile Include="CPControllers\ModCountryController.cs" />
+    <Compile Include="CPControllers\ModDistrictController.cs" />
+    <Compile Include="CPControllers\ModDT_CapDaiLy_TyLeController.cs" />
+    <Compile Include="CPControllers\ModDT_DaiLyController.cs" />
+    <Compile Include="CPControllers\ModDT_KyController.cs" />
+    <Compile Include="CPControllers\ModDT_Ky_DaiLyController.cs" />
+    <Compile Include="CPControllers\ModDT_Ky_DaiLy_DonHangController.cs" />
+    <Compile Include="CPControllers\ModDT_Ky_DaiLy_DonHang_SanPhamController.cs" />
+    <Compile Include="CPControllers\ModLoai_DaiLyController.cs" />
+    <Compile Include="CPControllers\ModProvinceController.cs" />
+    <Compile Include="CPControllers\ModTemplateController.cs" />
+    <Compile Include="CPControllers\FormProduct_AreaController.cs" />
+    <Compile Include="CPControllers\FormProduct_AttachController.cs" />
+    <Compile Include="CPControllers\FormProduct_RelativeController.cs" />
+    <Compile Include="CPControllers\FormNewsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\FormProduct_CommentsController.cs" />
+    <Compile Include="CPControllers\FormProduct_FilterGroupsController.cs" />
+    <Compile Include="CPControllers\FormProduct_FilterValuesController.cs" />
+    <Compile Include="CPControllers\FormProduct_Info_DetailsController.cs" />
+    <Compile Include="CPControllers\FormProduct_PriceSale_HistoryController.cs" />
+    <Compile Include="CPControllers\FormProduct_Price_HistoryController.cs" />
+    <Compile Include="CPControllers\FormProduct_SlideShowController.cs" />
+    <Compile Include="CPControllers\FormTextController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\HomeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\LoginController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModAdvController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModAutoLinksController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModCommentController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModFeedbackController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModFileController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModListMailNewsLetterController.cs" />
+    <Compile Include="CPControllers\ModMenu_DynamicController.cs" />
+    <Compile Include="CPControllers\ModMenu_TypeController.cs" />
+    <Compile Include="CPControllers\ModNewsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModParametersController.cs" />
+    <Compile Include="CPControllers\ModProductController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModProduct_AgentController.cs" />
+    <Compile Include="CPControllers\ModProduct_AreaController.cs" />
+    <Compile Include="CPControllers\ModProduct_Area_PropretyGroupController.cs" />
+    <Compile Include="CPControllers\ModProduct_CityController.cs" />
+    <Compile Include="CPControllers\ModProduct_CommentsController.cs" />
+    <Compile Include="CPControllers\ModProduct_CurrencyController.cs" />
+    <Compile Include="CPControllers\ModProduct_CustomersController.cs" />
+    <Compile Include="CPControllers\ModProduct_CustomersGroupsController.cs" />
+    <Compile Include="CPControllers\ModProduct_FilterController.cs" />
+    <Compile Include="CPControllers\ModProduct_FilterGroupsController.cs" />
+    <Compile Include="CPControllers\ModProduct_FilterValuesController.cs" />
+    <Compile Include="CPControllers\ModProduct_GroupsController.cs" />
+    <Compile Include="CPControllers\ModProduct_Groups_PropertiesGroupsController.cs" />
+    <Compile Include="CPControllers\ModProduct_InfoController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_AgentController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_AreaInNationalController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_CityController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_ColorController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_DetailsController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModProduct_Info_OfficeController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_PropertyFilterController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_SizeController.cs" />
+    <Compile Include="CPControllers\ModProduct_Info_TypesController.cs" />
+    <Compile Include="CPControllers\ModProduct_ManufacturerController.cs" />
+    <Compile Include="CPControllers\ModProduct_NationalController.cs" />
+    <Compile Include="CPControllers\ModProduct_National_AreaController.cs" />
+    <Compile Include="CPControllers\ModProduct_OfficeController.cs" />
+    <Compile Include="CPControllers\ModProduct_OrderController.cs" />
+    <Compile Include="CPControllers\ModProduct_Order_DetailsController.cs" />
+    <Compile Include="CPControllers\ModProduct_PaymentController.cs" />
+    <Compile Include="CPControllers\ModProduct_PriceSale_HistoryController.cs" />
+    <Compile Include="CPControllers\ModProduct_Price_HistoryController.cs" />
+    <Compile Include="CPControllers\ModProduct_PropertiesGroupsController.cs" />
+    <Compile Include="CPControllers\ModProduct_PropertiesListController.cs" />
+    <Compile Include="CPControllers\ModProduct_PropertiesList_ValuesController.cs" />
+    <Compile Include="CPControllers\ModProduct_RegisterEmailController.cs" />
+    <Compile Include="CPControllers\ModProduct_SlideShowController.cs" />
+    <Compile Include="CPControllers\ModProduct_SupplierController.cs" />
+    <Compile Include="CPControllers\ModProduct_SurveyGroupController.cs" />
+    <Compile Include="CPControllers\ModProduct_SurveyGroup_DetailController.cs" />
+    <Compile Include="CPControllers\ModProduct_TransportController.cs" />
+    <Compile Include="CPControllers\ModProduct_TypesController.cs" />
+    <Compile Include="CPControllers\ModTagController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModTestController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\ModWardController.cs" />
+    <Compile Include="CPControllers\SysMenuController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysPageController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysResourceController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysRoleController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysSiteController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysTemplateController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysUserController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\SysUserLogController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\UserChangeInfoController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CPControllers\UserChangePassController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Design\EditPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Design\EditTemplate.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global\Application.cs" />
+    <Compile Include="Global\ConvertTool.cs" />
+    <Compile Include="Global\EnumValue.cs" />
+    <Compile Include="Global\ObjectCookies.cs" />
+    <Compile Include="Global\CPLogin.cs" />
+    <Compile Include="Global\CPResource.cs" />
+    <Compile Include="Global\Data.cs" />
+    <Compile Include="Global\Directory.cs" />
+    <Compile Include="Global\Error.cs" />
+    <Compile Include="Global\File.cs" />
+    <Compile Include="Global\Image.cs" />
+    <Compile Include="Global\IniResourceService.cs" />
+    <Compile Include="Global\IniSqlResourceService.cs" />
+    <Compile Include="Global\JavaScript.cs" />
+    <Compile Include="Global\Mail.cs" />
+    <Compile Include="Global\Message.cs" />
+    <Compile Include="Global\Pager.cs" />
+    <Compile Include="Global\Security.cs" />
+    <Compile Include="Global\Template.cs" />
+    <Compile Include="Global\FileUpload.cs" />
+    <Compile Include="Global\Utils.cs" />
+    <Compile Include="Global\WebResource.cs" />
+    <Compile Include="Global\Permissions.cs" />
+    <Compile Include="LinqToSql\DataClassesDb.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClassesDb.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LinqToSql\DbExecute.cs" />
+    <Compile Include="Models\Common.cs" />
+    <Compile Include="Models\CPAccessModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CPRoleModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CPUserLogModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CPUserModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\CPUserRoleModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModAdvModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModAutoLinksModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModChat_HistoryModel.cs" />
+    <Compile Include="Models\ModCommentModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModCountryModel.cs" />
+    <Compile Include="Models\ModDistrictModel.cs" />
+    <Compile Include="Models\ModDT_CapDaiLy_TyLeModel.cs" />
+    <Compile Include="Models\ModDT_DaiLyModel.cs" />
+    <Compile Include="Models\ModDT_KyModel.cs" />
+    <Compile Include="Models\ModDT_Ky_DaiLyModel.cs" />
+    <Compile Include="Models\ModDT_Ky_DaiLy_DonHangModel.cs" />
+    <Compile Include="Models\ModDT_Ky_DaiLy_DonHang_SanPhamModel.cs" />
+    <Compile Include="Models\ModFeedbackModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModListMailNewsLetterModel.cs" />
+    <Compile Include="Models\ModLoai_DaiLyModel.cs" />
+    <Compile Include="Models\ModMenu_DynamicModel.cs" />
+    <Compile Include="Models\ModMenu_TypeModel.cs" />
+    <Compile Include="Models\ModNewsModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModNewsTagModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModOnlineModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModParametersModel.cs" />
+    <Compile Include="Models\ModProductModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModProduct_AgentModel.cs" />
+    <Compile Include="Models\ModProduct_AreaModel.cs" />
+    <Compile Include="Models\ModProduct_Area_PropretyGroupModel.cs" />
+    <Compile Include="Models\ModProduct_CityModel.cs" />
+    <Compile Include="Models\ModProduct_CommentsModel.cs" />
+    <Compile Include="Models\ModProduct_CurrencyModel.cs" />
+    <Compile Include="Models\ModProduct_CustomersGroupsModel.cs" />
+    <Compile Include="Models\ModProduct_CustomersModel.cs" />
+    <Compile Include="Models\ModProduct_Customers_GroupsModel.cs" />
+    <Compile Include="Models\ModProduct_FilterGroupsModel.cs" />
+    <Compile Include="Models\ModProduct_FilterModel.cs" />
+    <Compile Include="Models\ModProduct_FilterValuesModel.cs" />
+    <Compile Include="Models\ModProduct_GroupsModel.cs" />
+    <Compile Include="Models\ModProduct_Groups_PropertiesGroupsModel.cs" />
+    <Compile Include="Models\ModProduct_InfoModel.cs" />
+    <Compile Include="Models\ModProduct_Info_AgentModel.cs" />
+    <Compile Include="Models\ModProduct_Info_AreaInNationalModel.cs" />
+    <Compile Include="Models\ModProduct_Info_CityModel.cs" />
+    <Compile Include="Models\ModProduct_Info_ColorModel.cs" />
+    <Compile Include="Models\ModProduct_Info_DetailsModel.cs" />
+    <Compile Include="Models\ModProduct_Info_OfficeModel.cs" />
+    <Compile Include="Models\ModProduct_Info_ProductGroupsModel.cs" />
+    <Compile Include="Models\ModProduct_Info_PropertyFilterModel.cs" />
+    <Compile Include="Models\ModProduct_Info_SizeModel.cs" />
+    <Compile Include="Models\ModProduct_Info_TypesModel.cs" />
+    <Compile Include="Models\ModProduct_ManufacturerModel.cs" />
+    <Compile Include="Models\ModProduct_NationalModel.cs" />
+    <Compile Include="Models\ModProduct_National_AreaModel.cs" />
+    <Compile Include="Models\ModProduct_OfficeModel.cs" />
+    <Compile Include="Models\ModProduct_OrderModel.cs" />
+    <Compile Include="Models\ModProduct_Order_DetailsModel.cs" />
+    <Compile Include="Models\ModProduct_PaymentModel.cs" />
+    <Compile Include="Models\ModProduct_PriceSale_HistoryModel.cs" />
+    <Compile Include="Models\ModProduct_Price_HistoryModel.cs" />
+    <Compile Include="Models\ModProduct_PropertiesGroupsModel.cs" />
+    <Compile Include="Models\ModProduct_PropertiesListModel.cs" />
+    <Compile Include="Models\ModProduct_PropertiesList_ValuesModel.cs" />
+    <Compile Include="Models\ModProduct_RegisterEmailModel.cs" />
+    <Compile Include="Models\ModProduct_SlideShowModel.cs" />
+    <Compile Include="Models\ModProduct_SupplierModel.cs" />
+    <Compile Include="Models\ModProduct_SurveyGroupModel.cs" />
+    <Compile Include="Models\ModProduct_SurveyGroup_DetailModel.cs" />
+    <Compile Include="Models\ModProduct_TransportModel.cs" />
+    <Compile Include="Models\ModProduct_TypesModel.cs" />
+    <Compile Include="Models\ModProvinceModel.cs" />
+    <Compile Include="Models\ModTagModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModTestModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\ModWardModel.cs" />
+    <Compile Include="Models\SysLangModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SysModuleModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SysPageModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SysSiteModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\SysTemplateModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\WebMenuModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\WebResourceModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\WebSettingModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVC\Controller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVC\CPController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVC\CPModuleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVC\CPViewControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MVC\CPViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MVC\CPViewTemplate.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MVC\ModuleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MVC\ViewControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MVC\ViewPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Global\Cart.cs" />
+    <Compile Include="Global\Cookies.cs" />
+    <Compile Include="Global\ListItem\Item.cs" />
+    <Compile Include="Global\ListItem\List.cs" />
+    <Compile Include="Global\Session.cs" />
+    <Compile Include="Global\Setting.cs" />
+    <Compile Include="Web\Application.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LinqToSql\DataClassesDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClassesDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinqToSql\DataClassesDb.dbml.layout">
+      <DependentUpon>DataClassesDb.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

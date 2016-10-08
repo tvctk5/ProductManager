@@ -1,0 +1,16 @@
+E:\Working\ProductManager\Source\Lib\bin\Lib.dll
+E:\Working\ProductManager\Source\Lib\bin\Lib.pdb
+E:\Working\ProductManager\Source\Lib\obj\Debug\Lib.dll
+E:\Working\ProductManager\Source\Lib\obj\Debug\Lib.pdb
+E:\Working\ProductManager\Source\Lib\obj\Debug\Lib.csprojResolveAssemblyReference.cache
+D:\Working\ProductManager\Source\Lib\bin\Lib.dll.config
+D:\Working\ProductManager\Source\Lib\bin\Lib.dll
+D:\Working\ProductManager\Source\Lib\bin\Lib.pdb
+D:\Working\ProductManager\Source\Lib\obj\Debug\Lib.csprojResolveAssemblyReference.cache
+D:\Working\ProductManager\Source\Lib\obj\Debug\Lib.dll
+D:\Working\ProductManager\Source\Lib\obj\Debug\Lib.pdb
+G:\Working\ProductManager\Source\Lib\bin\Lib.dll
+G:\Working\ProductManager\Source\Lib\bin\Lib.pdb
+G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.csprojResolveAssemblyReference.cache
+G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.dll
+G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.pdb

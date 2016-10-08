@@ -1,0 +1,74 @@
+﻿.container3_border_le
+    {
+        background-image: url('/Content/html/images/Box/container3_border_le.png');
+        width: 5px;
+        background-repeat: repeat-y;
+    }
+    .container3_body
+    {
+        background-image: url('/Content/html/images/Box/container3_body.png');
+        background-repeat: repeat-x;
+    }
+    .container3_border_ri
+    {
+        width: 5px;
+        background-image: url('/Content/html/images/Box/container3_border_ri.png');
+        background-repeat: repeat-y;
+    }
+    .container3_border_bo
+    {
+        width: 100%;
+        height: 5px;
+        background-image: url('/Content/html/images/Box/container3_border_bo.png');
+        background-repeat: repeat-x;
+    }
+    .MenuLeft_Title
+    {
+        font-weight: bold;
+        color: White;
+    }
+    .box-div-parent
+    {
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .box-table-parent
+    {
+        border: solid 0px #BBBDB5;
+    }
+    .box-table-parent-td
+    {
+        background-image: url('/Content/html/images/Box/container3_body_top.png');
+        background-repeat: repeat-x;
+        height: 31px;
+        width: 97%;
+    }
+    .box-table-parent-td-table-title-1
+    {
+        height: 30px;
+        width: 1%;
+        border: 0 !important;
+    }
+    .box-table-parent-td-table-title-2
+    {
+        height: 31px;
+        text-align: center;
+    }
+    .box-table-parent-td-content
+    {
+        border-right: 0px solid #E4E4E4;
+        border-left: 0px solid #E4E4E4;
+        padding-top: 10px;
+    }
+    .cssInfoBox, .cssInfoBox P, .cssInfoBox TD
+    {
+        font-family: Arial;
+        font-size: 10pt;
+        font-weight: normal;
+        color: #797979;
+        text-decoration: none;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }

@@ -1,0 +1,1561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C83D5107-B6BE-4A52-9416-056F4A0A7070}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VSW.Website</RootNamespace>
+    <AssemblyName>VSW.Websitev1.1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SccProjectName>
+    </SccProjectName>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ajax">
+      <HintPath>..\LIB_BIN\Ajax.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder, Version=2.1.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKFinder_ImageResize.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\LIB_BIN\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSW.Corev1.1, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\LIB_BIN\VSW.Corev1.1.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CP\Tools\Ajax\Common\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\Common\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModMenu_Dynamic\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModMenu_Dynamic\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModNews\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModNews\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_National\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_National\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Office\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Office\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Agent\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Agent\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Currency\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Currency\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_CustomersGroups\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_CustomersGroups\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Groups\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Groups\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Info\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Info\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Manufacturer\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Manufacturer\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_PropertiesGroups\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_PropertiesGroups\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Supplier\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Tools\Ajax\ModProduct_Supplier\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CP\Tools\Common.cs" />
+    <Compile Include="CP\Views\ModProduct_Manufacturer\Ajax.aspx.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CP\Views\ModProduct_Manufacturer\Ajax.aspx.designer.cs">
+      <DependentUpon>Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Ajax\Common\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Ajax\Common\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Ajax\ModChat\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Ajax\ModProduct_Info\PostData.aspx.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Ajax\ModProduct_Info\PostData.aspx.designer.cs">
+      <DependentUpon>PostData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Copy.asmx.cs">
+      <DependentUpon>Copy.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\File.asmx.cs">
+      <DependentUpon>File.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\News.asmx.cs">
+      <DependentUpon>News.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\PostForm.aspx.cs">
+      <DependentUpon>PostForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\PostForm.aspx.designer.cs">
+      <DependentUpon>PostForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Test.asmx.cs">
+      <DependentUpon>Test.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\CKFinder.dll" />
+    <Content Include="bin\CKFinder_ImageResize.dll" />
+    <Content Include="bin\VSW.Corev1.1.dll" />
+    <Content Include="bin\VSW.Libv1.1.dll" />
+    <Content Include="bin\VSW.Websitev1.1.dll" />
+    <Content Include="Content\chat\css\chat.css" />
+    <Content Include="Content\chat\css\screen.css" />
+    <Content Include="Content\chat\css\screen_ie.css" />
+    <Content Include="Content\chat\images\delete.png" />
+    <Content Include="Content\chat\images\maximize.png" />
+    <Content Include="Content\chat\images\minimize.png" />
+    <Content Include="Content\chat\js\chat.js" />
+    <Content Include="Content\chat\js\jquery.js" />
+    <Content Include="Content\html\box\box.css" />
+    <Content Include="Content\html\images\style1\arrow-curve-180.png" />
+    <Content Include="Content\html\images\style1\arrow-stop-090.png" />
+    <Content Include="Content\html\images\style1\arrow-stop-180.png" />
+    <Content Include="Content\html\images\style1\arrow-stop-270.png" />
+    <Content Include="Content\html\images\style1\arrow-stop.png" />
+    <Content Include="Content\html\images\style1\bg_tittle.gif" />
+    <Content Include="Content\html\images\style1\delete.png" />
+    <Content Include="Content\html\images\style1\disk-black.png" />
+    <Content Include="Content\html\images\style1\edit_16x16.png" />
+    <Content Include="Content\html\images\style1\folder_sent_mail.png" />
+    <Content Include="Content\html\images\style1\go_to_top.png" />
+    <Content Include="Content\html\images\style1\grid-loading.gif" />
+    <Content Include="Content\html\images\style1\hand-point.png" />
+    <Content Include="Content\html\images\style1\home.png" />
+    <Content Include="Content\html\images\style1\icon-item-list.jpg" />
+    <Content Include="Content\html\images\style1\icon_news_hot.gif" />
+    <Content Include="Content\html\images\style1\icon_news_new.gif" />
+    <Content Include="Content\html\images\style1\icon_news_default.png" />
+    <Content Include="Content\html\images\style1\icon_ribbon_new_en.png" />
+    <Content Include="Content\html\images\style1\icon_ribbon_hot.png" />
+    <Content Include="Content\html\images\style1\icon_new.png" />
+    <Content Include="Content\html\images\style1\list.png" />
+    <Content Include="Content\html\images\style1\list_style.gif" />
+    <Content Include="Content\html\images\style1\list_style.png" />
+    <Content Include="Content\html\images\style1\list_style_sub.gif" />
+    <Content Include="Content\html\images\style1\line.gif" />
+    <Content Include="Content\html\images\style1\pay_online_baokim.png" />
+    <Content Include="Content\html\images\style1\pay_online_nganluong.png" />
+    <Content Include="Content\html\images\style1\ProductCompare.png" />
+    <Content Include="Content\html\images\style1\save-16.gif" />
+    <Content Include="Content\html\images\style1\search.png" />
+    <Content Include="Content\html\images\style1\title_bg_apilas.jpg" />
+    <Content Include="Content\html\images\style2\arrow-curve-180.png" />
+    <Content Include="Content\html\images\style2\arrow-stop-090.png" />
+    <Content Include="Content\html\images\style2\arrow-stop-180.png" />
+    <Content Include="Content\html\images\style2\arrow-stop-270.png" />
+    <Content Include="Content\html\images\style2\arrow-stop.png" />
+    <Content Include="Content\html\images\style2\bg_tittle.gif" />
+    <Content Include="Content\html\images\style2\boxheader.gif" />
+    <Content Include="Content\html\images\style2\delete.png" />
+    <Content Include="Content\html\images\style2\disk-black.png" />
+    <Content Include="Content\html\images\style2\dot.gif" />
+    <Content Include="Content\html\images\style2\edit_16x16.png" />
+    <Content Include="Content\html\images\style2\folder_sent_mail.png" />
+    <Content Include="Content\html\images\style2\go_to_top.png" />
+    <Content Include="Content\html\images\style2\grid-loading.gif" />
+    <Content Include="Content\html\images\style2\hand-point.png" />
+    <Content Include="Content\html\images\style2\header-pro.png" />
+    <Content Include="Content\html\images\style1\body-bg-muti.png" />
+    <Content Include="Content\html\images\style1\boxheader.gif" />
+    <Content Include="Content\html\images\style1\dot.gif" />
+    <Content Include="Content\html\images\arrow-down.png" />
+    <Content Include="Content\html\images\arrow-right.png" />
+    <Content Include="Content\html\images\bg.jpg" />
+    <Content Include="Content\html\images\Box\container3_body.png" />
+    <Content Include="Content\html\images\Box\container3_body_top.png" />
+    <Content Include="Content\html\images\Box\container3_border_bo.png" />
+    <Content Include="Content\html\images\Box\container3_border_le.png" />
+    <Content Include="Content\html\images\Box\container3_border_ri.png" />
+    <Content Include="Content\html\images\Box\container3_bottom_le.png" />
+    <Content Include="Content\html\images\Box\container3_bottom_ri.png" />
+    <Content Include="Content\html\images\Box\container3_left.png" />
+    <Content Include="Content\html\images\Box\container3_right.png" />
+    <Content Include="Content\html\images\Box\container3_top_left.png" />
+    <Content Include="Content\html\images\Box\container3_top_right.png" />
+    <Content Include="Content\html\images\Box\HTMLPage1.htm" />
+    <Content Include="Content\html\images\Box\icon-close-2.gif" />
+    <Content Include="Content\html\images\Box\icon-minimize-2.gif" />
+    <Content Include="Content\html\images\Box\icon-restore-2.gif" />
+    <Content Include="Content\html\images\bulet.png" />
+    <Content Include="Content\html\images\en.png" />
+    <Content Include="Content\html\images\footer.png" />
+    <Content Include="Content\html\images\mainnav-sep.gif" />
+    <Content Include="Content\html\images\Menu\arrow-down.png" />
+    <Content Include="Content\html\images\Menu\arrow-right.png" />
+    <Content Include="Content\html\images\Menu\bulet.png" />
+    <Content Include="Content\html\images\Menu\mainnav-bg.gif" />
+    <Content Include="Content\html\images\Menu\mainnav-sep.gif" />
+    <Content Include="Content\html\images\Menu\MenuLeft\arrow.gif" />
+    <Content Include="Content\html\images\Menu\MenuLeft\arrow.png" />
+    <Content Include="Content\html\images\Menu\MenuLeft\bgmenubody.jpg" />
+    <Content Include="Content\html\images\Menu\MenuLeft\bgmenubottom.jpg" />
+    <Content Include="Content\html\images\Menu\MenuLeft\bgmenutop.jpg" />
+    <Content Include="Content\html\images\Menu\MenuLeft\icon-menu.jpg" />
+    <Content Include="Content\html\images\Menu\MenuLeft\vach.gif" />
+    <Content Include="Content\html\images\Product\mainnav-bg.gif" />
+    <Content Include="Content\html\images\space.jpg" />
+    <Content Include="Content\html\images\style2\home.png" />
+    <Content Include="Content\html\images\style2\icon-item-list.jpg" />
+    <Content Include="Content\html\images\style2\icon_new.png" />
+    <Content Include="Content\html\images\style2\icon_news_default.png" />
+    <Content Include="Content\html\images\style2\icon_news_hot.gif" />
+    <Content Include="Content\html\images\style2\icon_news_new.gif" />
+    <Content Include="Content\html\images\style2\icon_ribbon_hot.png" />
+    <Content Include="Content\html\images\style2\icon_ribbon_new_en.png" />
+    <Content Include="Content\html\images\style2\line.gif" />
+    <Content Include="Content\html\images\style2\list.png" />
+    <Content Include="Content\html\images\style2\list_style.gif" />
+    <Content Include="Content\html\images\style2\list_style.png" />
+    <Content Include="Content\html\images\style2\list_style_sub.gif" />
+    <Content Include="Content\html\images\style2\body-bg-muti.png" />
+    <Content Include="Content\html\images\style2\pay_online_baokim.png" />
+    <Content Include="Content\html\images\style2\pay_online_nganluong.png" />
+    <Content Include="Content\html\images\style2\ProductCompare.png" />
+    <Content Include="Content\html\images\style2\save-16.gif" />
+    <Content Include="Content\html\images\style2\search.png" />
+    <Content Include="Content\html\images\style2\title_bg_apilas.jpg" />
+    <Content Include="Content\html\images\title.png" />
+    <Content Include="Content\html\images\vi.png" />
+    <Content Include="Content\html\menu\jquery-1.7.2.min.js" />
+    <Content Include="Content\html\menu\Menu.css" />
+    <Content Include="Content\html\menu\MenuLeft.css" />
+    <Content Include="Content\html\scripts\add\AjaxRequest.js" />
+    <Content Include="Content\html\scripts\add\common.js" />
+    <Content Include="Content\html\scripts\add\cp_v1.js" />
+    <Content Include="Content\html\scripts\add\hsTooltip.js" />
+    <Content Include="Content\html\scripts\add\jQuery\jquery-1.4.1.min.js" />
+    <Content Include="Content\html\scripts\add\jQuery\jquery-1.8.2.js" />
+    <Content Include="Content\html\scripts\add\jQuery\jquery.cookie.js" />
+    <Content Include="Content\html\scripts\add\Product.js" />
+    <Content Include="Content\html\scripts\add\Tabs\basic.js" />
+    <Content Include="Content\html\scripts\add\Tabs\organictabs.jquery.js" />
+    <Content Include="Content\html\scripts\add\Tabs\withoutPlugin.js" />
+    <Content Include="Content\html\scripts\jquery.js" />
+    <Content Include="Content\html\scripts\validate.js" />
+    <Content Include="Content\html\styles\1style-product.css" />
+    <Content Include="Content\html\styles\Copy of ProductSubPage.css" />
+    <Content Include="Content\html\styles\style1\style.css" />
+    <Content Include="Content\html\styles\style2\default.css" />
+    <Content Include="Content\html\styles\style2\Menu.css" />
+    <Content Include="Content\html\styles\style2\style-product.css" />
+    <Content Include="Content\html\styles\style1\default.css" />
+    <Content Include="Content\html\styles\ForProduct.css" />
+    <Content Include="Content\html\styles\general.css" />
+    <Content Include="Content\html\styles\Product.css" />
+    <Content Include="Content\html\styles\Product1.css" />
+    <Content Include="Content\html\styles\ProductSubPage.css" />
+    <Content Include="Content\html\styles\style.css" />
+    <Content Include="Content\html\example\tag-content.html" />
+    <Content Include="Content\html\styles\style2\style.css" />
+    <Content Include="Content\slideshow\Slide_Type04\css\layout.css" />
+    <Content Include="Content\slideshow\Slide_Type04\css\style4.css" />
+    <Content Include="Content\slideshow\Slide_Type04\images\arrow-bg.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\arrow-l.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\arrow-r.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\bg_trans.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\b_next.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\b_prev.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\grad-bg.gif" />
+    <Content Include="Content\slideshow\Slide_Type04\images\load-indicator.gif" />
+    <Content Include="Content\slideshow\Slide_Type04\images\next.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\pause.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\play.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\previous.png" />
+    <Content Include="Content\slideshow\Slide_Type04\images\spinner.gif" />
+    <Content Include="Content\slideshow\Slide_Type04\images\transparent_bg.png" />
+    <Content Include="Content\slideshow\Slide_Type04\js\jquery.easing.js" />
+    <Content Include="Content\slideshow\Slide_Type04\js\script.js" />
+    <Content Include="Content\slideshow\Slide_Type02\css\layout.css" />
+    <Content Include="Content\slideshow\Slide_Type02\css\style1.css" />
+    <Content Include="Content\slideshow\default\modules\mod_jsn_imageshow_pro\jsn_imageshow_pro\imageshow.swf" />
+    <Content Include="Content\slideshow\default\modules\mod_jsn_imageshow_pro\jsn_imageshow_pro\loader.swf" />
+    <Content Include="Content\slideshow\default\modules\mod_jsn_imageshow_pro\jsn_imageshow_pro\swfobject.js" />
+    <Content Include="Content\slideshow\default\modules\mod_jsn_imageshow_pro\jsn_imageshow_pro\swfobject_addon.js" />
+    <Content Include="Content\slideshow\Slide_Type01\css\images\bx_loader.gif" />
+    <Content Include="Content\slideshow\Slide_Type01\css\jquery.bxslider.css" />
+    <Content Include="Content\slideshow\Slide_Type01\css\images\controls.png" />
+    <Content Include="Content\slideshow\Document.txt" />
+    <Content Include="Content\slideshow\Slide_Type01\js\jquery.bxslider.js" />
+    <Content Include="Content\slideshow\Slide_Type01\js\jquery.bxslider.min.js" />
+    <Content Include="Content\slideshow\Slide_Type01-\images\loading.gif" />
+    <Content Include="Content\slideshow\Slide_Type01-\javascript.js" />
+    <Content Include="Content\slideshow\Slide_Type01-\style.css" />
+    <Content Include="Content\slideshow\Slide_Type02\images\arrow-bg.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\arrow-l.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\arrow-r.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\bg_trans.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\b_next.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\b_prev.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\grad-bg.gif" />
+    <Content Include="Content\slideshow\Slide_Type02\images\load-indicator.gif" />
+    <Content Include="Content\slideshow\Slide_Type02\images\next.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\pause.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\play.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\previous.png" />
+    <Content Include="Content\slideshow\Slide_Type02\images\spinner.gif" />
+    <Content Include="Content\slideshow\Slide_Type02\images\transparent_bg.png" />
+    <Content Include="Content\slideshow\Slide_Type02\js\jquery.easing.js" />
+    <Content Include="Content\slideshow\Slide_Type02\js\script.js" />
+    <Content Include="Content\slideshow\Slide_Type03\css\layout.css" />
+    <Content Include="Content\slideshow\Slide_Type03\css\style2.css" />
+    <Content Include="Content\slideshow\Slide_Type03\images\arrow-bg.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\arrow-l.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\arrow-r.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\bg_trans.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\b_next.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\b_prev.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\grad-bg.gif" />
+    <Content Include="Content\slideshow\Slide_Type03\images\load-indicator.gif" />
+    <Content Include="Content\slideshow\Slide_Type03\images\next.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\pause.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\play.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\previous.png" />
+    <Content Include="Content\slideshow\Slide_Type03\images\spinner.gif" />
+    <Content Include="Content\slideshow\Slide_Type03\images\transparent_bg.png" />
+    <Content Include="Content\slideshow\Slide_Type03\js\jquery.easing.js" />
+    <Content Include="Content\slideshow\Slide_Type03\js\script.js" />
+    <Content Include="CP\Content\add\colorpicker\css\colpick.css" />
+    <Content Include="CP\Content\add\colorpicker\js\colpick.js" />
+    <Content Include="CP\Content\add\css\cp_v1.css" />
+    <Content Include="CP\Content\add\css\jquery-ui.1.8.css" />
+    <Content Include="CP\Content\add\css\jquery-ui.min.1.8.js" />
+    <Content Include="CP\Content\add\css\tabui.css" />
+    <Content Include="CP\Content\add\datetimepickermaster\index.html" />
+    <Content Include="CP\Content\add\datetimepickermaster\jquery.datetimepicker.css" />
+    <Content Include="CP\Content\add\datetimepickermaster\jquery.datetimepicker.js" />
+    <Content Include="CP\Content\add\datetimepickermaster\jquery.js" />
+    <Content Include="CP\Content\add\datetimepickermaster\screen\1.png" />
+    <Content Include="CP\Content\add\datetimepickermaster\screen\2.png" />
+    <Content Include="CP\Content\add\datetimepickermaster\screen\3.1.png" />
+    <Content Include="CP\Content\add\datetimepickermaster\screen\3.png" />
+    <Content Include="CP\Content\add\highcharts\adapters\standalone-framework.js" />
+    <Content Include="CP\Content\add\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts-3d.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts-3d.src.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts-all.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts-more.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts-more.src.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts.js" />
+    <Content Include="CP\Content\add\highcharts\highcharts.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\canvas-tools.js" />
+    <Content Include="CP\Content\add\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\data.js" />
+    <Content Include="CP\Content\add\highcharts\modules\data.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\drilldown.js" />
+    <Content Include="CP\Content\add\highcharts\modules\drilldown.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\exporting.js" />
+    <Content Include="CP\Content\add\highcharts\modules\exporting.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\funnel.js" />
+    <Content Include="CP\Content\add\highcharts\modules\funnel.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\heatmap.js" />
+    <Content Include="CP\Content\add\highcharts\modules\heatmap.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\no-data-to-display.js" />
+    <Content Include="CP\Content\add\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="CP\Content\add\highcharts\modules\solid-gauge.js" />
+    <Content Include="CP\Content\add\highcharts\modules\solid-gauge.src.js" />
+    <Content Include="CP\Content\add\highcharts\themes\dark-blue.js" />
+    <Content Include="CP\Content\add\highcharts\themes\dark-green.js" />
+    <Content Include="CP\Content\add\highcharts\themes\dark-unica.js" />
+    <Content Include="CP\Content\add\highcharts\themes\gray.js" />
+    <Content Include="CP\Content\add\highcharts\themes\grid-light.js" />
+    <Content Include="CP\Content\add\highcharts\themes\grid.js" />
+    <Content Include="CP\Content\add\highcharts\themes\sand-signika.js" />
+    <Content Include="CP\Content\add\highcharts\themes\skies.js" />
+    <Content Include="CP\Content\add\img\add-16.gif" />
+    <Content Include="CP\Content\add\img\calendar.png" />
+    <Content Include="CP\Content\add\img\delete-16.gif" />
+    <Content Include="CP\Content\add\img\down-16.gif" />
+    <Content Include="CP\Content\add\img\edit_f2.png" />
+    <Content Include="CP\Content\add\img\Folder.gif" />
+    <Content Include="CP\Content\add\img\logo.jpg" />
+    <Content Include="CP\Content\add\jQuery\jquery-1.11.1.js" />
+    <Content Include="CP\Content\add\jQuery\jquery-1.11.1.min.js" />
+    <Content Include="CP\Content\add\jQuery\jquery-2.1.1.js" />
+    <Content Include="CP\Content\add\jQuery\jquery-2.1.1.min.js" />
+    <Content Include="CP\Content\jstree\img\folder-child.png" />
+    <Content Include="CP\Content\jstree\img\folder-parent.png" />
+    <Content Include="CP\Content\jstree\jstree.js" />
+    <Content Include="CP\Content\jstree\jstree.min.js" />
+    <Content Include="CP\Content\jstree\themes\default-dark\32px.png" />
+    <Content Include="CP\Content\jstree\themes\default-dark\40px.png" />
+    <Content Include="CP\Content\jstree\themes\default-dark\style.css" />
+    <Content Include="CP\Content\jstree\themes\default-dark\style.min.css" />
+    <Content Include="CP\Content\jstree\themes\default-dark\throbber.gif" />
+    <Content Include="CP\Content\jstree\themes\default\32px.png" />
+    <Content Include="CP\Content\jstree\themes\default\40px.png" />
+    <Content Include="CP\Content\jstree\themes\default\style.css" />
+    <Content Include="CP\Content\jstree\themes\default\style.min.css" />
+    <Content Include="CP\Content\jstree\themes\default\throbber.gif" />
+    <Content Include="CP\Content\templates\bluestork\images\grid-loading.gif" />
+    <Content Include="CP\Content\templates\bluestork\images\mails.png" />
+    <Content Include="CP\Content\add\img\ReadOnly.png" />
+    <Content Include="CP\Content\add\img\Root.gif" />
+    <Content Include="CP\Content\add\img\save-16.gif" />
+    <Content Include="CP\Content\add\img\search-16.gif" />
+    <Content Include="CP\Content\add\img\select.png" />
+    <Content Include="CP\Content\add\img\up-16.gif" />
+    <Content Include="CP\Content\add\img\xit.gif" />
+    <Content Include="CP\Content\add\jQuery\Common.js" />
+    <Content Include="CP\Content\add\js\AjaxRequest.js" />
+    <Content Include="CP\Content\add\js\cp_v1.js" />
+    <Content Include="CP\Content\add\js\ProductionInfo.js" />
+    <Content Include="CP\Content\add\ThickBox\loadingAnimation.gif" />
+    <Content Include="CP\Content\add\ThickBox\macFFBgHack.png" />
+    <Content Include="CP\Content\add\ThickBox\thickbox.css" />
+    <Content Include="CP\Content\add\ThickBox\thickbox.js" />
+    <Content Include="CP\Content\ckeditor\adapters\jquery.js" />
+    <Content Include="CP\Content\ckeditor\ckeditor.js" />
+    <Content Include="CP\Content\ckeditor\ckeditor_basic.js" />
+    <Content Include="CP\Content\ckeditor\ckeditor_basic_source.js" />
+    <Content Include="CP\Content\ckeditor\ckeditor_source.js" />
+    <Content Include="CP\Content\ckeditor\config.js" />
+    <Content Include="CP\Content\ckeditor\contents.css" />
+    <Content Include="CP\Content\ckeditor\images\spacer.gif" />
+    <Content Include="CP\Content\ckeditor\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\lang\vi.js" />
+    <Content Include="CP\Content\ckeditor\lang\_languages.js" />
+    <Content Include="CP\Content\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="CP\Content\ckeditor\plugins\a11yhelp\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\plugins\a11yhelp\lang\he.js" />
+    <Content Include="CP\Content\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="CP\Content\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="CP\Content\ckeditor\plugins\adobeair\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\ajax\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\autogrow\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\bbcode\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="CP\Content\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="CP\Content\ckeditor\plugins\devtools\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\plugins\devtools\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="CP\Content\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="CP\Content\ckeditor\plugins\docprops\dialogs\docprops.js" />
+    <Content Include="CP\Content\ckeditor\plugins\docprops\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="CP\Content\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="CP\Content\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="CP\Content\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\iframedialog\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="CP\Content\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="CP\Content\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="CP\Content\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="CP\Content\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="CP\Content\ckeditor\plugins\link\images\anchor.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="CP\Content\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="CP\Content\ckeditor\plugins\pastetext\dialogs\pastetext.js" />
+    <Content Include="CP\Content\ckeditor\plugins\placeholder\dialogs\placeholder.js" />
+    <Content Include="CP\Content\ckeditor\plugins\placeholder\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\plugins\placeholder\lang\he.js" />
+    <Content Include="CP\Content\ckeditor\plugins\placeholder\placeholder.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\placeholder\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="CP\Content\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="CP\Content\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="CP\Content\ckeditor\plugins\specialchar\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\styles\styles\default.js" />
+    <Content Include="CP\Content\ckeditor\plugins\tableresize\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="CP\Content\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="CP\Content\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="CP\Content\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="CP\Content\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\dialogs\uicolor.js" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\lang\en.js" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\lang\he.js" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\plugin.js" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\uicolor.gif" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\assets\hue_bg.png" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\assets\hue_thumb.png" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\assets\picker_mask.png" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\assets\picker_thumb.png" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\assets\yui.css" />
+    <Content Include="CP\Content\ckeditor\plugins\uicolor\yui\yui.js" />
+    <Content Include="CP\Content\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="CP\Content\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="CP\Content\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="CP\Content\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="CP\Content\ckeditor\plugins\xml\plugin.js" />
+    <Content Include="CP\Content\ckeditor\skins\kama\dialog.css" />
+    <Content Include="CP\Content\ckeditor\skins\kama\editor.css" />
+    <Content Include="CP\Content\ckeditor\skins\kama\icons.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\icons_rtl.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\noimage.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="CP\Content\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="CP\Content\ckeditor\skins\kama\skin.js" />
+    <Content Include="CP\Content\ckeditor\skins\kama\templates.css" />
+    <Content Include="CP\Content\ckeditor\themes\default\theme.js" />
+    <Content Include="CP\Content\ckfinder\ckfinder.html" />
+    <Content Include="CP\Content\ckfinder\ckfinder.js" />
+    <Content Include="CP\Content\ckfinder\ckfinder_v1.js" />
+    <Content Include="CP\Content\ckfinder\config.ascx" />
+    <Content Include="CP\Content\ckfinder\config.js" />
+    <Content Include="CP\Content\ckfinder\core\connector\aspx\connector.aspx" />
+    <Content Include="CP\Content\ckfinder\core\connector\aspx\lang\en.xml" />
+    <Content Include="CP\Content\ckfinder\core\connector\aspx\lang\vi.xml" />
+    <Content Include="CP\Content\ckfinder\lang\en.js" />
+    <Content Include="CP\Content\ckfinder\lang\vi.js" />
+    <Content Include="CP\Content\ckfinder\plugins\dummy\lang\en.js" />
+    <Content Include="CP\Content\ckfinder\plugins\dummy\lang\pl.js" />
+    <Content Include="CP\Content\ckfinder\plugins\dummy\plugin.js" />
+    <Content Include="CP\Content\ckfinder\plugins\flashupload\flash\Uploader.swf" />
+    <Content Include="CP\Content\ckfinder\plugins\flashupload\Uploader.html" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\colorbox.css" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\border.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\controls.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomCenter.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomLeft.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderBottomRight.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleLeft.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderMiddleRight.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopCenter.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopLeft.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\ie6\borderTopRight.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\loading.gif" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\loading_background.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\images\overlay.png" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\jquery.colorbox-min.js" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\jquery.min.js" />
+    <Content Include="CP\Content\ckfinder\plugins\gallery\colorbox\license.txt" />
+    <Content Include="CP\Content\ckfinder\plugins\imageresize\images\mini.gif" />
+    <Content Include="CP\Content\ckfinder\plugins\imageresize\plugin.js" />
+    <Content Include="CP\Content\ckfinder\skins\kama\app.css" />
+    <Content Include="CP\Content\ckfinder\skins\kama\host.css" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\ckffolder.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\ckffolderopened.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\ckfminus.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\ckfnothumb.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\ckfplus.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons.png" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\ai.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\avi.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\bmp.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\cs.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\default.icon.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\dll.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\doc.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\docx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\exe.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\fla.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\gif.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\jpg.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\js.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\mdb.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\mp3.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\ogg.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\pdf.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\ppt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\pptx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\rdp.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\swf.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\swt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\txt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\vsd.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\xls.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\xlsx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\xml.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\16\zip.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\ai.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\avi.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\bmp.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\cs.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\default.icon.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\dll.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\doc.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\docx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\exe.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\fla.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\gif.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\jpg.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\js.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\mdb.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\mp3.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\ogg.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\ogg.png" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\pdf.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\ppt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\pptx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\rdp.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\swf.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\swt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\txt.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\vsd.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\xls.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\xlsx.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\xml.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\icons\32\zip.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\loaders\16x16.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\loaders\32x32.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\spacer.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\sprites.png" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\sprites_ie6.png" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\add.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\clear_basket.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\delete.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\download.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\help.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\refresh.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\settings.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\images\toolbar\view.gif" />
+    <Content Include="CP\Content\ckfinder\skins\kama\richcombo.css" />
+    <Content Include="CP\Content\ckfinder\skins\kama\skin.js" />
+    <Content Include="CP\Content\ckfinder\skins\kama\uipanel.css" />
+    <Content Include="CP\Content\media\system\css\calendar-jos.css" />
+    <Content Include="CP\Content\media\system\css\modal.css" />
+    <Content Include="CP\Content\media\system\css\system.css" />
+    <Content Include="CP\Content\media\system\images\modal\bg_e.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_n.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_ne.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_nw.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_s.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_se.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_sw.png" />
+    <Content Include="CP\Content\media\system\images\modal\bg_w.png" />
+    <Content Include="CP\Content\media\system\images\modal\closebox.gif" />
+    <Content Include="CP\Content\media\system\images\modal\closebox.png" />
+    <Content Include="CP\Content\media\system\images\modal\spinner.gif" />
+    <Content Include="CP\Content\media\system\images\notice-alert.png" />
+    <Content Include="CP\Content\media\system\images\notice-info.png" />
+    <Content Include="CP\Content\media\system\images\notice-note.png" />
+    <Content Include="CP\Content\media\system\images\sort_asc.png" />
+    <Content Include="CP\Content\media\system\images\sort_desc.png" />
+    <Content Include="CP\Content\media\system\js\calendar-setup.js" />
+    <Content Include="CP\Content\media\system\js\calendar.js" />
+    <Content Include="CP\Content\media\system\js\modal.js" />
+    <Content Include="CP\Content\media\system\js\mootools-core.js" />
+    <Content Include="CP\Content\media\system\js\mootools-more.js" />
+    <Content Include="CP\Content\media\system\js\switcher.js" />
+    <Content Include="CP\Content\media\system\js\validate.js" />
+    <Content Include="CP\Content\templates\bluestork\css\ie7.css" />
+    <Content Include="CP\Content\templates\bluestork\css\ie8.css" />
+    <Content Include="CP\Content\templates\bluestork\css\rounded.css" />
+    <Content Include="CP\Content\templates\bluestork\css\template.css" />
+    <Content Include="CP\Content\templates\bluestork\favicon.ico" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\refresh.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\checked_out.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\disabled.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\downarrow.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\downarrow0.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\edit.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\featured.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\filesave.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\icon-16-allow.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\icon-16-allowinactive.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\icon-16-deny.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\icon-16-denyinactive.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\icon-16-notice-note.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\publish_g.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\publish_r.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\publish_x.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\publish_y.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\save.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\tick.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\uparrow.png" />
+    <Content Include="CP\Content\templates\bluestork\images\admin\uparrow0.png" />
+    <Content Include="CP\Content\templates\bluestork\images\bg-menu.gif" />
+    <Content Include="CP\Content\templates\bluestork\images\calendar.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-article-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-article-edit.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-article.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-banner-categories.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-banner-client.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-banner-tracks.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-banner.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-category-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-category.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-checkin.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-clear.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-config.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-contacts-categories.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-contacts.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-cpanel.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-extension.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-featured.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-generic.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-groups-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-groups.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-help_header.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-inbox.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-info.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-language.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-levels-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-levels.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-links-cat.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-links.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-massmail.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-media.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-menu-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-menu.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-menumgr.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-module.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-new-privatemessage.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-newsfeeds-cat.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-newsfeeds.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-plugin.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-purge.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-redirect.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-search.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-section.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-stats.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-themes.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-trash.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-user-add.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-user-edit.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-user-profile.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-user.png" />
+    <Content Include="CP\Content\templates\bluestork\images\header\icon-48-writemess.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\calendar.gif" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-icons_222222_256x240.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-icons_454545_256x240.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-icons_888888_256x240.png" />
+    <Content Include="CP\Content\templates\bluestork\images\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_arrow.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_arrow_down.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_border.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_bottom.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button1_left.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button1_next.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_blank.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_first.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_first_off.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_image.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_last.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_last_off.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_left.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_next.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_next_off.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_pagebreak.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_prev.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_prev_off.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_readmore.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_right.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_button2_right_cap.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_corner_bl.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_corner_br.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_bl_dark.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_bl_light.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_br_dark.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_br_light.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_tl_dark.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_tl_light.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_tr_dark.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_crn_tr_light.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_header_left.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_header_middle.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_header_right.png" />
+    <Content Include="CP\Content\templates\bluestork\images\j_login_lock.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-archive.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-article.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-back-user.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-banner-categories.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-banner-client.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-banner-tracks.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-banner.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-category.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-checkin.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-clear.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-component.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-config.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-contacts-categories.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-contacts.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-content.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-cpanel.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-default.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-featured.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-groups.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-community.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-dev.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-docs.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-forum.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-jed.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-jrd.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-security.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-shop.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-this.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help-trans.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-help.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-info.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-install.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-language.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-levels.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-links-cat.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-links.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-logout.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-maintenance.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-massmail.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-media.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-menu.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-menumgr.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-messages.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-messaging.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-module.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-new-privatemessage.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newarticle.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newcategory.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newgroup.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newlevel.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newsfeeds-cat.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newsfeeds.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-newuser.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-notdefault.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-plugin.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-purge.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-readmess.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-redirect.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-search.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-stats.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-themes.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-trash.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-user.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-viewsite.png" />
+    <Content Include="CP\Content\templates\bluestork\images\menu\icon-16-writemess.png" />
+    <Content Include="CP\Content\templates\bluestork\images\notice-alert.png" />
+    <Content Include="CP\Content\templates\bluestork\images\notice-info.png" />
+    <Content Include="CP\Content\templates\bluestork\images\notice-note.png" />
+    <Content Include="CP\Content\templates\bluestork\images\ReadOnly.png" />
+    <Content Include="CP\Content\templates\bluestork\images\selector-arrow.png" />
+    <Content Include="CP\Content\templates\bluestork\images\system\calendar.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-apply.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-archive.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-back.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-cancel.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-checkin.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-config.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-copy.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-css.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-default.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-delete-style.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-delete.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-edit.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-error.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-export.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-forward.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-help.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-html.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-list.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-menu.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-move.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-new-style.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-new.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-preview.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-publish.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-purge.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-refresh.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-remove.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-revert.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-save-copy.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-save-new.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-save.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-send.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-trash.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-unarchive.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-unblock.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-unpublish.png" />
+    <Content Include="CP\Content\templates\bluestork\images\toolbar\icon-32-upload.png" />
+    <Content Include="CP\Content\templates\system\css\system.css" />
+    <Content Include="CP\Default.aspx" />
+    <Content Include="CP\Design\EditControl.ascx" />
+    <Content Include="CP\Design\EditControlBegin.ascx" />
+    <Content Include="CP\Design\EditControlEnd.ascx" />
+    <Content Include="CP\Design\EditModule.ascx" />
+    <Content Include="CP\Design\EditPage.aspx" />
+    <Content Include="CP\Design\EditTemplate.aspx" />
+    <Content Include="CP\Tools\Ajax\Common\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModMenu_Dynamic\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModNews\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_National\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Office\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Agent\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Currency\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_CustomersGroups\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Groups\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Info\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Manufacturer\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_PropertiesGroups\PostData.aspx" />
+    <Content Include="CP\Tools\Ajax\ModProduct_Supplier\PostData.aspx" />
+    <Content Include="CP\Tools\SQLTools.aspx" />
+    <Content Include="CP\Tools\UnLoad.aspx" />
+    <Content Include="CP\Views\AccessDenied\Index.ascx" />
+    <Content Include="CP\Views\ModDT_BaoCaoThongKe\Add.ascx" />
+    <Content Include="CP\Views\ModDT_BaoCaoThongKe\Index.ascx" />
+    <Content Include="CP\Views\FormDkKyDaiLyDonHang\FormDkKyDaiLyDonHang.ascx" />
+    <Content Include="CP\Views\ModChat_History\Add.ascx" />
+    <Content Include="CP\Views\ModChat_History\Index.ascx" />
+    <Content Include="CP\Views\ModCountry\Add.ascx" />
+    <Content Include="CP\Views\ModCountry\Index.ascx" />
+    <Content Include="CP\Views\ModDistrict\Add.ascx" />
+    <Content Include="CP\Views\ModDistrict\Index.ascx" />
+    <Content Include="CP\Views\ModDT_CapDaiLy_TyLe\Add.ascx" />
+    <Content Include="CP\Views\ModDT_CapDaiLy_TyLe\Index.ascx" />
+    <Content Include="CP\Views\ModDT_DaiLy\Add.ascx" />
+    <Content Include="CP\Views\ModDT_DaiLy\IndexDefault.ascx" />
+    <Content Include="CP\Views\ModDT_DaiLy\Index.ascx" />
+    <Content Include="CP\Views\ModDT_Ky\Add.ascx" />
+    <Content Include="CP\Views\ModDT_Ky\Index.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy\Add.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy\Index.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang\AddDonHang.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang\Add.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang\Index.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang_SanPham\Add.ascx" />
+    <Content Include="CP\Views\ModDT_Ky_DaiLy_DonHang_SanPham\Index.ascx" />
+    <Content Include="CP\Views\ModLoai_DaiLy\Add.ascx" />
+    <Content Include="CP\Views\ModLoai_DaiLy\Index.ascx" />
+    <Content Include="CP\Views\ModProvince\Add.ascx" />
+    <Content Include="CP\Views\ModProvince\Index.ascx" />
+    <Content Include="CP\Views\ModTemplate\Add.ascx" />
+    <Content Include="CP\Views\ModTemplate\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_Area\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_Attach\AddAttachProduct.ascx" />
+    <Content Include="CP\Views\FormProduct_Relative\AddRelativeProduct.ascx" />
+    <Content Include="CP\Views\FormNews\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_Comments\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_Comments\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_FilterGroups\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_FilterGroups\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_FilterValues\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_Info_Details\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_Info_Details\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_PriceSale_History\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_PriceSale_History\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_Price_History\Add.ascx" />
+    <Content Include="CP\Views\FormProduct_Price_History\Index.ascx" />
+    <Content Include="CP\Views\FormProduct_SlideShow\Index.ascx" />
+    <Content Include="CP\Views\FormText\Index.ascx" />
+    <Content Include="CP\Views\Home\Index.ascx" />
+    <Content Include="CP\Views\Lang\en-US.ini" />
+    <Content Include="CP\Views\Lang\vi-VN.ini" />
+    <Content Include="CP\Views\Login\Index.ascx" />
+    <Content Include="CP\Views\ModAdv\Add.ascx" />
+    <Content Include="CP\Views\ModAdv\Index.ascx" />
+    <Content Include="CP\Views\ModAutoLinks\Add.ascx" />
+    <Content Include="CP\Views\ModAutoLinks\Index.ascx" />
+    <Content Include="CP\Views\ModComment\Add.ascx" />
+    <Content Include="CP\Views\ModComment\Index.ascx" />
+    <Content Include="CP\Views\ModFeedback\Add.ascx" />
+    <Content Include="CP\Views\ModFeedback\Index.ascx" />
+    <Content Include="CP\Views\ModFile\Index.ascx" />
+    <Content Include="CP\Views\ModListMailNewsLetter\Add.ascx" />
+    <Content Include="CP\Views\ModListMailNewsLetter\Index.ascx" />
+    <Content Include="CP\Views\ModMenu_Dynamic\Add.ascx" />
+    <Content Include="CP\Views\ModMenu_Dynamic\Index.ascx" />
+    <Content Include="CP\Views\ModMenu_Type\Add.ascx" />
+    <Content Include="CP\Views\ModMenu_Type\Index.ascx" />
+    <Content Include="CP\Views\ModNews\Add.ascx" />
+    <Content Include="CP\Views\ModNews\Index.ascx" />
+    <Content Include="CP\Views\ModParameters\Add.ascx" />
+    <Content Include="CP\Views\ModParameters\Index.ascx" />
+    <Content Include="CP\Views\ModProduct\Add.ascx" />
+    <Content Include="CP\Views\ModProduct\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Agent\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Agent\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Area\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Area\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_City\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_City\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Comments\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Comments\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Currency\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Currency\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_CustomersGroups\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_CustomersGroups\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Customers\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Customers\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_FilterGroups\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_FilterGroups\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_FilterValues\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_FilterValues\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Filter\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Filter\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Groups\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Groups\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Info\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Info\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_City\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_City\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_Details\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_Details\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_Office\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Info_Office\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Manufacturer\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Manufacturer\Ajax.aspx" />
+    <Content Include="CP\Views\ModProduct_Manufacturer\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_National\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_National\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_National_Area\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_National_Area\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Office\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Office\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Order\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Order\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Order_Details\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Order_Details\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Payment\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Payment\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_PriceSale_History\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_PriceSale_History\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_PropertiesGroups\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_PropertiesGroups\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_PropertiesList\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_PropertiesList\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_RegisterEmail\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_RegisterEmail\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Supplier\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Supplier\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_SurveyGroup\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_SurveyGroup\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_SurveyGroup_Detail\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_SurveyGroup_Detail\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Transport\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Transport\Index.ascx" />
+    <Content Include="CP\Views\ModProduct_Types\Add.ascx" />
+    <Content Include="CP\Views\ModProduct_Types\Index.ascx" />
+    <Content Include="CP\Views\ModTag\Add.ascx" />
+    <Content Include="CP\Views\ModTag\Index.ascx" />
+    <Content Include="CP\Views\ModTest\Add.ascx" />
+    <Content Include="CP\Views\ModTest\Index.ascx" />
+    <Content Include="CP\Views\ModWard\Add.ascx" />
+    <Content Include="CP\Views\ModWard\Index.ascx" />
+    <Content Include="CP\Views\Shared\Form.Master" />
+    <Content Include="CP\Views\Shared\Login.Master" />
+    <Content Include="CP\Views\Shared\Main.Master" />
+    <Content Include="CP\Views\Shared\MenuTop.ascx" />
+    <Content Include="CP\Views\SysMenu\Add.ascx" />
+    <Content Include="CP\Views\SysMenu\Index.ascx" />
+    <Content Include="CP\Views\SysPage\Add.ascx" />
+    <Content Include="CP\Views\SysPage\Index.ascx" />
+    <Content Include="CP\Views\SysResource\Add.ascx" />
+    <Content Include="CP\Views\SysResource\Import.ascx" />
+    <Content Include="CP\Views\SysResource\Index.ascx" />
+    <Content Include="CP\Views\SysRole\Add.ascx" />
+    <Content Include="CP\Views\SysRole\Index.ascx" />
+    <Content Include="CP\Views\SysSite\Add.ascx" />
+    <Content Include="CP\Views\SysSite\Index.ascx" />
+    <Content Include="CP\Views\SysTemplate\Add.ascx" />
+    <Content Include="CP\Views\SysTemplate\Index.ascx" />
+    <Content Include="CP\Views\SysUserLog\Index.ascx" />
+    <Content Include="CP\Views\SysUser\Add.ascx" />
+    <Content Include="CP\Views\SysUser\Index.ascx" />
+    <Content Include="CP\Views\UserChangeInfo\Index.ascx" />
+    <Content Include="CP\Views\UserChangePass\Index.ascx" />
+    <Content Include="Data\ResizeImage\files\products\Emptyx100x100x2.gif" />
+    <Content Include="Data\ResizeImage\files\products\Emptyx100x80x2.gif" />
+    <Content Include="Data\ResizeImage\files\products\Emptyx40x40x2.gif" />
+    <Content Include="Data\ResizeImage\files\products\Emptyx50x50x2.gif" />
+    <Content Include="Data\ResizeImage\files\products\Emptyx60x60x2.gif" />
+    <Content Include="Data\ResizeImage\files\products\No_imagex100x80x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\No_imagex40x40x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\Penguinsx100x100x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\Penguinsx100x80x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\Penguinsx40x40x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\Penguinsx50x50x2.jpg" />
+    <Content Include="Data\ResizeImage\files\products\Penguinsx60x60x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\bannerx100x80x2.gif" />
+    <Content Include="Data\ResizeImage\images\adv\bannerx40x40x2.gif" />
+    <Content Include="Data\ResizeImage\images\adv\banner_vne_180x300x100x100x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\banner_vne_180x300x100x80x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\banner_vne_180x300x40x40x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\resort_allezboo__180X300_x100x100x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\resort_allezboo__180X300_x100x80x2.jpg" />
+    <Content Include="Data\ResizeImage\images\adv\resort_allezboo__180X300_x40x40x2.jpg" />
+    <Content Include="Data\upload\files\Products\Empty.gif" />
+    <Content Include="Data\upload\files\Products\No image.jpg" />
+    <Content Include="Data\upload\files\Products\Penguins.jpg" />
+    <Content Include="Data\upload\flash\banner.swf" />
+    <Content Include="Data\upload\images\Adv\banner-vne-180x300.jpg" />
+    <Content Include="Data\upload\images\Adv\banner.gif" />
+    <Content Include="Data\upload\images\Adv\resort-allezboo-%28180X300%29.jpg" />
+    <Content Include="Data\upload\resources\css\default\default-img\body-bg-muti.png" />
+    <Content Include="Data\upload\resources\css\default\default-img\bulet.png" />
+    <Content Include="Data\upload\resources\css\default\default-img\footer.png" />
+    <Content Include="Data\upload\resources\css\default\default-img\title.png" />
+    <Content Include="Data\upload\resources\css\default\default-img\title_bg_apilas.jpg" />
+    <Content Include="Data\upload\resources\css\default\default.css" />
+    <Content Include="Data\upload\resources\css\default\general.css" />
+    <Content Include="Data\upload\resources\css\default\menu-img\arrow-down.png" />
+    <Content Include="Data\upload\resources\css\default\menu-img\arrow-right.png" />
+    <Content Include="Data\upload\resources\css\default\menu-img\bulet.png" />
+    <Content Include="Data\upload\resources\css\default\menu-img\mainnav-bg.gif" />
+    <Content Include="Data\upload\resources\css\default\menu-img\mainnav-sep.gif" />
+    <Content Include="Data\upload\resources\css\default\menu.css" />
+    <Content Include="Data\upload\resources\css\default\style-img\arrow-curve-180.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\arrow-stop-090.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\arrow-stop-180.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\arrow-stop-270.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\arrow-stop.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\bg_tittle.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\body-bg-muti.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\boxheader.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\delete.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\disk-black.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\dot.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\edit_16x16.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\folder_sent_mail.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\go_to_top.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\grid-loading.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\hand-point.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\home.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon-item-list.jpg" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_new.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_news_default.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_news_hot.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_news_new.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_ribbon_hot.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\icon_ribbon_new_en.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\line.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\list.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\list_style.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\list_style.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\list_style_sub.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\pay_online_baokim.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\pay_online_nganluong.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\ProductCompare.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\save-16.gif" />
+    <Content Include="Data\upload\resources\css\default\style-img\search.png" />
+    <Content Include="Data\upload\resources\css\default\style-img\title_bg_apilas.jpg" />
+    <Content Include="Data\upload\resources\css\default\style.css" />
+    <Content Include="Data\upload\resources\js\default\common.js" />
+    <Content Include="Data\upload\resources\js\default\jquery-1_8_2.js" />
+    <Content Include="Data\upload\resources\js\default\jquery_cookie.js" />
+    <Content Include="Data\upload\resources\js\default\Product.js" />
+    <Content Include="Data\upload\_thumbs\Files\Products\No image.jpg" />
+    <Content Include="Data\upload\_thumbs\Files\Products\Penguins.jpg" />
+    <Content Include="Data\upload\_thumbs\Images\Adv\banner-vne-180x300.jpg" />
+    <Content Include="Data\upload\_thumbs\Images\Adv\resort-allezboo-%28180X300%29.jpg" />
+    <Content Include="muahang1.png" />
+    <Content Include="Tools\Ajax\Common\PostData.aspx" />
+    <Content Include="Tools\Ajax\ModChat\PostData.aspx" />
+    <Content Include="Tools\Ajax\ModProduct_Info\PostData.aspx" />
+    <Content Include="Tools\Copy.asmx" />
+    <Content Include="Tools\File.asmx" />
+    <Content Include="Tools\News.asmx" />
+    <Content Include="Tools\PostForm.aspx" />
+    <Content Include="Content\slideshow\default\SlideshowXML.aspx" />
+    <Content Include="Tools\Test.asmx" />
+    <Content Include="Views\CAdv\Advs.ascx" />
+    <Content Include="Views\CAdv\Slide_Type04.ascx" />
+    <Content Include="Views\CAdv\Slide_Type03.ascx" />
+    <Content Include="Views\CAdv\Slide_Type02.ascx" />
+    <Content Include="Views\CAdv\Slide_Type01.ascx" />
+    <Content Include="Views\CAdv\Default.ascx" />
+    <Content Include="Views\CAdv\Links.ascx" />
+    <Content Include="Views\CAdv\Slide.ascx" />
+    <Content Include="Views\CAdv\Slide_Type01.ascx_img.PNG" />
+    <Content Include="Views\CAdv\Slide_Type02.ascx_img.PNG" />
+    <Content Include="Views\CAdv\Slide_Type03.ascx_img.PNG" />
+    <Content Include="Views\CAdv\Slide_Type04.ascx_img.PNG" />
+    <Content Include="Views\CChat_History\Default.ascx" />
+    <Content Include="Views\CCountry\Default.ascx" />
+    <Content Include="Views\CDistrict\Default.ascx" />
+    <Content Include="Views\CDT_CapDaiLy_TyLe\Default.ascx" />
+    <Content Include="Views\CDT_DaiLy\Default.ascx" />
+    <Content Include="Views\CDT_Ky\Default.ascx" />
+    <Content Include="Views\CDT_Ky_DaiLy\Default.ascx" />
+    <Content Include="Views\CDT_Ky_DaiLy_DonHang\Default.ascx" />
+    <Content Include="Views\CDT_Ky_DaiLy_DonHang_SanPham\Default.ascx" />
+    <Content Include="Views\CFeedback\Default.ascx" />
+    <Content Include="Views\CListMailNewsLetter\Default.ascx" />
+    <Content Include="Views\CLoai_DaiLy\Default.ascx" />
+    <Content Include="Views\CMenu\Copy of LeftProduct.ascx" />
+    <Content Include="Views\CMenu\Copy of MenuLeft.ascx" />
+    <Content Include="Views\CMenu\LeftProduct.ascx" />
+    <Content Include="Views\CMenu\MenuLeft.ascx" />
+    <Content Include="Views\CMenu\TopLeftProduct.ascx" />
+    <Content Include="Views\CMenu\TopProduct.ascx" />
+    <Content Include="Views\CMenu\Top.ascx" />
+    <Content Include="Views\CMenu_Dynamic\Kira_MainLeftMenu.ascx" />
+    <Content Include="Views\CMenu_Dynamic\Kira_MainTopMenu.ascx" />
+    <Content Include="Views\CMenu_Dynamic\Default.ascx" />
+    <Content Include="Views\CMenu_Type\Default.ascx" />
+    <Content Include="Views\CModuleTool\GoToTop.ascx" />
+    <Content Include="Views\CNews\DichVu.ascx" />
+    <Content Include="Views\CNews\News.ascx" />
+    <Content Include="Views\CProduct_Customers\ResetPass_Form.ascx" />
+    <Content Include="Views\CProduct_Customers\RequestResetPass_Form.ascx" />
+    <Content Include="Views\CProduct_Info_Compare\Default.ascx" />
+    <Content Include="Views\CProduct_SurveyGroup\Default.ascx" />
+    <Content Include="Views\CNews\KhuyenMai.ascx" />
+    <Content Include="Views\CProvince\Default.ascx" />
+    <Content Include="Views\CWard\Default.ascx" />
+    <Content Include="Views\MChat_History\Detail.ascx" />
+    <Content Include="Views\MChat_History\Index.ascx" />
+    <Content Include="Views\MCountry\Detail.ascx" />
+    <Content Include="Views\MCountry\Index.ascx" />
+    <Content Include="Views\MDistrict\Detail.ascx" />
+    <Content Include="Views\MDistrict\Index.ascx" />
+    <Content Include="Views\MDT_CapDaiLy_TyLe\Detail.ascx" />
+    <Content Include="Views\MDT_CapDaiLy_TyLe\Index.ascx" />
+    <Content Include="Views\MDT_DaiLy\Detail.ascx" />
+    <Content Include="Views\MDT_DaiLy\Index.ascx" />
+    <Content Include="Views\MDT_Ky\Detail.ascx" />
+    <Content Include="Views\MDT_Ky\Index.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy\Detail.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy\Index.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy_DonHang\Detail.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy_DonHang\Index.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy_DonHang_SanPham\Detail.ascx" />
+    <Content Include="Views\MDT_Ky_DaiLy_DonHang_SanPham\Index.ascx" />
+    <Content Include="Views\MListMailNewsLetter\Detail.ascx" />
+    <Content Include="Views\MListMailNewsLetter\Index.ascx" />
+    <Content Include="Views\MLoai_DaiLy\Detail.ascx" />
+    <Content Include="Views\MLoai_DaiLy\Index.ascx" />
+    <Content Include="Views\MProduct_Compare\Index.ascx" />
+    <Content Include="Views\CProduct_Customers\AccountSetting_Form.ascx" />
+    <Content Include="Views\CProduct_Customers\Login_Form.ascx" />
+    <Content Include="Views\CProduct_Customers\Login.ascx" />
+    <Content Include="Views\CProduct_Customers\Register.ascx" />
+    <Content Include="Views\CProduct_Customers\Default.ascx" />
+    <Content Include="Views\MCheckOut\Index.ascx" />
+    <Content Include="Views\CResources\Default.ascx" />
+    <Content Include="Views\CProduct_Info_Relative\Relative.ascx" />
+    <Content Include="Views\CSiteMap\Default.ascx" />
+    <Content Include="Views\CProduct\Default.ascx" />
+    <Content Include="Views\CProduct_Area\Default.ascx" />
+    <Content Include="Views\CProduct_Comments\Default.ascx" />
+    <Content Include="Views\CProduct_Currency\Default.ascx" />
+    <Content Include="Views\CProduct_Filter\Default.ascx" />
+    <Content Include="Views\CProduct_Groups\Default.ascx" />
+    <Content Include="Views\CProduct_Info\ChungLoai_1.ascx" />
+    <Content Include="Views\CProduct_Info\ChungLoai_2.ascx" />
+    <Content Include="Views\CProduct_Info\ChungLoai_3.ascx" />
+    <Content Include="Views\CProduct_Info\TopDiscount.ascx" />
+    <Content Include="Views\CProduct_Info\Copy of TopBuy.ascx" />
+    <Content Include="Views\CProduct_Info\TopBuy.ascx" />
+    <Content Include="Views\CProduct_Info\Default.ascx" />
+    <Content Include="Views\CProduct_Info\Sale.ascx" />
+    <Content Include="Views\CProduct_RegisterEmail\Default.ascx" />
+    <Content Include="Views\CStatic\NewsLetter.ascx" />
+    <Content Include="Views\CStatic\Support.ascx" />
+    <Content Include="Views\CTest\Default.ascx" />
+    <Content Include="Views\CText\Default.ascx" />
+    <Content Include="Views\Design\Default.Master" />
+    <Content Include="Views\Design\MContent.ascx" />
+    <Content Include="Views\HttpError\404.html" />
+    <Content Include="Views\HttpError\500.html" />
+    <Content Include="Views\MContent\Index.ascx" />
+    <Content Include="Views\MEmpty\Index.ascx" />
+    <Content Include="Views\MFeedback\Index.ascx" />
+    <Content Include="Views\MMenu_Dynamic\Detail.ascx" />
+    <Content Include="Views\MMenu_Dynamic\Index.ascx" />
+    <Content Include="Views\MMenu_Type\Detail.ascx" />
+    <Content Include="Views\MMenu_Type\Index.ascx" />
+    <Content Include="Views\MNews\Detail.ascx" />
+    <Content Include="Views\MNews\Index.ascx" />
+    <Content Include="Views\MProduct\Detail.ascx" />
+    <Content Include="Views\MProduct\Index.ascx" />
+    <Content Include="Views\MProduct_Area\Detail.ascx" />
+    <Content Include="Views\MProduct_Area\Index.ascx" />
+    <Content Include="Views\MProduct_Comments\Detail.ascx" />
+    <Content Include="Views\MProduct_Comments\Index.ascx" />
+    <Content Include="Views\MProduct_Customers\Detail.ascx" />
+    <Content Include="Views\MProduct_Customers\Index.ascx" />
+    <Content Include="Views\MProduct_Filter\Detail.ascx" />
+    <Content Include="Views\MProduct_Filter\Index.ascx" />
+    <Content Include="Views\MProduct_Groups\Detail.ascx" />
+    <Content Include="Views\MProduct_Groups\Index.ascx" />
+    <Content Include="Views\MProduct_Info\Copy of Index.ascx" />
+    <Content Include="Views\MProduct_Info\Detail.ascx" />
+    <Content Include="Views\MProduct_Info\Index.ascx" />
+    <Content Include="Views\MProduct_RegisterEmail\Detail.ascx" />
+    <Content Include="Views\MProduct_RegisterEmail\Index.ascx" />
+    <Content Include="Views\MProduct_SurveyGroup\Detail.ascx" />
+    <Content Include="Views\MProduct_SurveyGroup\Index.ascx" />
+    <Content Include="Views\MProduct_SurveyGroup_Detail\Detail.ascx" />
+    <Content Include="Views\MProduct_SurveyGroup_Detail\Index.ascx" />
+    <Content Include="Views\MProvince\Detail.ascx" />
+    <Content Include="Views\MProvince\Index.ascx" />
+    <Content Include="Views\MTag\Detail.ascx" />
+    <Content Include="Views\MTestAction\Index.ascx" />
+    <Content Include="Views\MTest\Detail.ascx" />
+    <Content Include="Views\MTest\Index.ascx" />
+    <Content Include="Views\MViewCart\Index.ascx" />
+    <Content Include="Views\MWard\Detail.ascx" />
+    <Content Include="Views\MWard\Index.ascx" />
+    <Content Include="Views\Shared\Default.Master" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VSW.Lib\VSW.Lib.csproj">
+      <Project>{C2ED2502-B00D-4CA4-B7F1-D31C1BD33FD4}</Project>
+      <Name>VSW.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\html\images\add\common\" />
+    <Folder Include="CP\Content\add\css\images\" />
+    <Folder Include="CP\Content\add\img\htooltip\" />
+    <Folder Include="CP\Content\add\img\images\" />
+    <Folder Include="CP\Content\add\img\Product\" />
+    <Folder Include="CP\Content\add\img\Tab\" />
+    <Folder Include="CP\Content\add\js\Tabs\" />
+    <Folder Include="CP\Content\html\images\" />
+    <Folder Include="CP\Content\templates\bluestork\images\Add\Tabs\" />
+    <Folder Include="Data\upload\customer\" />
+    <Folder Include="Data\upload\resources\css\default\general-img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Design\Products.Master" />
+    <Content Include="Views\Design\Products_SubPage.Master" />
+    <Content Include="Views\Design\Copy of Products_SubPage.Master" />
+    <Content Include="Views\Design\Products_SubPage_OneColumn.Master" />
+    <None Include="CP\Content\add\datetimepickermaster\bower.json" />
+    <None Include="CP\Content\add\datetimepickermaster\datetimepicker.jquery.json" />
+    <Content Include="Views\Design\Default_OneColumn.Master" />
+    <None Include="Views\Lang\en-US.ini" />
+    <None Include="Views\Lang\vi-VN.ini" />
+    <Content Include="Views\Shared\Products.Master" />
+    <Content Include="Views\Shared\Products_SubPage.Master" />
+    <Content Include="Views\Shared\Products_Sub.Master" />
+    <Content Include="Views\Shared\Products_SubPage_OneColumn.Master" />
+    <Content Include="Views\Shared\Default_OneColumn.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://product.vn</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>80</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://product.vn</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  -->
+</Project>

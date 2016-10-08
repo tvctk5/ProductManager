@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head" runat="server">
+<%
+        var CssPage = Cookies.GetValue("CssPage");
+        var JsPage = Cookies.GetValue("JsPage");
+
+        if (!string.IsNullOrEmpty(CssPage))
+        {
+            if (CssPage.Contains(",") == false)
+                CssPage = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + CssPage + "\" />";
+            else
+            {
+                List<string> lstCssFile = CssPage.Split(',').ToList();
+                CssPage = string.Empty;
+                foreach (var item in lstCssFile)
+                    CssPage += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + item + "\" />";
+            }
+        }
+
+        if (!string.IsNullOrEmpty(JsPage))
+        {
+            if (JsPage.Contains(",") == false)
+                JsPage = "<script type=\"text/javascript\" src=\"" + JsPage + "\"></script>";
+            else
+            {
+                List<string> lstJsFile = JsPage.Split(',').ToList();
+                JsPage = string.Empty;
+                foreach (var item in lstJsFile)
+                    JsPage += "<script type=\"text/javascript\" src=\"" + item + "\"></script>";
+            }
+        }
+    %>
+    <title></title>
+    <meta name="author" content="trai.it.utehy@gmail.com" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+    <meta name="robots" content="index, follow" />
+    <meta id="description" name="description" content="" runat="server" />
+    <meta id="keywords" name="keywords" content="" runat="server" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--Css trên page-->
+    <%= CssPage %>
+    <!--Js trên page-->
+    <%= JsPage%>
+</head>
+<body id="body">
+    <form id="vswForm" runat="server">
+    <div id="box_main">
+        <div class="box_function_Center">
+            <VSW:DynamicControl ID="DynamicControl1" Code="Top" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <div style="float: left; width: 30%">
+                <VSW:DynamicControl ID="DynamicControl4" Code="Main-Top-left" runat="server" />
+            </div>
+            <div style="float: right; width: 70%">
+                <VSW:DynamicControl ID="DynamicControl5" Code="Main-Top-right" runat="server" />
+            </div>
+        </div>
+        <div class="box_function_Center">
+            <VSW:DynamicControl ID="DynamicControl2" Code="Main" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <VSW:DynamicControl ID="DynamicControl3" Code="Bottom" runat="server" />
+        </div>
+        <div class="box_function_Center">
+            <div class="boxfooter">
+                <p style="padding-top: 15px;">
+                    <div style="text-align: center;">
+                        {RS:Web_Footer}
+                    </div>
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

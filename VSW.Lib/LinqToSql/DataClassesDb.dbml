@@ -1,0 +1,1231 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProductManager" Class="DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=.\SQL2008R2;Initial Catalog=ProductManager;Persist Security Info=True;User ID=sa;Password=123**abc" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CP_Access" Member="CP_Accesses">
+    <Type Name="CP_Access">
+      <Column Name="RefCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CP_Role_CP_Access" Member="CP_Role" ThisKey="RoleID" OtherKey="ID" Type="CP_Role" IsForeignKey="true" />
+      <Association Name="CP_User_CP_Access" Member="CP_User" ThisKey="UserID" OtherKey="ID" Type="CP_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Web_Setting" Member="Web_Settings">
+    <Type Name="Web_Setting">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CP_Role" Member="CP_Roles">
+    <Type Name="CP_Role">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Lock" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CP_Role_CP_Access" Member="CP_Accesses" ThisKey="ID" OtherKey="RoleID" Type="CP_Access" />
+      <Association Name="CP_Role_CP_UserRole" Member="CP_UserRoles" ThisKey="ID" OtherKey="RoleID" Type="CP_UserRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CP_User" Member="CP_Users">
+    <Type Name="CP_User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="CP_User_CP_Access" Member="CP_Accesses" ThisKey="ID" OtherKey="UserID" Type="CP_Access" />
+      <Association Name="CP_User_CP_UserLog" Member="CP_UserLogs" ThisKey="ID" OtherKey="UserID" Type="CP_UserLog" />
+      <Association Name="CP_User_CP_UserRole" Member="CP_UserRoles" ThisKey="ID" OtherKey="UserID" Type="CP_UserRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CP_UserLog" Member="CP_UserLogs">
+    <Type Name="CP_UserLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="CP_User_CP_UserLog" Member="CP_User" ThisKey="UserID" OtherKey="ID" Type="CP_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CP_UserRole" Member="CP_UserRoles">
+    <Type Name="CP_UserRole">
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RoleID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CP_Role_CP_UserRole" Member="CP_Role" ThisKey="RoleID" OtherKey="ID" Type="CP_Role" IsForeignKey="true" />
+      <Association Name="CP_User_CP_UserRole" Member="CP_User" ThisKey="UserID" OtherKey="ID" Type="CP_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Adv" Member="Mod_Advs">
+    <Type Name="Mod_Adv">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="AdvCode" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddInTag" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Target" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Web_Menu_Mod_Adv" Member="Web_Menu" ThisKey="MenuID" OtherKey="ID" Type="Web_Menu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_AutoLinks" Member="Mod_AutoLinks">
+    <Type Name="Mod_AutoLink">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Chat_History" Member="Mod_Chat_Histories">
+    <Type Name="Mod_Chat_History">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="From_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="From_UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="From_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="To_Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="To_UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="To_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Comment" Member="Mod_Comments">
+    <Type Name="Mod_Comment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReplyByID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="HasReply" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Country" Member="Mod_Countries">
+    <Type Name="Mod_Country">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Country_Mod_Province" Member="Mod_Provinces" ThisKey="ID" OtherKey="ModCountryId" Type="Mod_Province" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_District" Member="Mod_Districts">
+    <Type Name="Mod_District">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModProvinceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ProvinceFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_District_Mod_Ward" Member="Mod_Wards" ThisKey="ID" OtherKey="ModDistrictId" Type="Mod_Ward" />
+      <Association Name="Mod_Province_Mod_District" Member="Mod_Province" ThisKey="ModProvinceId" OtherKey="ID" Type="Mod_Province" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_CapDaiLy_TyLe" Member="Mod_DT_CapDaiLy_TyLes">
+    <Type Name="Mod_DT_CapDaiLy_TyLe">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_DT_CapDaiLy_TyLe_Mod_DT_CapDaiLy_TyLe" Member="Mod_DT_CapDaiLy_TyLes" ThisKey="ID" OtherKey="ParentID" Type="Mod_DT_CapDaiLy_TyLe" />
+      <Association Name="Mod_DT_CapDaiLy_TyLe_Mod_DT_CapDaiLy_TyLe" Member="Mod_DT_CapDaiLy_TyLe1" ThisKey="ParentID" OtherKey="ID" Type="Mod_DT_CapDaiLy_TyLe" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_DaiLy" Member="Mod_DT_DaiLies">
+    <Type Name="Mod_DT_DaiLy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModProductAgentParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModProductAgentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModDTLoaiDaiLyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Transfer" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Agent_Mod_DT_DaiLy" Member="Mod_Product_Agent" ThisKey="ModProductAgentId" OtherKey="ID" Type="Mod_Product_Agent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_Ky" Member="Mod_DT_Kies">
+    <Type Name="Mod_DT_Ky">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalFirst" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalLast" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_DT_Ky_Mod_DT_Ky_DaiLy" Member="Mod_DT_Ky_DaiLies" ThisKey="ID" OtherKey="ModDtKyId" Type="Mod_DT_Ky_DaiLy" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_Ky_DaiLy" Member="Mod_DT_Ky_DaiLies">
+    <Type Name="Mod_DT_Ky_DaiLy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModDtKyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModProductAgentParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModProductAgentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFirst" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalLast" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongTienLayHang" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongTienHoaHong" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_DT_Ky_DaiLy_Mod_DT_Ky_DaiLy_DonHang" Member="Mod_DT_Ky_DaiLy_DonHangs" ThisKey="ID" OtherKey="ModDTKyDaiLyId" Type="Mod_DT_Ky_DaiLy_DonHang" />
+      <Association Name="Mod_DT_Ky_Mod_DT_Ky_DaiLy" Member="Mod_DT_Ky" ThisKey="ModDtKyId" OtherKey="ID" Type="Mod_DT_Ky" IsForeignKey="true" />
+      <Association Name="Mod_Product_Agent_Mod_DT_Ky_DaiLy" Member="Mod_Product_Agent" ThisKey="ModProductAgentParentId" OtherKey="ID" Type="Mod_Product_Agent" IsForeignKey="true" />
+      <Association Name="Mod_Product_Agent_Mod_DT_Ky_DaiLy1" Member="Mod_Product_Agent1" ThisKey="ModProductAgentId" OtherKey="ID" Type="Mod_Product_Agent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_Ky_DaiLy_DonHang" Member="Mod_DT_Ky_DaiLy_DonHangs">
+    <Type Name="Mod_DT_Ky_DaiLy_DonHang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModDtKyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModDTKyDaiLyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NgayTao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChietKhau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongSanPham" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongSauGiam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_DT_Ky_DaiLy_DonHang_Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_DT_Ky_DaiLy_DonHang_SanPhams" ThisKey="ID" OtherKey="ModDTKyDaiLyDonHangId" Type="Mod_DT_Ky_DaiLy_DonHang_SanPham" />
+      <Association Name="Mod_DT_Ky_DaiLy_Mod_DT_Ky_DaiLy_DonHang" Member="Mod_DT_Ky_DaiLy" ThisKey="ModDTKyDaiLyId" OtherKey="ID" Type="Mod_DT_Ky_DaiLy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_DT_Ky_DaiLy_DonHang_SanPhams">
+    <Type Name="Mod_DT_Ky_DaiLy_DonHang_SanPham">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ModDtKyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModDTKyDaiLyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModDTKyDaiLyDonHangId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModProductId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ChietKhau" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TongSauGiam" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Association Name="Mod_DT_Ky_DaiLy_DonHang_Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_DT_Ky_DaiLy_DonHang" ThisKey="ModDTKyDaiLyDonHangId" OtherKey="ID" Type="Mod_DT_Ky_DaiLy_DonHang" IsForeignKey="true" />
+      <Association Name="Mod_Product_Info_Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_Product_Info" ThisKey="ModProductId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Feedback" Member="Mod_Feedbacks">
+    <Type Name="Mod_Feedback">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_ListMailNewsLetter" Member="Mod_ListMailNewsLetters">
+    <Type Name="Mod_ListMailNewsLetter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CodeRemoveList" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Loai_DaiLy" Member="Mod_Loai_DaiLies">
+    <Type Name="Mod_Loai_DaiLy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Loai_DaiLy_Mod_Product_Agent" Member="Mod_Product_Agents" ThisKey="ID" OtherKey="ModLoaiDaiLyId" Type="Mod_Product_Agent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics">
+    <Type Name="Mod_Menu_Dynamic">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModMenuTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SysPageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="IconUrl" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ShowPopup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Menu_Type_Mod_Menu_Dynamic" Member="Mod_Menu_Type" ThisKey="ModMenuTypeID" OtherKey="ID" Type="Mod_Menu_Type" IsForeignKey="true" />
+      <Association Name="Sys_Lang_Mod_Menu_Dynamic" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+      <Association Name="Sys_Page_Mod_Menu_Dynamic" Member="Sys_Page" ThisKey="SysPageID" OtherKey="ID" Type="Sys_Page" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Menu_Type" Member="Mod_Menu_Types">
+    <Type Name="Mod_Menu_Type">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Menu_Type_Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics" ThisKey="ID" OtherKey="ModMenuTypeID" Type="Mod_Menu_Dynamic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_News" Member="Mod_News">
+    <Type Name="Mod_New">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Summary" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Tags" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="PageTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PageKeywords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Custom" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Published" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountViewed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountComment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Web_Menu_Mod_New" Member="Web_Menu" ThisKey="MenuID" OtherKey="ID" Type="Web_Menu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_NewsTag" Member="Mod_NewsTags">
+    <Type Name="Mod_NewsTag">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NewsID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TagID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Online" Member="Mod_Onlines">
+    <Type Name="Mod_Online">
+      <Column Name="SessionID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TimeValue" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Parameters" Member="Mod_Parameters">
+    <Type Name="Mod_Parameter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product" Member="Mod_Products">
+    <Type Name="Mod_Product">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Summary" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Frice" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Agent" Member="Mod_Product_Agents">
+    <Type Name="Mod_Product_Agent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModCountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModProvinceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModDistrictId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModWardId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModLoaiDaiLyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_Agent_Mod_DT_DaiLy" Member="Mod_DT_DaiLies" ThisKey="ID" OtherKey="ModProductAgentId" Type="Mod_DT_DaiLy" />
+      <Association Name="Mod_Product_Agent_Mod_DT_Ky_DaiLy" Member="Mod_DT_Ky_DaiLies" ThisKey="ID" OtherKey="ModProductAgentParentId" Type="Mod_DT_Ky_DaiLy" />
+      <Association Name="Mod_Product_Agent_Mod_DT_Ky_DaiLy1" Member="Mod_DT_Ky_DaiLies1" ThisKey="ID" OtherKey="ModProductAgentId" Type="Mod_DT_Ky_DaiLy" />
+      <Association Name="Mod_Product_Agent_Mod_Product_Info_Agent" Member="Mod_Product_Info_Agents" ThisKey="ID" OtherKey="ProductAgeId" Type="Mod_Product_Info_Agent" />
+      <Association Name="Mod_Loai_DaiLy_Mod_Product_Agent" Member="Mod_Loai_DaiLy" ThisKey="ModLoaiDaiLyId" OtherKey="ID" Type="Mod_Loai_DaiLy" IsForeignKey="true" />
+      <Association Name="Mod_Ward_Mod_Product_Agent" Member="Mod_Ward" ThisKey="ModWardId" OtherKey="ID" Type="Mod_Ward" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Area" Member="Mod_Product_Areas">
+    <Type Name="Mod_Product_Area">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Area_Mod_Product_Area_PropretyGroup" Member="Mod_Product_Area_PropretyGroups" ThisKey="ID" OtherKey="ProductAreaId" Type="Mod_Product_Area_PropretyGroup" />
+      <Association Name="Mod_Product_Area_Web_Menu" Member="Web_Menus" ThisKey="ID" OtherKey="ProductAreaId" Type="Web_Menu" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Area_PropretyGroup" Member="Mod_Product_Area_PropretyGroups">
+    <Type Name="Mod_Product_Area_PropretyGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductAreaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertiesGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Area_Mod_Product_Area_PropretyGroup" Member="Mod_Product_Area" ThisKey="ProductAreaId" OtherKey="ID" Type="Mod_Product_Area" IsForeignKey="true" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_Area_PropretyGroup" Member="Mod_Product_PropertiesGroup" ThisKey="PropertiesGroupId" OtherKey="ID" Type="Mod_Product_PropertiesGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_City" Member="Mod_Product_Cities">
+    <Type Name="Mod_Product_City">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductNationalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_City_Mod_Product_Info_City" Member="Mod_Product_Info_Cities" ThisKey="ID" OtherKey="ProductCityId" Type="Mod_Product_Info_City" />
+      <Association Name="Mod_Product_City_Mod_Product_Office" Member="Mod_Product_Offices" ThisKey="ID" OtherKey="ProductCityId" Type="Mod_Product_Office" />
+      <Association Name="Mod_Product_National_Mod_Product_City" Member="Mod_Product_National" ThisKey="ProductNationalId" OtherKey="ID" Type="Mod_Product_National" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Comments" Member="Mod_Product_Comments">
+    <Type Name="Mod_Product_Comment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomersId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Approved" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Comment" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Currency" Member="Mod_Product_Currencies">
+    <Type Name="Mod_Product_Currency">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Customers" Member="Mod_Product_Customers">
+    <Type Name="Mod_Product_Customer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Pass" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PointTotal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateRequestReset" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="KeyReset" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateReset" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Reseted" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Customer_Mod_Product_Customers_Group" Member="Mod_Product_Customers_Groups" ThisKey="ID" OtherKey="CustomersId" Type="Mod_Product_Customers_Group" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Customers_Groups" Member="Mod_Product_Customers_Groups">
+    <Type Name="Mod_Product_Customers_Group">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomersGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomersId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Customer_Mod_Product_Customers_Group" Member="Mod_Product_Customer" ThisKey="CustomersId" OtherKey="ID" Type="Mod_Product_Customer" IsForeignKey="true" />
+      <Association Name="Mod_Product_CustomersGroup_Mod_Product_Customers_Group" Member="Mod_Product_CustomersGroup" ThisKey="CustomersGroupsId" OtherKey="ID" Type="Mod_Product_CustomersGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_CustomersGroups" Member="Mod_Product_CustomersGroups">
+    <Type Name="Mod_Product_CustomersGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PointStart" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PointEnd" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_CustomersGroup_Mod_Product_Customers_Group" Member="Mod_Product_Customers_Groups" ThisKey="ID" OtherKey="CustomersGroupsId" Type="Mod_Product_Customers_Group" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Filter" Member="Mod_Product_Filters">
+    <Type Name="Mod_Product_Filter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilterGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Filter_Mod_Product_FilterValue" Member="Mod_Product_FilterValues" ThisKey="ID" OtherKey="ProductFilterId" Type="Mod_Product_FilterValue" />
+      <Association Name="Mod_Product_Filter_Mod_Product_Info_PropertyFilter" Member="Mod_Product_Info_PropertyFilters" ThisKey="ID" OtherKey="ProductFilterId" Type="Mod_Product_Info_PropertyFilter" />
+      <Association Name="Mod_Product_FilterGroup_Mod_Product_Filter" Member="Mod_Product_FilterGroup" ThisKey="FilterGroupsId" OtherKey="ID" Type="Mod_Product_FilterGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_FilterGroups" Member="Mod_Product_FilterGroups">
+    <Type Name="Mod_Product_FilterGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowControl" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_FilterGroup_Mod_Product_Filter" Member="Mod_Product_Filters" ThisKey="ID" OtherKey="FilterGroupsId" Type="Mod_Product_Filter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_FilterValues" Member="Mod_Product_FilterValues">
+    <Type Name="Mod_Product_FilterValue">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductFilterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Mod_Product_Filter_Mod_Product_FilterValue" Member="Mod_Product_Filter" ThisKey="ProductFilterId" OtherKey="ID" Type="Mod_Product_Filter" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Groups" Member="Mod_Product_Groups">
+    <Type Name="Mod_Product_Group">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Web_MenuId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Web_MenuParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CodeParent" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ShowHide" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Group_Mod_Product_Groups_PropertiesGroup" Member="Mod_Product_Groups_PropertiesGroups" ThisKey="ID" OtherKey="ProductGroupsId" Type="Mod_Product_Groups_PropertiesGroup" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Groups_PropertiesGroups" Member="Mod_Product_Groups_PropertiesGroups">
+    <Type Name="Mod_Product_Groups_PropertiesGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertiesGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Mod_Product_Group_Mod_Product_Groups_PropertiesGroup" Member="Mod_Product_Group" ThisKey="ProductGroupsId" OtherKey="ID" Type="Mod_Product_Group" IsForeignKey="true" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_Groups_PropertiesGroup" Member="Mod_Product_PropertiesGroup" ThisKey="PropertiesGroupsId" OtherKey="ID" Type="Mod_Product_PropertiesGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info" Member="Mod_Product_Infos">
+    <Type Name="Mod_Product_Info">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ManufacturerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PageKeywords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CountNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceInput" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShowPrice" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleOff" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleOffType" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleOffValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceSale" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PriceTextSaleView" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShowVAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="InfoBasic" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Gifts" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Promotion" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Policy" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="InfoHighlight" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Preview" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowPreview" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BuyCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowBuyCount" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CommentCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowCommentCount" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShowCallRequire" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CallRequireCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowLike" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LikeCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Warranty" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StatusNote" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShowStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShowIcon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NewsPost" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SizeInfo" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ProductsConnection" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ProductsAttach" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ProductType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductFilterIds" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PostDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RuntimeDateStart" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RuntimeDateFinish" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_DT_Ky_DaiLy_DonHang_SanPham" Member="Mod_DT_Ky_DaiLy_DonHang_SanPhams" ThisKey="ID" OtherKey="ModProductId" Type="Mod_DT_Ky_DaiLy_DonHang_SanPham" />
+      <Association Name="Mod_Product_Info_Mod_Product_Comment" Member="Mod_Product_Comments" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Comment" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Agent" Member="Mod_Product_Info_Agents" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Agent" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_AreaInNational" Member="Mod_Product_Info_AreaInNationals" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_AreaInNational" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_City" Member="Mod_Product_Info_Cities" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_City" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Color" Member="Mod_Product_Info_Colors" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Color" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Detail" Member="Mod_Product_Info_Details" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Detail" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Office" Member="Mod_Product_Info_Offices" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Office" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_ProductGroup" Member="Mod_Product_Info_ProductGroups" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_ProductGroup" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_PropertyFilter" Member="Mod_Product_Info_PropertyFilters" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_PropertyFilter" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Size" Member="Mod_Product_Info_Sizes" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Size" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Type" Member="Mod_Product_Info_Types" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Info_Type" />
+      <Association Name="Mod_Product_Info_Mod_Product_Order_Detail" Member="Mod_Product_Order_Details" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Order_Detail" />
+      <Association Name="Mod_Product_Info_Mod_Product_Policy_ProductInfo" Member="Mod_Product_Policy_ProductInfos" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Policy_ProductInfo" />
+      <Association Name="Mod_Product_Info_Mod_Product_Price_History" Member="Mod_Product_Price_Histories" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_Price_History" />
+      <Association Name="Mod_Product_Info_Mod_Product_PriceSale_History" Member="Mod_Product_PriceSale_Histories" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_PriceSale_History" />
+      <Association Name="Mod_Product_Info_Mod_Product_SlideShow" Member="Mod_Product_SlideShows" ThisKey="ID" OtherKey="ProductInfoId" Type="Mod_Product_SlideShow" />
+      <Association Name="Mod_Product_Manufacturer_Mod_Product_Info" Member="Mod_Product_Manufacturer" ThisKey="ManufacturerId" OtherKey="ID" Type="Mod_Product_Manufacturer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Agent" Member="Mod_Product_Info_Agents">
+    <Type Name="Mod_Product_Info_Agent">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductAgeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_Agent_Mod_Product_Info_Agent" Member="Mod_Product_Agent" ThisKey="ProductAgeId" OtherKey="ID" Type="Mod_Product_Agent" IsForeignKey="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Agent" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_AreaInNational" Member="Mod_Product_Info_AreaInNationals">
+    <Type Name="Mod_Product_Info_AreaInNational">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductNationalAreaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_AreaInNational" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Mod_Product_National_Area_Mod_Product_Info_AreaInNational" Member="Mod_Product_National_Area" ThisKey="ProductNationalAreaId" OtherKey="ID" Type="Mod_Product_National_Area" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_City" Member="Mod_Product_Info_Cities">
+    <Type Name="Mod_Product_Info_City">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Mod_Product_City_Mod_Product_Info_City" Member="Mod_Product_City" ThisKey="ProductCityId" OtherKey="ID" Type="Mod_Product_City" IsForeignKey="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_City" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Color" Member="Mod_Product_Info_Colors">
+    <Type Name="Mod_Product_Info_Color">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ColorCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ColorName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Color" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Details" Member="Mod_Product_Info_Details">
+    <Type Name="Mod_Product_Info_Detail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertiesGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertiesListId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Detail" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Office" Member="Mod_Product_Info_Offices">
+    <Type Name="Mod_Product_Info_Office">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductOfficeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Office" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Mod_Product_Office_Mod_Product_Info_Office" Member="Mod_Product_Office" ThisKey="ProductOfficeId" OtherKey="ID" Type="Mod_Product_Office" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_ProductGroups" Member="Mod_Product_Info_ProductGroups">
+    <Type Name="Mod_Product_Info_ProductGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_ProductGroup" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Web_Menu_Mod_Product_Info_ProductGroup" Member="Web_Menu" ThisKey="MenuID" OtherKey="ID" Type="Web_Menu" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_PropertyFilter" Member="Mod_Product_Info_PropertyFilters">
+    <Type Name="Mod_Product_Info_PropertyFilter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductFilterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Filter_Mod_Product_Info_PropertyFilter" Member="Mod_Product_Filter" ThisKey="ProductFilterId" OtherKey="ID" Type="Mod_Product_Filter" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_PropertyFilter" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Size" Member="Mod_Product_Info_Sizes">
+    <Type Name="Mod_Product_Info_Size">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SizeCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SizeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CountNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Size" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Info_Types" Member="Mod_Product_Info_Types">
+    <Type Name="Mod_Product_Info_Type">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductTypesId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Info_Type" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Mod_Product_Type_Mod_Product_Info_Type" Member="Mod_Product_Type" ThisKey="ProductTypesId" OtherKey="ID" Type="Mod_Product_Type" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Manufacturer" Member="Mod_Product_Manufacturers">
+    <Type Name="Mod_Product_Manufacturer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Manufacturer_Mod_Product_Info" Member="Mod_Product_Infos" ThisKey="ID" OtherKey="ManufacturerId" Type="Mod_Product_Info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_National" Member="Mod_Product_Nationals">
+    <Type Name="Mod_Product_National">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_National_Mod_Product_City" Member="Mod_Product_Cities" ThisKey="ID" OtherKey="ProductNationalId" Type="Mod_Product_City" />
+      <Association Name="Mod_Product_National_Mod_Product_National_Area" Member="Mod_Product_National_Areas" ThisKey="ID" OtherKey="ProductNationalId" Type="Mod_Product_National_Area" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_National_Area" Member="Mod_Product_National_Areas">
+    <Type Name="Mod_Product_National_Area">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductNationalId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_National_Area_Mod_Product_Info_AreaInNational" Member="Mod_Product_Info_AreaInNationals" ThisKey="ID" OtherKey="ProductNationalAreaId" Type="Mod_Product_Info_AreaInNational" />
+      <Association Name="Mod_Product_National_Mod_Product_National_Area" Member="Mod_Product_National" ThisKey="ProductNationalId" OtherKey="ID" Type="Mod_Product_National" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Office" Member="Mod_Product_Offices">
+    <Type Name="Mod_Product_Office">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_Office_Mod_Product_Info_Office" Member="Mod_Product_Info_Offices" ThisKey="ID" OtherKey="ProductOfficeId" Type="Mod_Product_Info_Office" />
+      <Association Name="Mod_Product_City_Mod_Product_Office" Member="Mod_Product_City" ThisKey="ProductCityId" OtherKey="ID" Type="Mod_Product_City" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Order" Member="Mod_Product_Orders">
+    <Type Name="Mod_Product_Order">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TransportId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomersCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CustomersId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserModifiedId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuantityProduct" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuantityTotal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFriceFirst" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalFrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NguoiDat_FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NguoiDat_Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiDat_Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NguoiDat_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NguoiDat_PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NguoiNhan_FullName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NguoiNhan_Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NguoiNhan_Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="NguoiNhan_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NguoiNhan_PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Order_Mod_Product_Order_Detail" Member="Mod_Product_Order_Details" ThisKey="ID" OtherKey="OrderId" Type="Mod_Product_Order_Detail" />
+      <Association Name="Mod_Product_Payment_Mod_Product_Order" Member="Mod_Product_Payment" ThisKey="PaymentId" OtherKey="ID" Type="Mod_Product_Payment" IsForeignKey="true" />
+      <Association Name="Mod_Product_Transport_Mod_Product_Order" Member="Mod_Product_Transport" ThisKey="TransportId" OtherKey="ID" Type="Mod_Product_Transport" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Order_Details" Member="Mod_Product_Order_Details">
+    <Type Name="Mod_Product_Order_Detail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FriceInput" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Frice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceSale" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShowVAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="VAT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleOffType" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PriceTextSaleView" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalFrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Gifts" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Attach" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Order_Detail" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" />
+      <Association Name="Mod_Product_Order_Mod_Product_Order_Detail" Member="Mod_Product_Order" ThisKey="OrderId" OtherKey="ID" Type="Mod_Product_Order" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Payment" Member="Mod_Product_Payments">
+    <Type Name="Mod_Product_Payment">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Payment_Mod_Product_Order" Member="Mod_Product_Orders" ThisKey="ID" OtherKey="PaymentId" Type="Mod_Product_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Policy" Member="Mod_Product_Policies">
+    <Type Name="Mod_Product_Policy">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Discription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Policy_Mod_Product_Policy_Detail" Member="Mod_Product_Policy_Details" ThisKey="ID" OtherKey="PolicyId" Type="Mod_Product_Policy_Detail" />
+      <Association Name="Mod_Product_Policy_Mod_Product_Policy_ProductInfo" Member="Mod_Product_Policy_ProductInfos" ThisKey="ID" OtherKey="PolicyId" Type="Mod_Product_Policy_ProductInfo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Policy_Details" Member="Mod_Product_Policy_Details">
+    <Type Name="Mod_Product_Policy_Detail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PolicyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ObjectId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Policy_Mod_Product_Policy_Detail" Member="Mod_Product_Policy" ThisKey="PolicyId" OtherKey="ID" Type="Mod_Product_Policy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Policy_ProductInfo" Member="Mod_Product_Policy_ProductInfos">
+    <Type Name="Mod_Product_Policy_ProductInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PolicyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Policy_ProductInfo" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" />
+      <Association Name="Mod_Product_Policy_Mod_Product_Policy_ProductInfo" Member="Mod_Product_Policy" ThisKey="PolicyId" OtherKey="ID" Type="Mod_Product_Policy" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Price_History" Member="Mod_Product_Price_Histories">
+    <Type Name="Mod_Product_Price_History">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BeforePrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AfterPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_Price_History" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_PriceSale_History" Member="Mod_Product_PriceSale_Histories">
+    <Type Name="Mod_Product_PriceSale_History">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="SaleOffType" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SaleOffValue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceSale" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_PriceSale_History" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Properties_Groups" Member="Mod_Product_Properties_Groups">
+    <Type Name="Mod_Product_Properties_Group">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PropertiesListId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PropertiesGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_PropertiesGroups" Member="Mod_Product_PropertiesGroups">
+    <Type Name="Mod_Product_PropertiesGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_Area_PropretyGroup" Member="Mod_Product_Area_PropretyGroups" ThisKey="ID" OtherKey="PropertiesGroupId" Type="Mod_Product_Area_PropretyGroup" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_Groups_PropertiesGroup" Member="Mod_Product_Groups_PropertiesGroups" ThisKey="ID" OtherKey="PropertiesGroupsId" Type="Mod_Product_Groups_PropertiesGroup" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_PropertiesList" Member="Mod_Product_PropertiesLists" ThisKey="ID" OtherKey="PropertiesGroupsId" Type="Mod_Product_PropertiesList" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_PropertiesList" Member="Mod_Product_PropertiesLists">
+    <Type Name="Mod_Product_PropertiesList">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PropertiesGroupsId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ViewOldData" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Mod_Product_PropertiesList_Mod_Product_PropertiesList_Value" Member="Mod_Product_PropertiesList_Values" ThisKey="ID" OtherKey="PropertiesListId" Type="Mod_Product_PropertiesList_Value" />
+      <Association Name="Mod_Product_PropertiesGroup_Mod_Product_PropertiesList" Member="Mod_Product_PropertiesGroup" ThisKey="PropertiesGroupsId" OtherKey="ID" Type="Mod_Product_PropertiesGroup" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_PropertiesList_Values" Member="Mod_Product_PropertiesList_Values">
+    <Type Name="Mod_Product_PropertiesList_Value">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PropertiesListId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Mod_Product_PropertiesList_Mod_Product_PropertiesList_Value" Member="Mod_Product_PropertiesList" ThisKey="PropertiesListId" OtherKey="ID" Type="Mod_Product_PropertiesList" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_RegisterEmail" Member="Mod_Product_RegisterEmails">
+    <Type Name="Mod_Product_RegisterEmail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Allow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_SlideShow" Member="Mod_Product_SlideShows">
+    <Type Name="Mod_Product_SlideShow">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductInfoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UrlReSize" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UrlFull" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Info_Mod_Product_SlideShow" Member="Mod_Product_Info" ThisKey="ProductInfoId" OtherKey="ID" Type="Mod_Product_Info" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Supplier" Member="Mod_Product_Suppliers">
+    <Type Name="Mod_Product_Supplier">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_SurveyGroup" Member="Mod_Product_SurveyGroups">
+    <Type Name="Mod_Product_SurveyGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FinishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_SurveyGroup_Mod_Product_SurveyGroup_Detail" Member="Mod_Product_SurveyGroup_Details" ThisKey="ID" OtherKey="SurveyGroupId" Type="Mod_Product_SurveyGroup_Detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_SurveyGroup_Detail" Member="Mod_Product_SurveyGroup_Details">
+    <Type Name="Mod_Product_SurveyGroup_Detail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SurveyGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Vote" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_SurveyGroup_Mod_Product_SurveyGroup_Detail" Member="Mod_Product_SurveyGroup" ThisKey="SurveyGroupId" OtherKey="ID" Type="Mod_Product_SurveyGroup" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Transport" Member="Mod_Product_Transports">
+    <Type Name="Mod_Product_Transport">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Product_Transport_Mod_Product_Order" Member="Mod_Product_Orders" ThisKey="ID" OtherKey="TransportId" Type="Mod_Product_Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Product_Types" Member="Mod_Product_Types">
+    <Type Name="Mod_Product_Type">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Mod_Product_Type_Mod_Product_Info_Type" Member="Mod_Product_Info_Types" ThisKey="ID" OtherKey="ProductTypesId" Type="Mod_Product_Info_Type" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Province" Member="Mod_Provinces">
+    <Type Name="Mod_Province">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModCountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ModCountryName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Province_Mod_District" Member="Mod_Districts" ThisKey="ID" OtherKey="ModProvinceId" Type="Mod_District" />
+      <Association Name="Mod_Country_Mod_Province" Member="Mod_Country" ThisKey="ModCountryId" OtherKey="ID" Type="Mod_Country" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Tag" Member="Mod_Tags">
+    <Type Name="Mod_Tag">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Keywords" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Test" Member="Mod_Tests">
+    <Type Name="Mod_Test">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Column1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Column2" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Mod_Ward" Member="Mod_Wards">
+    <Type Name="Mod_Ward">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ModDistrictId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DistrictFullName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Mod_Ward_Mod_Product_Agent" Member="Mod_Product_Agents" ThisKey="ID" OtherKey="ModWardId" Type="Mod_Product_Agent" />
+      <Association Name="Mod_District_Mod_Ward" Member="Mod_District" ThisKey="ModDistrictId" OtherKey="ID" Type="Mod_District" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sys_Lang" Member="Sys_Langs">
+    <Type Name="Sys_Lang">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Sys_Lang_Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics" ThisKey="ID" OtherKey="LangID" Type="Mod_Menu_Dynamic" />
+      <Association Name="Sys_Lang_Sys_Page" Member="Sys_Pages" ThisKey="ID" OtherKey="LangID" Type="Sys_Page" />
+      <Association Name="Sys_Lang_Sys_Site" Member="Sys_Sites" ThisKey="ID" OtherKey="LangID" Type="Sys_Site" />
+      <Association Name="Sys_Lang_Sys_Template" Member="Sys_Templates" ThisKey="ID" OtherKey="LangID" Type="Sys_Template" />
+      <Association Name="Sys_Lang_Web_Menu" Member="Web_Menus" ThisKey="ID" OtherKey="LangID" Type="Web_Menu" />
+      <Association Name="Sys_Lang_Web_Resource" Member="Web_Resources" ThisKey="ID" OtherKey="LangID" Type="Web_Resource" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sys_Page" Member="Sys_Pages">
+    <Type Name="Sys_Page">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TemplateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModuleCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MenuID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LinkTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageTitle" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PageKeywords" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Content" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Custom" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViewInMenu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ViewInSiteMap" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChangeCss" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CssFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChangeJs" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="JsFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Sys_Page_Mod_Menu_Dynamic" Member="Mod_Menu_Dynamics" ThisKey="ID" OtherKey="SysPageID" Type="Mod_Menu_Dynamic" />
+      <Association Name="Sys_Page_Sys_Site" Member="Sys_Sites" ThisKey="ID" OtherKey="PageID" Type="Sys_Site" />
+      <Association Name="Sys_Lang_Sys_Page" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+      <Association Name="Sys_Template_Sys_Page" Member="Sys_Template" ThisKey="TemplateID" OtherKey="ID" Type="Sys_Template" IsForeignKey="true" />
+      <Association Name="Web_Menu_Sys_Page" Member="Web_Menu" ThisKey="MenuID" OtherKey="ID" Type="Web_Menu" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sys_Site" Member="Sys_Sites">
+    <Type Name="Sys_Site">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PageID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Custom" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="[Default]" Member="Default" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Sys_Page_Sys_Site" Member="Sys_Page" ThisKey="PageID" OtherKey="ID" Type="Sys_Page" IsForeignKey="true" />
+      <Association Name="Sys_Lang_Sys_Site" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sys_Template" Member="Sys_Templates">
+    <Type Name="Sys_Template">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[File]" Member="File" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Custom" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CssFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="JsFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Sys_Template_Sys_Page" Member="Sys_Pages" ThisKey="ID" OtherKey="TemplateID" Type="Sys_Page" />
+      <Association Name="Sys_Lang_Sys_Template" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Web_Menu" Member="Web_Menus">
+    <Type Name="Web_Menu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductAreaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Custom" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrentCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Activity" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Web_Menu_Mod_Adv" Member="Mod_Advs" ThisKey="ID" OtherKey="MenuID" Type="Mod_Adv" />
+      <Association Name="Web_Menu_Mod_New" Member="Mod_News" ThisKey="ID" OtherKey="MenuID" Type="Mod_New" />
+      <Association Name="Web_Menu_Mod_Product_Info_ProductGroup" Member="Mod_Product_Info_ProductGroups" ThisKey="ID" OtherKey="MenuID" Type="Mod_Product_Info_ProductGroup" />
+      <Association Name="Web_Menu_Sys_Page" Member="Sys_Pages" ThisKey="ID" OtherKey="MenuID" Type="Sys_Page" />
+      <Association Name="Sys_Lang_Web_Menu" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+      <Association Name="Mod_Product_Area_Web_Menu" Member="Mod_Product_Area" ThisKey="ProductAreaId" OtherKey="ID" Type="Mod_Product_Area" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Web_Resource" Member="Web_Resources">
+    <Type Name="Web_Resource">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Sys_Lang_Web_Resource" Member="Sys_Lang" ThisKey="LangID" OtherKey="ID" Type="Sys_Lang" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

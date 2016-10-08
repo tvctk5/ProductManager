@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="VSW.Lib.MVC.CPViewTemplate" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Form</title>
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
+    <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+    <script type="text/javascript" src="/{CPPath}/Content/add/js/cp_v1.js"></script>
+    <script type="text/javascript" src="/{CPPath}/Content/add/js/AjaxRequest.js"></script>
+    <link rel="stylesheet" href="/{CPPath}/Content/add/css/cp_v1.css" type="text/css" />
+    <script type="text/javascript" src="/{CPPath}/Content/media/system/js/mootools-core.js"></script>
+    <script type="text/javascript" src="/{CPPath}/Content/media/system/js/mootools-more.js"></script>
+    <script type="text/javascript" src="/{CPPath}/Content/media/system/js/switcher.js"></script>
+    <link rel="stylesheet" href="/{CPPath}/Content/templates/system/css/system.css" type="text/css" />
+    <link href="/{CPPath}/Content/templates/bluestork/css/template.css" rel="stylesheet"
+        type="text/css" />
+    <script src="/{CPPath}/Content/add/jQuery/jquery-1.8.2.js" type="text/javascript"></script>
+    <!--[if IE 7]>
+    <link href="/{CPPath}/Content/templates/bluestork/css/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if lte IE 6]>
+    <link href="/{CPPath}/Content/templates/bluestork/css/ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/{CPPath}/Content/templates/bluestork/css/rounded.css" />
+    <script type="text/javascript">
+        var CPPath = '{CPPath}';
+        var Sys_SiteID = '<%=VSW.Core.Web.Setting.Sys_SiteID %>';
+
+        document.switcher = null;
+        window.addEvent('domready', function () {
+            toggler = document.id('submenu');
+            element = document.id('tab-document');
+            if (element) {
+                document.switcher = new JSwitcher(toggler, element, { cookieName: toggler.getProperty('class') });
+            }
+        });
+
+        function Close(arg) {
+            if (window.opener)
+                window.opener.refreshPage(arg);
+            else
+                window.parent.refreshPage(arg);
+
+            window.close();
+        }
+
+        function Cancel() {
+            window.close();
+        }
+    </script>
+</head>
+<body style="width: 98% !important;">
+    <%--id="minwidth-body"--%>
+    <form id="vswForm" runat="server">
+    <div class="border">
+        <div class="padding">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server">
+            </asp:ContentPlaceHolder>
+            <div class="clr">
+            </div>
+        </div>
+    </div>
+    <%--<div id="footer">
+            <p class="copyright">
+                <a href="http://www.allproject.net/" target="_blank">AllProject.Net</a> © Coppyright 2012.
+            </p>
+        </div>--%>
+    </form>
+</body>
+</html>

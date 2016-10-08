@@ -1,0 +1,122 @@
+﻿body
+{
+}
+
+/*Tạo hộp box có viền màu xám*/
+
+.box-product-header
+{
+    background: url("../images/add/product/boxheader.gif") repeat-x scroll center top #E2E2E2;
+    border: 1px solid #C5C5C5;
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.box-product
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C5C5C5;
+    border-top-style: none;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+/*Kết thúc Tạo hộp box có viền màu xám*/
+
+/*Tabs*/
+
+/* Wrapper */
+div#wrapper
+{
+    /*margin: 50px;*/
+    padding: 0;
+    border: 1px solid #D3DDED;
+}
+
+/* Style for orderlist */
+ol.tab
+{
+    background: url(../images/add/Product/dot.gif) repeat-x left bottom;
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    position: relative; /*min-height: 50px;*/
+    overflow: hidden;
+}
+
+ol.tab li
+{
+    background: #F2F5FA;
+    border: 1px solid #D3DDED;
+    display: inline;
+    margin-right: 5px;
+    margin-left: 6px !important;
+    margin-top: 6px !important;
+    float: left;
+    min-width: 100px;
+    cursor: pointer;
+}
+ol.tab li:hover
+{
+    border: 1px solid blue;
+    }
+html > body ol.tab li
+{
+    margin-right: 0px;
+    padding: 5px 0;
+    float: left;
+}
+
+ol.tab li.active
+{
+    background: #FFF;
+    border-bottom: 1px solid #FFF;
+    font-weight: bold; /*padding: 5px 10px;*/
+    min-width: 100px;
+    cursor: auto;
+}
+ol.tab span
+{
+    margin: 0;
+    padding: 5px 10px;
+}
+
+div#content
+{
+    /*border-top: 1px solid #D3DDED;*/
+    padding: 10px;
+}
+/*End Tabs*/
+
+/*Cách hiển thị sản phẩm*/
+
+.tblView td
+{
+    padding-left: 10px;
+}
+.tblView td div
+{
+    background-color: #F2F2F2;
+    padding-top: 1px;
+    padding-bottom: 3px;
+    width: 96%;
+}
+.tblView td div div
+{
+    margin-top: -3px;
+    margin-left: -2px;
+    padding: 5px 0px;
+    background-color: white;
+    border: 1px solid #D7D7D7;
+    width: 98%;
+    min-height:200px;
+    cursor:pointer;
+}
+.tblView td div div:hover
+{
+    border: 2px solid #3DA6F7;
+}
+
+/*Kết thúc Cách hiển thị sản phẩm*/
