@@ -16,3 +16,9 @@ G:\Working\ProductManager\Source\VSW.Lib\bin\Debug\VSW.Libv1.1.pdb
 G:\Working\ProductManager\Source\VSW.Lib\obj\Debug\VSW.Lib.csprojResolveAssemblyReference.cache
 G:\Working\ProductManager\Source\VSW.Lib\obj\Debug\VSW.Libv1.1.dll
 G:\Working\ProductManager\Source\VSW.Lib\obj\Debug\VSW.Libv1.1.pdb
+G:\Working\ProductManager\Sources\VSW.Lib\bin\Debug\VSW.Libv1.1.dll.config
+G:\Working\ProductManager\Sources\VSW.Lib\bin\Debug\VSW.Libv1.1.dll
+G:\Working\ProductManager\Sources\VSW.Lib\bin\Debug\VSW.Libv1.1.pdb
+G:\Working\ProductManager\Sources\VSW.Lib\obj\Debug\VSW.Lib.csprojResolveAssemblyReference.cache
+G:\Working\ProductManager\Sources\VSW.Lib\obj\Debug\VSW.Libv1.1.dll
+G:\Working\ProductManager\Sources\VSW.Lib\obj\Debug\VSW.Libv1.1.pdb

@@ -1,1 +1,248 @@
-﻿legend { 	color: #0B55C4; 	font-size: 12px; 	font-weight: bold; }  legend img { 	vertical-align: middle; }  fieldset { 	margin-bottom: 10px; 	border: 1px #ccc solid; 	padding: 5px; 	text-align: left; } td.key { 	background-color: #f6f6f6; 	text-align: right; 	vertical-align: middle; 	color: #666; 	font-weight: bold; 	border-bottom: 1px solid #e9e9e9; 	border-right: 1px solid #e9e9e9; }  /* BEGIN: Poll */ .polls_color_1{ 	background-color: #8D1B1B; 	border: 2px ridge #B22222; }  .polls_color_2{ 	background-color: #6740E1; 	border: 2px ridge #4169E1; }  .polls_color_3{ 	background-color: #8D8D8D; 	border: 2px ridge #D2D2D2; }  .polls_color_4{ 	background-color: #CC8500; 	border: 2px ridge #FFA500; }  .polls_color_5{ 	background-color: #5B781E; 	border: 2px ridge #6B8E23; }  .polls_color_6{ 	background-color: #11B1FF; 	border: 2px ridge #6B8E23; }  .polls_color_7{ 	background-color: #50A0A0; 	border: 2px ridge #6B8E23; }  .polls_color_8{ 	background-color: #73ED03; 	border: 2px ridge #6B8E23; }  /* END: Poll */  .item_lesson_onlinecoure { 	text-align:left; 	padding-left:10px; 	vertical-align:middle; 	height:27px; }  .left-lesson_navi-icon { 	float: left; 	background: url(../images/icon_lesson.gif) no-repeat left center; 	width: 18px; }  .bg_coure { 	background:#F2F2E7 url(../images/bg_learn.gif) no-repeat bottom; }  .bornew_unit { 	border:1px solid #FF9331; 	background-color:#FFF4EA; 	padding:10px; }  .link_xanh1:link { 	color:#0036FF; 	text-decoration: underline; 	text-transform:uppercase; 	font-weight: bold; } .link_xanh1:visited { 	color: #0036FF; 	text-decoration: underline; 	text-transform:uppercase; 	font-weight: bold; } .link_xanh1:hover { 	color:#FD1900; 	text-decoration: none; 	text-transform:uppercase; 	font-weight: bold; } .link_xanh1:active { 	color: #0036FF; 	text-decoration: underline; 	text-transform:uppercase; 	font-weight: bold; }  .lblkeyword { 	padding:5px 0px 5px 10px; }  .tit_find { 	background:url(../images/moi_11.gif) no-repeat bottom; 	height:46px; 	text-align:left; 	vertical-align:middle; 	padding-left:10px; } .tit_unit1 { 	height:46px; 	text-align:left; 	vertical-align:bottom; 	padding-bottom:3px; 	padding-left:10px; } .calendar { 	background:url(../images/calendar.gif) no-repeat center; 	width: 33px; 	height: 20px; 	vertical-align: top; } .search_result { 	background:url(../images/search_banner.gif) no-repeat center; 	width: 540px; 	height: 21px; 	vertical-align: middle; 	padding-left:10px; } /* BEGIN: Form */ fieldset { 	margin-bottom: 10px; 	border: 1px #ccc solid; 	padding: 5px; 	text-align: left; } td.key { 	background-color: #f6f6f6; 	text-align: right; 	vertical-align: middle; 	color: #666; 	font-weight: bold; 	border-bottom: 1px solid #e9e9e9; 	border-right: 1px solid #e9e9e9; } /* END: Form */ .highlight { 	background: #CCCCCC; 	font-weight: bold; } /* BEGIN: paginationControl */ #paginationControl { 	text-align:center; } #paginationControl .current { 	color: #DF0023; 	font-weight: bold; } #paginationControl .disabled { 	color: #848484; } /* END: paginationControl */ /* BEGIN: conment */ .ykien { 	padding-left:20px; 	padding-top:20px; 	font-weight:bold; } .ykientable { 	border-bottom:#cbe8fe solid 1px; 	border-top:#cbe8fe solid 1px; 	border-left:#cbe8fe solid 1px; 	border-right:#cbe8fe solid 1px; 	width:500px; } .tdtable { 	border-bottom:#cbe8fe solid 1px; 	padding-left:5px; } . bodyCm { 	padding-left:5px; } .divtable { 	padding-left:30px; 	padding-top:20px; 	padding-bottom:10px; } .submitCm { 	text-align:center; } .msg { 	text-align:center; 	color:#FF0000; } .baiviet { 	padding-left:10px; 	font-weight:bold; 	color:#666666; } .noidong { 	padding-left:10px; 	padding-bottom:10px; 	padding-top:10px; } .print { 	text-align:right; 	padding-right:10px; } .back { 	text-align:right;  	padding-right:10px; 	padding-top:20px; } .email { 	font-family:Arial; 	font-size:12px; } .required { 	font-family:Arial; 	font-size:11px; } .banin { 	border-bottom:#666666 solid 2px; 	text-align:right; } /* END: conment */    
+legend {
+	color: #0B55C4;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+legend img {
+	vertical-align: middle;
+}
+
+fieldset {
+	margin-bottom: 10px;
+	border: 1px #ccc solid;
+	padding: 5px;
+	text-align: left;
+}
+td.key {
+	background-color: #f6f6f6;
+	text-align: right;
+	vertical-align: middle;
+	color: #666;
+	font-weight: bold;
+	border-bottom: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+}
+
+/* BEGIN: Poll */
+.polls_color_1{
+	background-color: #8D1B1B;
+	border: 2px ridge #B22222;
+}
+
+.polls_color_2{
+	background-color: #6740E1;
+	border: 2px ridge #4169E1;
+}
+
+.polls_color_3{
+	background-color: #8D8D8D;
+	border: 2px ridge #D2D2D2;
+}
+
+.polls_color_4{
+	background-color: #CC8500;
+	border: 2px ridge #FFA500;
+}
+
+.polls_color_5{
+	background-color: #5B781E;
+	border: 2px ridge #6B8E23;
+}
+
+.polls_color_6{
+	background-color: #11B1FF;
+	border: 2px ridge #6B8E23;
+}
+
+.polls_color_7{
+	background-color: #50A0A0;
+	border: 2px ridge #6B8E23;
+}
+
+.polls_color_8{
+	background-color: #73ED03;
+	border: 2px ridge #6B8E23;
+}
+
+/* END: Poll */
+
+.item_lesson_onlinecoure {
+	text-align:left;
+	padding-left:10px;
+	vertical-align:middle;
+	height:27px;
+}
+
+.left-lesson_navi-icon {
+	float: left;
+	background: url(../images/icon_lesson.gif) no-repeat left center;
+	width: 18px;
+}
+
+.bg_coure {
+	background:#F2F2E7 url(../images/bg_learn.gif) no-repeat bottom;
+}
+
+.bornew_unit {
+	border:1px solid #FF9331;
+	background-color:#FFF4EA;
+	padding:10px;
+}
+
+.link_xanh1:link {
+	color:#0036FF;
+	text-decoration: underline;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+.link_xanh1:visited {
+	color: #0036FF;
+	text-decoration: underline;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+.link_xanh1:hover {
+	color:#FD1900;
+	text-decoration: none;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+.link_xanh1:active {
+	color: #0036FF;
+	text-decoration: underline;
+	text-transform:uppercase;
+	font-weight: bold;
+}
+
+.lblkeyword {
+	padding:5px 0px 5px 10px;
+}
+
+.tit_find {
+	background:url(../images/moi_11.gif) no-repeat bottom;
+	height:46px;
+	text-align:left;
+	vertical-align:middle;
+	padding-left:10px;
+}
+.tit_unit1 {
+	height:46px;
+	text-align:left;
+	vertical-align:bottom;
+	padding-bottom:3px;
+	padding-left:10px;
+}
+.calendar {
+	background:url(../images/calendar.gif) no-repeat center;
+	width: 33px;
+	height: 20px;
+	vertical-align: top;
+}
+.search_result {
+	background:url(../images/search_banner.gif) no-repeat center;
+	width: 540px;
+	height: 21px;
+	vertical-align: middle;
+	padding-left:10px;
+}
+/* BEGIN: Form */
+fieldset {
+	margin-bottom: 10px;
+	border: 1px #ccc solid;
+	padding: 5px;
+	text-align: left;
+}
+td.key {
+	background-color: #f6f6f6;
+	text-align: right;
+	vertical-align: middle;
+	color: #666;
+	font-weight: bold;
+	border-bottom: 1px solid #e9e9e9;
+	border-right: 1px solid #e9e9e9;
+}
+/* END: Form */
+.highlight {
+	background: #CCCCCC;
+	font-weight: bold;
+}
+/* BEGIN: paginationControl */
+#paginationControl {
+	text-align:center;
+}
+#paginationControl .current {
+	color: #DF0023;
+	font-weight: bold;
+}
+#paginationControl .disabled {
+	color: #848484;
+}
+/* END: paginationControl */
+/* BEGIN: conment */
+.ykien {
+	padding-left:20px;
+	padding-top:20px;
+	font-weight:bold;
+}
+.ykientable {
+	border-bottom:#cbe8fe solid 1px;
+	border-top:#cbe8fe solid 1px;
+	border-left:#cbe8fe solid 1px;
+	border-right:#cbe8fe solid 1px;
+	width:500px;
+}
+.tdtable {
+	border-bottom:#cbe8fe solid 1px;
+	padding-left:5px;
+}
+. bodyCm {
+	padding-left:5px;
+}
+.divtable {
+	padding-left:30px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.submitCm {
+	text-align:center;
+}
+.msg {
+	text-align:center;
+	color:#FF0000;
+}
+.baiviet {
+	padding-left:10px;
+	font-weight:bold;
+	color:#666666;
+}
+.noidong {
+	padding-left:10px;
+	padding-bottom:10px;
+	padding-top:10px;
+}
+.print {
+	text-align:right;
+	padding-right:10px;
+}
+.back {
+	text-align:right; 
+	padding-right:10px;
+	padding-top:20px;
+}
+.email {
+	font-family:Arial;
+	font-size:12px;
+}
+.required {
+	font-family:Arial;
+	font-size:11px;
+}
+.banin {
+	border-bottom:#666666 solid 2px;
+	text-align:right;
+}
+/* END: conment */
+
+
+

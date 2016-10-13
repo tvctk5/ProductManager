@@ -23,7 +23,7 @@ body{
 .boxsearch{width:100%; height:36px}
 .s1{width:920px; float:left; overflow:hidden}
 .s2{width:80px; float:left; overflow:hidden}
-.box-topmenu{width:100%;font-size:11px;	padding:10px 0	}
+.box-topmenu{	width:100%px;	font-size:11px;	padding:10px 0	}
 .box-topmenu a{color:#fff; text-decoration:none; border:0}
 .box-topmenu img{border:0}
 .pr{padding-right:10px}

@@ -20,3 +20,10 @@ G:\Working\ProductManager\Source\VSW.Website\bin\VSW.Libv1.1.pdb
 G:\Working\ProductManager\Source\VSW.Website\obj\Debug\VSW.Website.csprojResolveAssemblyReference.cache
 G:\Working\ProductManager\Source\VSW.Website\obj\Debug\VSW.Websitev1.1.dll
 G:\Working\ProductManager\Source\VSW.Website\obj\Debug\VSW.Websitev1.1.pdb
+G:\Working\ProductManager\Sources\VSW.Website\bin\VSW.Websitev1.1.dll
+G:\Working\ProductManager\Sources\VSW.Website\bin\VSW.Websitev1.1.pdb
+G:\Working\ProductManager\Sources\VSW.Website\bin\VSW.Libv1.1.dll
+G:\Working\ProductManager\Sources\VSW.Website\bin\VSW.Libv1.1.pdb
+G:\Working\ProductManager\Sources\VSW.Website\obj\Debug\VSW.Website.csprojResolveAssemblyReference.cache
+G:\Working\ProductManager\Sources\VSW.Website\obj\Debug\VSW.Websitev1.1.dll
+G:\Working\ProductManager\Sources\VSW.Website\obj\Debug\VSW.Websitev1.1.pdb

@@ -14,3 +14,8 @@ G:\Working\ProductManager\Source\Lib\bin\Lib.pdb
 G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.csprojResolveAssemblyReference.cache
 G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.dll
 G:\Working\ProductManager\Source\Lib\obj\Debug\Lib.pdb
+G:\Working\ProductManager\Sources\Lib\bin\Lib.dll
+G:\Working\ProductManager\Sources\Lib\bin\Lib.pdb
+G:\Working\ProductManager\Sources\Lib\obj\Debug\Lib.csprojResolveAssemblyReference.cache
+G:\Working\ProductManager\Sources\Lib\obj\Debug\Lib.dll
+G:\Working\ProductManager\Sources\Lib\obj\Debug\Lib.pdb
