@@ -11,8 +11,11 @@ namespace VSW.Lib.Controllers
         [VSW.Core.MVC.PropertyInfo("Chuyên mục", "Type|News")]
         public int MenuID;
 
-        [VSW.Core.MVC.PropertyInfo("Loại tin")]
-        public string Type = string.Empty;
+        //[VSW.Core.MVC.PropertyInfo("Loại tin", "ConfigKey|Mod.NewsType")]/*,SelectType|Checkbox*/
+        //public string Type = string.Empty;
+
+        [VSW.Core.MVC.PropertyInfo("Loại slide show", "ConfigKey|Mod.NewsSlide")]
+        public int SlideType = 0;
 
         [VSW.Core.MVC.PropertyInfo("Số lượng")]
         public int PageSize = 5;
@@ -30,12 +33,14 @@ namespace VSW.Lib.Controllers
             }
 
             ViewBag.Data = ModNewsService.Instance.CreateQuery()
-                                    .Where(o => o.Activity == true)
+                                    .Where(o => o.Activity == true && o.SlideType == SlideType)
                                     .WhereIn(MenuID > 0, o => o.MenuID, WebMenuService.Instance.GetChildIDForWeb_Cache("News", MenuID, ViewPage.CurrentLang.ID))
                                     .OrderByDesc(o => o.Order)
                                     .Take(PageSize)
                                     .ToList_Cache();
             ViewBag.Title = Title;
+            ViewBag.CssForModule = getCssForModule(ModuleId, CssForModule);
+            ViewBag.JsForModule = getJsForModule(ModuleId, JsForModule);
         }
     }
 }

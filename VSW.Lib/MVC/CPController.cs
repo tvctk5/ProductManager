@@ -60,6 +60,16 @@ namespace VSW.Lib.MVC
             return type;
         }
 
+        protected int GetValueRadioButton(int[] arrValue)
+        {
+            int value = 0;
+
+            for (int i = 0; arrValue != null && i < arrValue.Length; i++)
+                if (arrValue[i] >= 0) value ^= arrValue[i];
+
+            return value;
+        }
+
         protected void SaveRedirect()
         {
             CPViewPage.SetMessage("Thông tin đã cập nhật.");

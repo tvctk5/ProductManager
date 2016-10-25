@@ -17,6 +17,9 @@ namespace VSW.Lib.Models
 
         [DataInfo]
         public string Type { get; set; }
+        
+        [DataInfo]
+        public int SlideType { get; set; }
 
         [DataInfo]
         public int State { get; set; }

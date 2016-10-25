@@ -185,3 +185,892 @@ StackTrace :    at System.Web.UI.Page.set_Title(String value)
    at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
 
 
+Time : 15/10/2016 03:34:56
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The call is ambiguous between the following methods or properties: 'System.IO.TextWriter.Write(string, params object[])' and 'System.IO.TextWriter.Write(char[])'
+Source : Anonymously Hosted DynamicMethods Assembly
+TargetSite : Void CallSite.Target(System.Runtime.CompilerServices.Closure, System.Runtime.CompilerServices.CallSite, System.Web.UI.HtmlTextWriter, System.Object)
+StackTrace :    at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at ASP.views_cnews_dichvu_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\CNews\DichVu.ascx:line 10
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 03:37:02
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The call is ambiguous between the following methods or properties: 'System.IO.TextWriter.Write(string, params object[])' and 'System.IO.TextWriter.Write(char[])'
+Source : Anonymously Hosted DynamicMethods Assembly
+TargetSite : Void CallSite.Target(System.Runtime.CompilerServices.Closure, System.Runtime.CompilerServices.CallSite, System.Web.UI.HtmlTextWriter, System.Object)
+StackTrace :    at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at ASP.views_cnews_news_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\CNews\News.ascx:line 10
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 03:51:09
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The control 'CCategory:vswCategoryHomePage' not set Layout
+Source : VSW.Corev1.1
+TargetSite : Void (System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 03:52:08
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The control 'CCategory:vswCategoryHomePage' not set Layout
+Source : VSW.Corev1.1
+TargetSite : Void (System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 04:30:24
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The call is ambiguous between the following methods or properties: 'System.IO.TextWriter.Write(string, params object[])' and 'System.IO.TextWriter.Write(char[])'
+Source : Anonymously Hosted DynamicMethods Assembly
+TargetSite : Void CallSite.Target(System.Runtime.CompilerServices.Closure, System.Runtime.CompilerServices.CallSite, System.Web.UI.HtmlTextWriter, System.Object)
+StackTrace :    at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at ASP.views_ccategory_homepage_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\CCategory\HomePage.ascx:line 2
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 04:31:32
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The call is ambiguous between the following methods or properties: 'System.IO.TextWriter.Write(string, params object[])' and 'System.IO.TextWriter.Write(char[])'
+Source : Anonymously Hosted DynamicMethods Assembly
+TargetSite : Void CallSite.Target(System.Runtime.CompilerServices.Closure, System.Runtime.CompilerServices.CallSite, System.Web.UI.HtmlTextWriter, System.Object)
+StackTrace :    at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at ASP.views_ccategory_homepage_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\CCategory\HomePage.ascx:line 2
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 08:49:35
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : Object reference not set to an instance of an object.
+Source : VSW.Libv1.1
+TargetSite : VSW.Lib.Models.SysPageEntity get_CurrentPage()
+StackTrace :    at VSW.Lib.MVC.ViewPage.get_CurrentPage()
+   at VSW.Lib.MVC.ViewPage.GetURL(Int32 MenuID, String Code)
+   at ASP.cp_views_modproduct_order_add_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModProduct_Order\Add.ascx:line 25
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.cp_views_shared_main_master.__RendervswForm(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\CP\Views\Shared\Main.Master:line 81
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 08:49:57
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : Object reference not set to an instance of an object.
+Source : VSW.Libv1.1
+TargetSite : VSW.Lib.Models.SysPageEntity get_CurrentPage()
+StackTrace :    at VSW.Lib.MVC.ViewPage.get_CurrentPage()
+   at VSW.Lib.MVC.ViewPage.GetURL(Int32 MenuID, String Code)
+   at ASP.cp_views_modproduct_order_add_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModProduct_Order\Add.ascx:line 25
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at ASP.cp_views_shared_main_master.__RendervswForm(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\CP\Views\Shared\Main.Master:line 81
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   at System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 09:32:17
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModNews\Add.ascx(182): error CS1061: 'VSW.Lib.Models.ModNewsEntity' does not contain a definition for 'SlideType' and no extension method 'SlideType' accepting a first argument of type 'VSW.Lib.Models.ModNewsEntity' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPageBase.(String )
+   at VSW.Core.MVC.CPViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.cp_default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.42b4d82d.1nnrhnql.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 15/10/2016 10:58:28
+IP : 127.0.0.1
+URL : http://product.vn/CP/Design/EditTemplate.aspx?id=1
+Message : Content controls have to be top-level controls in a content page or a nested master page that references a master page.
+Source : System.Web
+TargetSite : System.Web.UI.MasterPage CreateMaster(System.Web.UI.TemplateControl, System.Web.HttpContext, System.Web.VirtualPath, System.Collections.IDictionary)
+StackTrace :    at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 10:58:37
+IP : 127.0.0.1
+URL : http://product.vn/CP/Design/EditTemplate.aspx?id=1
+Message : Content controls have to be top-level controls in a content page or a nested master page that references a master page.
+Source : System.Web
+TargetSite : System.Web.UI.MasterPage CreateMaster(System.Web.UI.TemplateControl, System.Web.HttpContext, System.Web.VirtualPath, System.Collections.IDictionary)
+StackTrace :    at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 11:22:13
+IP : 127.0.0.1
+URL : http://product.vn/CP/Design/EditTemplate.aspx?id=1
+Message : Content controls have to be top-level controls in a content page or a nested master page that references a master page.
+Source : System.Web
+TargetSite : System.Web.UI.MasterPage CreateMaster(System.Web.UI.TemplateControl, System.Web.HttpContext, System.Web.VirtualPath, System.Collections.IDictionary)
+StackTrace :    at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 15/10/2016 11:22:23
+IP : 127.0.0.1
+URL : http://product.vn/CP/Design/EditTemplate.aspx?id=1
+Message : Content controls have to be top-level controls in a content page or a nested master page that references a master page.
+Source : System.Web
+TargetSite : System.Web.UI.MasterPage CreateMaster(System.Web.UI.TemplateControl, System.Web.HttpContext, System.Web.VirtualPath, System.Collections.IDictionary)
+StackTrace :    at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.Page.get_Master()
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 18/10/2016 10:41:54
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 18/10/2016 10:41:58
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 22/10/2016 11:03:14
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 22/10/2016 11:03:36
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 23/10/2016 08:40:40
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 23/10/2016 08:41:02
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault() in G:\Working\ProductManager\Sources\VSW.Lib\Models\SysSiteModel.cs:line 88
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.nai2csqk.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 24/10/2016 02:39:32
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The file '~/Views/CAdv/Slide.ascx' not found
+Source : VSW.Corev1.1
+TargetSite : Void (System.Web.UI.Control, System.String, System.String, System.String, System.String, System.String)
+StackTrace :    at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 02:53:03
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModNews\Add.ascx(174): error CS1061: 'VSW.Lib.Models.ModNewsEntity' does not contain a definition for 'Type_None' and no extension method 'Type_None' accepting a first argument of type 'VSW.Lib.Models.ModNewsEntity' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPageBase.(String )
+   at VSW.Core.MVC.CPViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.cp_default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.42b4d82d.idfkjs0z.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 24/10/2016 02:54:01
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModNews\Add.ascx(174): error CS1061: 'VSW.Lib.Models.ModNewsEntity' does not contain a definition for 'Type_None' and no extension method 'Type_None' accepting a first argument of type 'VSW.Lib.Models.ModNewsEntity' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPageBase.(String )
+   at VSW.Core.MVC.CPViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.cp_default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.42b4d82d.idfkjs0z.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 24/10/2016 02:56:14
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=22835f672b975ed8&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 02:56:14
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=22835f672b975ed8&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 02:56:15
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Files&currentFolder=/Products/&langCode=vi&hash=22835f672b975ed8&FileName=Empty.gif&fileHash=201208071452-2
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 03:32:08
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : Object reference not set to an instance of an object.
+Source : App_Web_detail.ascx.91956a24.rdpzh-gv
+TargetSite : Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+StackTrace :    at ASP.views_mnews_detail_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\MNews\Detail.ascx:line 67
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 03:33:36
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : Object reference not set to an instance of an object.
+Source : App_Web_detail.ascx.91956a24.rdpzh-gv
+TargetSite : Void __Render__control1(System.Web.UI.HtmlTextWriter, System.Web.UI.Control)
+StackTrace :    at ASP.views_mnews_detail_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\MNews\Detail.ascx:line 67
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 24/10/2016 04:01:21
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : The call is ambiguous between the following methods or properties: 'System.IO.TextWriter.Write(string, params object[])' and 'System.IO.TextWriter.Write(char[])'
+Source : Anonymously Hosted DynamicMethods Assembly
+TargetSite : Void CallSite.Target(System.Runtime.CompilerServices.Closure, System.Runtime.CompilerServices.CallSite, System.Web.UI.HtmlTextWriter, System.Object)
+StackTrace :    at CallSite.Target(Closure , CallSite , HtmlTextWriter , Object )
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at ASP.views_ccategory_homepage_ascx.__Render__control1(HtmlTextWriter __w, Control parameterContainer) in g:\Working\ProductManager\Sources\VSW.Website\Views\CCategory\HomePage.ascx:line 6
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at System.Web.UI.Control.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   at System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   at VSW.Core.MVC.ViewPageBase.Render(HtmlTextWriter writer)
+   at System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   at System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 25/10/2016 01:29:18
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault()
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.stktsx8m.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.stktsx8m.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 25/10/2016 01:29:41
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+SQLText : SELECT TOP 1 * FROM [Sys_Site] WHERE ([Default]=1)
+SQLParameters : 
+Source : VSW.Corev1.1
+TargetSite : System.Data.DataSet ExecuteDataSet(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteDataSet(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQLCmd.ExecuteDataTable(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Models.ServiceBase`1.ExecuteDataTable(String SPName, Object[] Params)
+   at VSW.Core.Models.DBQuery`1.ToList()
+   at VSW.Core.Models.DBQuery`1.ToList_Cache()
+   at VSW.Core.Models.DBQuery`1.ToSingle_Cache()
+   at VSW.Lib.Models.SysSiteService.VSW_Core_GetDefault()
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.stktsx8m.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.stktsx8m.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 25/10/2016 03:05:08
+IP : 127.0.0.1
+URL : http://product.vn/CP/Content/ckfinder/core/connector/aspx/connector.aspx?command=Thumbnail&type=Images&currentFolder=/Adv/&langCode=vi&hash=2132c236ca0a11b5&FileName=banner.gif&fileHash=201205272040-54
+Message : Attempt by security transparent method 'ImageManipulation.Quantizer+Color32..ctor(IntPtr)' to access security critical method 'System.Runtime.InteropServices.Marshal.PtrToStructure(IntPtr, System.Type)' failed.
+
+Assembly 'CKFinder, Version=2.2.0.1326, Culture=neutral, PublicKeyToken=579e7adc719a1423' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model.  Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+Source : CKFinder
+TargetSite : Void .ctor(IntPtr)
+StackTrace :    at ImageManipulation.Quantizer.Color32..ctor(IntPtr pSourcePixel)
+   at ImageManipulation.Quantizer.FirstPass(BitmapData sourceData, Int32 width, Int32 height)
+   at ImageManipulation.Quantizer.Quantize(Image source)
+   at CKFinder.Connector.ImageTools.ResizeImage(String sourceFile, String targetFile, Int32 maxWidth, Int32 maxHeight, Boolean preserverAspectRatio, Int32 quality)
+   at CKFinder.Connector.CommandHandlers.ThumbnailCommandHandler.SendResponse(HttpResponse response)
+   at CKFinder.Connector.Connector.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+
+Time : 25/10/2016 03:15:50
+IP : 127.0.0.1
+URL : http://product.vn/default.aspx
+Message : g:\Working\ProductManager\Sources\VSW.Website\Views\CCategory\HomePage.ascx(22): error CS1061: 'VSW.Lib.Models.SysPageEntity' does not contain a definition for 'File' and no extension method 'File' accepting a first argument of type 'VSW.Lib.Models.SysPageEntity' could be found (are you missing a using directive or an assembly reference?)
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPage.(Control , String , String , String , String , String )
+   at VSW.Core.MVC.ViewPage.(Control , String )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.(Control )
+   at VSW.Core.MVC.ViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.ldsje2wt.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 25/10/2016 03:54:16
+IP : 127.0.0.1
+URL : http://product.vn/Default.aspx
+Message : The file '~/Views/MProduct_Info/Index.ascx' not found
+Source : VSW.Corev1.1
+TargetSite : Void (System.String)
+StackTrace :    at VSW.Core.MVC.ViewPageBase.(String )
+   at VSW.Core.MVC.ViewPage.InitializeCulture()
+   at ASP.default_aspx.__BuildControlTree(default_aspx __ctrl) in g:\Working\ProductManager\Sources\VSW.Website\Default.aspx:line 1
+   at ASP.default_aspx.FrameworkInitialize() in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.ldsje2wt.0.cs:line 0
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.cdcab7d2.ldsje2wt.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+
+Time : 26/10/2016 03:20:47
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Mod_Menu_Dynamic_Sys_Page". The conflict occurred in database "ProductManager", table "dbo.Sys_Page", column 'ID'.
+The statement has been terminated.
+SQLText : INSERT INTO [Mod_Menu_Dynamic]([ModMenuTypeID], [ParentID], [LangID], [SysPageID], [Name], [Url], [IconUrl], [ShowPopup], [Order], [Activity], [CreateDate]) VALUES(@ModMenuTypeID, @ParentID, @LangID, @SysPageID, @Name, @Url, @IconUrl, @ShowPopup, @Order, @Activity, @CreateDate); SELECT @@IDENTITY
+SQLParameters : @ModMenuTypeID=1, @ParentID=0, @LangID=1, @SysPageID=0, @Name=Giới thiệu, @Url=, @IconUrl=, @ShowPopup=False, @Order=1, @Activity=True, @CreateDate=26/10/2016 3:20:47 SA, 
+Source : VSW.Corev1.1
+TargetSite : VSW.Core.Global.Object ExecuteScalar(System.String, System.String, System.Object[])
+StackTrace :    at VSW.Core.Data.SQLCmd.ExecuteScalar(String ConnectionString, String SPName, Object[] Params)
+   at VSW.Core.Data.SQL.Insert(String ConnectionString, String TableName, Boolean Identity, Object[] Fields)
+   at VSW.Core.Models.ServiceBase`1.Insert(Boolean Identity, Object[] Fields)
+   at VSW.Core.Models.ServiceBase`1.
+(T1 , String[] , String[] , Dictionary`2 )
+   at VSW.Core.Models.ServiceBase`1.Save(T1 entity, Expression`1 PropertyExec, Expression`1 PropertyNotExec, Dictionary`2 NewFields)
+   at VSW.Core.Models.ServiceBase`1.Save(T1 entity)
+   at VSW.Lib.CPControllers.ModMenu_DynamicController.ValidSave(ModMenu_DynamicModel model)
+
+
+Time : 26/10/2016 03:26:01
+IP : 127.0.0.1
+URL : http://product.vn/CP/Default.aspx
+Message : g:\Working\ProductManager\Sources\VSW.Website\CP\Views\ModMenu_Dynamic\Add.ascx(80): error CS1502: The best overloaded method match for 'VSW.Lib.Global.Utils.ShowDDLTrangLienKet(int, int)' has some invalid arguments
+Source : System.Web
+TargetSite : System.CodeDom.Compiler.CompilerResults Compile()
+StackTrace :    at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.UI.TemplateControl.LoadControl(VirtualPath virtualPath)
+   at VSW.Core.MVC.ViewPageBase.(String )
+   at VSW.Core.MVC.CPViewPage.OnLoad(EventArgs e)
+   at System.Web.UI.Control.LoadRecursive()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.cp_default_aspx.ProcessRequest(HttpContext context) in c:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\f0baf886\b6e84d30\App_Web_default.aspx.42b4d82d._oseeaby.0.cs:line 0
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+

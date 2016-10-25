@@ -9,30 +9,38 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-  <form id="vswForm" runat="server">
-     <div id="vsw_container">
-
-        <VSW:StaticControl Code="CAdv" VSWID="vswBanner" runat="server"/>
-
-        <VSW:StaticControl Code="CMenu" VSWID="vswMenuTop" runat="server"/>
-
-        <div>
-            <VSW:StaticControl Code="CAdv" VSWID="vswSlide" runat="server" />
-
-            <div style="clear:both"></div>
-
-            <div style="float:left;width:60%">
-                <VSW:DynamicControl Code="Main" runat="server" />
+    <form id="vswForm" runat="server">
+    <div id="vsw_container">
+        <div class="header-top">
+            <div class="wrap">
+                <%--<VSW:StaticControl ID="StaticControl1" Code="CAdv" VSWID="vswBanner" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl1" Code="Banner" runat="server" />
             </div>
-            
-            <div style="float:left;width:40%">
-               <VSW:DynamicControl Code="Right" runat="server" />
-            </div>
-
         </div>
-
-        <div style="clear:both"></div>
+        <div class="header-bottom">
+            <div class="wrap">
+                <!-- start header menu -->
+                <%--<VSW:StaticControl ID="StaticControl2" Code="CMenu" VSWID="vswMenuTop" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl2" Code="Menu" runat="server" />
+            </div>
+        </div>
+    <div class="index-banner">
+        <%--<VSW:StaticControl ID="StaticControl3" Code="CAdv" VSWID="vswSlide" runat="server" />--%>
+        <VSW:DynamicControl ID="DynamicControl3" Code="Slide" runat="server" />
     </div>
-  </form>
+    <div class="main">
+        <div class="wrap">           
+            <VSW:DynamicControl ID="DynamicControl4" Code="Main" runat="server" />
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <VSW:DynamicControl ID="DynamicControl5" Code="Footer" runat="server" />
+        </div>
+    </div>
+        <div style="clear: both">
+        </div>
+    </div>
+    </form>
 </body>
 </html>

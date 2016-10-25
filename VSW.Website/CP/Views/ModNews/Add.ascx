@@ -162,7 +162,7 @@
                                     <%= Utils.ShowRadioByConfigkey("Mod.NewsState", "ArrState", item.State)%>
                                 </td>
                             </tr>
-                            <tr>
+                            <%--<tr>
                                 <td align="center" style="text-align: center" class="key">
                                     Loại tin
                                 </td>
@@ -170,6 +170,25 @@
                             <tr>
                                 <td>
                                     <%= Utils.ShowCheckBoxByConfigkey("Mod.NewsType", "ArrType", item.Type)%>
+
+                                    <input type="checkbox" value="1" name="Type_None" <%= item.Type_None ? "checked" : "" %> /> Tin thường 
+                                    <input type="hidden" value="0" name="Type_None" />
+                            
+                                    <input type="checkbox" value="1" name="Type_New" <%= item.Type_New ? "checked" : "" %> /> Mới 
+                                    <input type="hidden" value="0" name="Type_New" />
+                            
+                                    <input type="checkbox" value="1" name="Type_Hot" <%= item.Type_Hot ? "checked" : "" %> /> Nổi bật 
+                                    <input type="hidden" value="0" name="Type_Hot" />
+                                </td>
+                            </tr>--%>
+                            <tr>
+                                <td align="center" style="text-align: center" class="key">
+                                    Slide show
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <%= Utils.ShowRadioByConfigkey("Mod.NewsSlide", "ArrSlideType", item.SlideType)%>
                                 </td>
                             </tr>
                             <%if (CPViewPage.UserPermissions.Approve)

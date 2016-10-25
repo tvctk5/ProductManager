@@ -104,6 +104,7 @@
     </Compile>
     <Compile Include="Controllers\CModuleToolController.cs" />
     <Compile Include="Controllers\CFeedbackController.cs" />
+    <Compile Include="Controllers\CCategoryController.cs" />
     <Compile Include="Controllers\CParametersController.cs" />
     <Compile Include="Controllers\CProduct_Info_CompareController.cs" />
     <Compile Include="Controllers\CProduct_SurveyGroupController.cs" />

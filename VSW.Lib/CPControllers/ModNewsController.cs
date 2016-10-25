@@ -126,6 +126,9 @@ namespace VSW.Lib.CPControllers
                 // Cập nhật loại tin
                 item.Type = GetNewsType(model.ArrType);
 
+                // Cập nhật loại slide
+                item.SlideType = GetValueRadioButton(model.ArrSlideType);
+
                 try
                 {
                     //save
@@ -172,5 +175,6 @@ namespace VSW.Lib.CPControllers
 
         public int[] ArrState { get; set; }
         public int[] ArrType { get; set; }
+        public int[] ArrSlideType { get; set; }
     }
 }

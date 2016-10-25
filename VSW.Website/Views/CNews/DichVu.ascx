@@ -1,6 +1,10 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="VSW.Lib.MVC.ViewControl" %>
 
 <%
+    // Không hiển thị module
+    if (!ViewBag.ShowModule)
+        return;
+        
     var listItem = ViewBag.Data as List<ModNewsEntity>;
 %>
 

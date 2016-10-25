@@ -5,7 +5,7 @@ using VSW.Lib.Models;
 
 namespace VSW.Lib.Controllers
 {
-    [ModuleInfo(Name = "ĐK : Quảng cáo/Liên kết", Code = "CAdv", IsControl = true, Order = 2)]
+    [ModuleInfo(Name = "ĐK : Banner/ Slideshow/ Quảng cáo/ Liên kết", Code = "CAdv", IsControl = true, Order = 2)]
     public class CAdvController : Controller
     {
         [VSW.Core.MVC.PropertyInfo("Chuyên mục", "Type|Adv")]

@@ -43,6 +43,9 @@ namespace VSW.Lib.Models
         public string CurrentCode { get; set; }
 
         [DataInfo]
+        public string File { get; set; }
+
+        [DataInfo]
         public bool Activity { get; set; }
 
         #endregion
