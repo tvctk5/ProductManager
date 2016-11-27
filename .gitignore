@@ -95,4 +95,22 @@ VSW.Lib\bin*/
 VSW.Website\bin*/
 ProductManager.suo
 
-VSW.Website\aspnet_client\system_web\4_0_30319\crystalreportviewers13\ActiveXControls*/
+VSW.Website\aspnet_client*/
+VSW.Website\obj*/
+
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.exe
+*.aps
+*.ncb
+*.bak
+*.cache
+[Bb]in
+[Dd]ebug*/
+*.lib
+obj/
+[Rr]elease*/
+[Tt]est[Rr]esult*
+#Nuget packages folder
+packages/
