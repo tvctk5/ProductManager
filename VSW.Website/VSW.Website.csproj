@@ -236,7 +236,6 @@
     <Content Include="bin\VSW.Libv1.1.dll" />
     <Content Include="bin\VSW.Websitev1.1.dll" />
     <Content Include="Content\css\default.css" />
-    <Content Include="Content\modules\css\p15_.css" />
     <Content Include="Content\html\images\bg.jpg" />
     <Content Include="Content\html\images\bulet.png" />
     <Content Include="Content\html\images\en.png" />
@@ -252,7 +251,6 @@
     <Content Include="Content\images\title_bg_final.jpg" />
     <Content Include="Content\images\title_bg_final_v1.jpg" />
     <Content Include="Content\js\default.js" />
-    <Content Include="Content\modules\js\p15_.js" />
     <Content Include="Content\plugins\adidas-pack\css\default.css" />
     <Content Include="Content\plugins\adidas-pack\css\etalage.css" />
     <Content Include="Content\plugins\adidas-pack\css\form.css" />
@@ -1286,6 +1284,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\modules\css\" />
+    <Folder Include="Content\modules\js\" />
     <Folder Include="CP\Content\add\css\images\" />
     <Folder Include="CP\Content\add\img\htooltip\" />
     <Folder Include="CP\Content\add\img\images\" />
