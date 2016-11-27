@@ -39,8 +39,6 @@ namespace VSW.Lib.Controllers
                                     .Take(PageSize)
                                     .ToList_Cache();
             ViewBag.Title = Title;
-            ViewBag.CssForModule = getCssForModule(ModuleId, CssForModule);
-            ViewBag.JsForModule = getJsForModule(ModuleId, JsForModule);
         }
     }
 }

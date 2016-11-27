@@ -35,9 +35,6 @@ namespace VSW.Lib.Controllers
             
             // Thông tin cần thiết của module
             ViewBag.ModuleId = ModuleId;
-            ViewBag.CssForModule = getCssForModule(ModuleId, CssForModule);
-            ViewBag.JsForModule = getJsForModule(ModuleId, JsForModule);
-
 
             SysPageEntity _Page = SysPageService.Instance.GetByID_Cache(PageID);
 

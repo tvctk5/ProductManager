@@ -28,8 +28,6 @@ namespace VSW.Lib.Controllers
 
             // Thông tin cần thiết của module
             ViewBag.ModuleId = ModuleId;
-            ViewBag.CssForModule = getCssForModule(ModuleId, CssForModule);
-            ViewBag.JsForModule = getJsForModule(ModuleId, JsForModule);
             ViewBag.Title = Title;
             ViewBag.ModuleId = ModuleId;
 

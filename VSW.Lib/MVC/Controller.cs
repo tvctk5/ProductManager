@@ -13,11 +13,11 @@ namespace VSW.Lib.MVC
         [VSW.Core.MVC.PropertyInfo("Hiển thị Module", "ConfigKey|Mod.YesNo")]
         public int ShowModule = 1;
 
-        [VSW.Core.MVC.PropertyInfo("Css cho Module", "Mutiline|TRUE")]
-        public string CssForModule;
+        //[VSW.Core.MVC.PropertyInfo("Css cho Module", "Mutiline|TRUE")]
+        //public string CssForModule;
 
-        [VSW.Core.MVC.PropertyInfo("Js cho Module", "Mutiline|TRUE")]
-        public string JsForModule;
+        //[VSW.Core.MVC.PropertyInfo("Js cho Module", "Mutiline|TRUE")]
+        //public string JsForModule;
 
         public Controller()
         {
