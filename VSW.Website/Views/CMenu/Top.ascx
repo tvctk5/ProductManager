@@ -594,8 +594,6 @@
 				<li><a class="color11" href="#">Originals</a></li>
 				<li><a class="color12" href="#">Basketball</a></li>--%>
 		   </ul>
-
-    <%= ViewBag.CssForModule%>
 </div>
 		 <%--  <div class="clear"></div>
      	</div>--%>
