@@ -36,3 +36,4 @@ ul.navi-main {
     margin-top: 10px !important;
 }
 .clearfix{/*line-height:1px;*/    display: inline-block;}
+.title-background{background-image:url('../images/title_bg_final.jpg');}

@@ -15,10 +15,11 @@
 <div id='<%=ViewBag.ModuleId %>' class="div-category-homepage">
 <%foreach (var item in Data)
   {
-      var category = AllCategory.Where(o => o.ID == item.MenuID).SingleOrDefault();
+      var category = AllCategory.Where(o => o.ID == item.MenuID && o.Activity == true).SingleOrDefault();
       category = category == null ? new WebMenuEntity() : category;
       %>
-    <a data-toggle="tooltip" data-placement="bottom" title="<%=category.Name %>" href="<%=ViewPage.GetURL(item.MenuID, item.Code) %>">
+    <%--<%=ViewPage.GetURL(item.MenuID, item.Code) %>--%>
+    <a data-toggle="tooltip" data-placement="bottom" title="<%=category.Name %>" href="<%=ViewPage.GetPageURL(item.ID) %>">
         <img alt="<%=category.Name %>" src="<%= Utils.GetResizeFile(category.File, 2, 150, 150) %>" class="img-responsive" width="150px" height="150px" />
     </a>  
   <%} %>

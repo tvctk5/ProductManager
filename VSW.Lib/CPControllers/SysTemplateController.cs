@@ -95,6 +95,9 @@ namespace VSW.Lib.CPControllers
                 {
                     //save
                     SysTemplateService.Instance.Save(item);
+
+                    // save file
+                    BuildFileCssJs(item);
                 }
                 catch (Exception ex)
                 {
@@ -117,6 +120,28 @@ namespace VSW.Lib.CPControllers
                     .ToValue().ToInt(0) + 1;
         }
 
+        private void BuildFileCssJs(SysTemplateEntity item)
+        {
+            if (item == null || item.ID <= 0)
+                return;
+
+            if (string.IsNullOrEmpty(item.CssContent) && string.IsNullOrEmpty(item.JsContent))
+                return;
+
+            if (!string.IsNullOrEmpty(item.CssContent))
+            {
+                string CssPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/modules/css/t" + item.ID + ".css");
+
+                VSW.Lib.Global.File.WriteTextUnicode(CssPath, "/*" + item.Name + "*/ \r\n" + item.CssContent, true);
+            }
+
+            if (!string.IsNullOrEmpty(item.JsContent))
+            {
+                string JsPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/modules/js/t" + item.ID + ".js");
+
+                VSW.Lib.Global.File.WriteTextUnicode(JsPath, "// " + item.Name + "\r\n" + item.JsContent, true);
+            }
+        }
         #endregion
     }
 

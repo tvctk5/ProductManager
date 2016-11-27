@@ -1,4 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="VSW.Core.Design.ViewControlDesign" %>
+<script src="/{CPPath}/Content/plugins/jQuery/jquery-3.1.1.min.js" type="text/javascript"></script>
 <div id="to_hlid_<%= ViewControlName%>$<%=CphName %>" style="height: 10px; width: 100%"
     ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
 </div>
@@ -26,12 +27,14 @@
             string LayoutDefine = string.Empty;
             string LayoutValue = string.Empty;
             bool bolMutiline = false;
+            bool bolCheckBox = false;
 
             for (int i = 0; CurrentObject != null && i < CurrentObject.GetFields_Name().Length; i++)
             {
                 string fieldName = CurrentObject.GetFields_Name()[i];
                 string currentTitle = fieldName;
                 bolMutiline = false;
+                bolCheckBox = false;
 
                 List<VSW.Lib.Global.ListItem.Item> _List = null;
 
@@ -56,6 +59,10 @@
 
                 if (_List != null && VSW.Lib.Global.ListItem.List.FindByName(_List, "ConfigKey").Value != "")
                 {
+                    // Kiểm tra xem loại hiển thị config này có hiển thị dạng check box không
+                    if (VSW.Lib.Global.ListItem.List.FindByName(_List, "SelectType").Value == "Checkbox")
+                        bolCheckBox = true;
+                    
                     _List = VSW.Lib.Global.ListItem.List.GetListByText("," + VSW.Core.Global.Config.GetValue(VSW.Lib.Global.ListItem.List.FindByName(_List, "ConfigKey").Value));
                 }
 
@@ -132,14 +139,31 @@
             <td>
                 <%if (_List != null)
                   { %>
-                <select id="<%= currentID%>" name="<%= currentID%>" style="width: 99%;" class="text_input">
-                    <%for (int j = 0; j < _List.Count; j++)
-                      { %>
-                    <option <%if(currentValue==_List[j].Value) {%>selected<%} %> value='<%= _List[j].Value%>'>
-                        <%= _List[j].Name%></option>
-                    <%} %>
-                </select>
+                  <% if (bolCheckBox == true)
+                     {%>
+                            <%
+                                List<string> Values = string.IsNullOrEmpty(currentValue) ? new List<string>() : currentValue.Trim(',').Split(',').ToList();
+                                for (int j = 0; j < _List.Count; j++)
+                              {
+                                  if (string.IsNullOrEmpty(_List[j].Value))
+                                      continue;
+                                  bool bolExists = Values.Where(o => o == _List[j].Value).Any();
+                                    %>
+                                <input type="checkbox" id="<%= j %>" checkboxvalue="checkboxvalue" data-id="<%= currentID%>" data-name="<%= currentID%>" value='<%=_List[j].Value %>' <%if(bolExists) {%>checked<%} %> onchange="checkboxChange(this);"/> <%= _List[j].Name%> 
+                            <%} %>
+                            <input type="text" name="<%= currentID%>" id="<%= currentID%>" value="<%=currentValue %>" />
+                  <%}
+                     else
+                     { %>
+                        <select id="<%= currentID%>" name="<%= currentID%>" style="width: 99%;" class="text_input">
+                            <%for (int j = 0; j < _List.Count; j++)
+                              { %>
+                            <option <%if(currentValue==_List[j].Value) {%>selected<%} %> value='<%= _List[j].Value%>'>
+                                <%= _List[j].Name%></option>
+                            <%} %>
+                        </select>
                 <%}
+                  }
                   else
                   { %>
                 <%if (fieldName.IndexOf("Text") > -1)
@@ -202,7 +226,7 @@
         %>
         <tr id="tr_<%= ViewControlID%>_ViewLayout">
             <td class="key" style="font-size: 12px; font-weight: normal; width: 35%;">
-                Cách hiện thị :
+                Cách hiển thị :
             </td>
             <td>
                 <select id="<%= ViewControlID%>_ViewLayout" name="<%= ViewControlID%>_ViewLayout"
@@ -256,5 +280,12 @@
   { %>
 <script type="text/javascript">
     window.parent.ListOnLoad.push({ pid: '<%= ViewControlID%>', list_param: '<%=LayoutDefine %>', layout: '<%=LayoutValue %>' });
+//    $(document).ready(function () {
+//        $(".boder-template").on("change", "input", function () {
+//            alert("awrara");
+//        });
+//    });
+
+    
 </script>
 <%} %>

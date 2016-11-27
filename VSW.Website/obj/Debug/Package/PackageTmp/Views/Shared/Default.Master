@@ -1,80 +1,247 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head id="Head" runat="server">
-<%
-        var CssPage = Cookies.GetValue("CssPage");
-        var JsPage = Cookies.GetValue("JsPage");
-
-        if (!string.IsNullOrEmpty(CssPage))
-        {
-            if (CssPage.Contains(",") == false)
-                CssPage = "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + CssPage + "\" />";
-            else
-            {
-                List<string> lstCssFile = CssPage.Split(',').ToList();
-                CssPage = string.Empty;
-                foreach (var item in lstCssFile)
-                    CssPage += "<link rel=\"stylesheet\" type=\"text/css\" href=\"" + item + "\" />";
-            }
-        }
-
-        if (!string.IsNullOrEmpty(JsPage))
-        {
-            if (JsPage.Contains(",") == false)
-                JsPage = "<script type=\"text/javascript\" src=\"" + JsPage + "\"></script>";
-            else
-            {
-                List<string> lstJsFile = JsPage.Split(',').ToList();
-                JsPage = string.Empty;
-                foreach (var item in lstJsFile)
-                    JsPage += "<script type=\"text/javascript\" src=\"" + item + "\"></script>";
-            }
-        }
-    %>
     <title></title>
-    <meta name="author" content="trai.it.utehy@gmail.com" />
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
     <meta name="generator" content="VSWv1.0 - AllProject.Net" />
+
     <meta name="robots" content="index, follow" />
     <meta id="description" name="description" content="" runat="server" />
     <meta id="keywords" name="keywords" content="" runat="server" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!--Css trên page-->
-    <%= CssPage %>
-    <!--Js trên page-->
-    <%= JsPage%>
+
+    <link rel="stylesheet" type="text/css" href="/Content/plugins/adidas-pack/html/styles/style.css" />
+    <link href="/Content/plugins/adidas-pack/html/styles/general.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/Content/plugins/adidas-pack/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/html/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/html/scripts/validate.js"></script>
 </head>
 <body id="body">
     <form id="vswForm" runat="server">
-    <div id="box_main">
-        <div class="box_function_Center">
-            <VSW:DynamicControl ID="DynamicControl1" Code="Top" runat="server" />
+     
+     <div id="box_main">
+        <div class="box_banner">
+            <VSW:StaticControl Code="CAdv" VSWID="vswBanner" runat="server" />
         </div>
-        <div class="box_function_Center">
-            <div style="float: left; width: 30%">
-                <VSW:DynamicControl ID="DynamicControl4" Code="Main-Top-left" runat="server" />
+        <VSW:StaticControl Code="CMenu" VSWID="vswMenuTop" runat="server" />
+        <div class="box-content">
+            <div class="box-flash">
+                <VSW:StaticControl Code="CAdv" VSWID="vswSlide" runat="server" />
             </div>
-            <div style="float: right; width: 70%">
-                <VSW:DynamicControl ID="DynamicControl5" Code="Main-Top-right" runat="server" />
+            <div class="box100">
+                <div class="contentleft">
+                   <VSW:DynamicControl ID="DynamicControl1" Code="Main" runat="server" />
+                </div>
+                <div class="contentright">
+                   <VSW:DynamicControl ID="DynamicControl2" Code="Right" runat="server" />
+                </div>
             </div>
         </div>
-        <div class="box_function_Center">
-            <VSW:DynamicControl ID="DynamicControl2" Code="Main" runat="server" />
+        <div class="boxfooter">
+            <p style="padding-top: 15px;">
+                <div style="text-align: center;">
+                   {RS:Web_Footer}
+                </div>
+            </p>
         </div>
-        <div class="box_function_Center">
-            <VSW:DynamicControl ID="DynamicControl3" Code="Bottom" runat="server" />
-        </div>
-        <div class="box_function_Center">
-            <div class="boxfooter">
-                <p style="padding-top: 15px;">
-                    <div style="text-align: center;">
-                        {RS:Web_Footer}
-                    </div>
-                </p>
+    </div>
+
+    </form>
+</body>
+</html>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head runat="server">
+    <title>Free Adidas Website Template | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="/Content/plugins/adidas-pack/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <%--<script type="text/javascript" src="/Content/plugins/adidas-pack/js/jquery.min.js"></script>--%>
+    <script src="/Content/plugins/jQuery/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <!-- Bootrap -->
+    <link href="/Content/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/plugins/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+    <script src="/Content/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- End Bootrap -->
+
+    <!-- Default -->
+    <link href="/Content/css/default.css" rel="stylesheet" type="text/css" />
+    <!-- End Default -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function () {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function () {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function (e) {
+                var $clicked = $(e.target);
+                if (!$clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function () {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+    <!-- start menu -->
+    <link href="/Content/plugins/adidas-pack/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/megamenu.js"></script>
+    <script>        $(document).ready(function () { $(".megamenu").megamenu(); });</script>
+    <!-- end menu -->
+    <!-- top scrolling -->
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/move-top.js"></script>
+    <script type="text/javascript" src="/Content/plugins/adidas-pack/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header-top row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <%--<VSW:StaticControl ID="StaticControl1" Code="CAdv" VSWID="vswBanner" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl1" Code="Banner" runat="server" />
             </div>
         </div>
     </div>
-    </form>
+    <div class="header-bottom row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <!-- start header menu -->
+                <%--<VSW:StaticControl ID="StaticControl2" Code="CMenu" VSWID="vswMenuTop" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl2" Code="Menu" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="index-banner row">
+        <div class="col-lg-12">            
+            <div class="wrap">
+                <%--<VSW:StaticControl ID="StaticControl3" Code="CAdv" VSWID="vswSlide" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl3" Code="Slide" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="main row">
+        <div class="col-lg-12">
+            <div class="content-top" style="display:none;">
+                <div class="lsidebar span_1_of_c1">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing</p>
+                </div>
+                <div class="cont span_2_of_c1">
+                    <div class="social">
+                        <ul>
+                            <li class="facebook"><a href="#"><span></span></a>
+                                <div class="radius">
+                                    <img src="/Content/plugins/adidas-pack/images/radius.png"><a href="#"> </a>
+                                </div>
+                                <div class="border hide">
+                                    <p class="num">
+                                        1.51K</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="twitter"><a href="#"><span></span></a>
+                                <div class="radius">
+                                    <img src="/Content/plugins/adidas-pack/images/radius.png"></div>
+                                <div class="border hide">
+                                    <p class="num">
+                                        1.51K</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="google"><a href="#"><span></span></a>
+                                <div class="radius">
+                                    <img src="/Content/plugins/adidas-pack/images/radius.png"></div>
+                                <div class="border hide">
+                                    <p class="num">
+                                        1.51K</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="social">
+                        <ul>
+                            <li class="dot"><a href="#"><span></span></a>
+                                <div class="radius">
+                                    <img src="/Content/plugins/adidas-pack/images/radius.png"></div>
+                                <div class="border hide">
+                                    <p class="num">
+                                        1.51K</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="wrap">
+                <VSW:DynamicControl ID="DynamicControl4" Code="Main" runat="server" />
+            </div>
+        </div>
+    </div>
+    <div class="vsw-footer row">
+        <div class="col-lg-12">
+            <div class="wrap">
+                <VSW:DynamicControl ID="DynamicControl5" Code="Footer" runat="server" />
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+            };
+
+
+            $().UItoTop({ easingType: 'easeOutQuart' });
+
+        });
+    </script>
+    <a href="#" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;">
+        </span>
+    </a>
 </body>
 </html>

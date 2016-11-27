@@ -4,6 +4,8 @@
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+	text-transform: uppercase;
+    font-weight: bold;
 }
 .megamenu>li.active>a{/*--color:#00405d;--*/}
 .megamenu>li.right{float:right}

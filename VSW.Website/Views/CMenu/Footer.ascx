@@ -7,8 +7,8 @@
     <ul class="navi-main menuFooter">
     <%for (int i = 0; listItem != null && i < listItem.Count; i++ )
     { 
-          var page = listAllPage.Where(o=>o.ID == listItem[i].SysPageID).SingleOrDefault(); page = page == null? new SysPageEntity() : page;
-          var link = string.IsNullOrEmpty(listItem[i].Url) ? page.LinkTitle : listItem[i].Url;
+          // var page = listAllPage.Where(o=>o.ID == listItem[i].SysPageID).SingleOrDefault(); page = page == null? new SysPageEntity() : page;
+        var link = string.IsNullOrEmpty(listItem[i].Url) ? ViewPage.GetPageURL(listItem[i].SysPageID, listAllPage) : listItem[i].Url;
      %>
         <li><a href="<%=link %>"><%=listItem[i].Name %></a></li> <%if (i != listItem.Count - 1){%><li>|</li> <%} %>
 <%} %>
@@ -29,12 +29,13 @@
         <li><a href="/lien-he">Liên hệ</a></li>
         <li>|</li>--%>
     </ul>
-    <div class="div-footer-p">
-        <p>
+    <div class="div-footer-p hidden-xs hidden-sm">
+        <%--<p>
             Copyright 2014 by Vingroup All rights reserved&nbsp;&nbsp;Times City, Minh Khai,
             Hà Nội</p>
         <p>
-            Điện thoại: +84 (0) 963 817 825 / +84 (0) 981 611 911 - Email: info@vineco.net.vn</p>
+            Điện thoại: +84 (0) 963 817 825 / +84 (0) 981 611 911 - Email: info@vineco.net.vn</p>--%>
+            {RS:Web_Footer}
     </div>
     <div class="clearfix">
     </div>

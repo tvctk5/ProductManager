@@ -19,21 +19,21 @@ function CheckValidationForm() {
     var txtPrice = document.getElementById("Price");
 
     //var iIndexMenuSelected = MenuID.selectedIndex;
-
-    if (txtCode != null) {
-        if (txtCode.value.trim() != "") {
-            if (txtCode.value.trim().length < 3) {
-                Mess = " - Yêu cầu nhập Mã sản phẩm từ 3 ký tự trở lên";
-                bolCode = false;
-            }
-            else {
-                bolCode = true;
-            }
-        }
-        else {
-            Mess = " - Yêu cầu nhập Mã sản phẩm";
-        }
-    }
+    bolCode = true;
+    //    if (txtCode != null) {
+    //        if (txtCode.value.trim() != "") {
+    //            if (txtCode.value.trim().length < 3) {
+    //                Mess = " - Yêu cầu nhập Mã sản phẩm từ 3 ký tự trở lên";
+    //                bolCode = false;
+    //            }
+    //            else {
+    //                bolCode = true;
+    //            }
+    //        }
+    //        else {
+    //            Mess = " - Yêu cầu nhập Mã sản phẩm";
+    //        }
+    //    }
 
     if (txtName != null) {
         if (txtName.value.trim() != "") {

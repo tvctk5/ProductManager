@@ -50,7 +50,7 @@ body{
 	margin-right: 46.5%;
 }
 .cssmenu {
-	float:left;
+	/*float:left;*/
 	margin-top:11px;
 }
 .cssmenu ul li {
@@ -3121,4 +3121,5 @@ p.cart a:hover {
 		font-size: 0.85em;
 		margin-bottom: 1%;
 	}
-}								
+}			
+.banner-slide .carousel-caption{bottom: 0px; padding-top: 0px !important; padding-bottom: 0px !important;}

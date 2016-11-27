@@ -1580,6 +1580,10 @@ namespace VSW.Lib.CPControllers
 
             if (CPViewPage.Message.ListMessage.Count == 0)
             {
+                //neu khong nhap code -> tu sinh
+                if (item.Code.Trim() == string.Empty)
+                    item.Code = Data.GetCode(item.Name);
+
                 // Kiểm tra mã xem có trùng với mã nào khác đã có không
                 string sMessError = string.Empty;
                 if (ModProduct_InfoService.Instance.DuplicateCode(item.Code, model.RecordID, ref sMessError))
@@ -1590,10 +1594,6 @@ namespace VSW.Lib.CPControllers
                         CPViewPage.Message.ListMessage.Add("Lỗi phát sinh: " + sMessError);
                     return false;
                 }
-
-                //neu khong nhap code -> tu sinh
-                if (item.Code.Trim() == string.Empty)
-                    item.Code = Data.GetCode(item.Name);
 
                 // Nếu không có nhà sản xuất
                 if (model.ModelManufacturerId == 0)

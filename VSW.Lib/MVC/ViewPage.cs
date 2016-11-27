@@ -26,6 +26,73 @@ namespace VSW.Lib.MVC
 
             // khong thi bo di nhe
             Lib.Global.Utils.UpdateOnline();
+
+            VSW.Lib.Global.Session.SetValue("CssJsForPage", BuildFileCssJsForPage());
+            VSW.Lib.Global.Session.SetValue("CssJsForTemplate", BuildFileCssJsForTemplate());
+        }
+
+        private string BuildFileCssJsForPage()
+        {
+            if (CurrentPage == null || CurrentPage.ID <= 0)
+                return string.Empty;
+
+            if (string.IsNullOrEmpty(CurrentPage.CssContent) && string.IsNullOrEmpty(CurrentPage.JsContent))
+                return string.Empty;
+
+            string strContent = string.Empty;
+
+            if(!string.IsNullOrEmpty(CurrentPage.CssContent)){
+                string CssPath = Server.MapPath("~/Content/modules/css/p" + CurrentPage.ID + ".css");
+                // add link
+                strContent += "<link href='/Content/modules/css/p" + CurrentPage.ID + ".css' rel='stylesheet' type='text/css' />\r\n";
+
+                if(!System.IO.File.Exists(CssPath))
+                    VSW.Lib.Global.File.WriteTextUnicode(CssPath, "/*" + CurrentPage.Code + "*/ \r\n" + CurrentPage.CssContent, true);
+            }
+
+            if (!string.IsNullOrEmpty(CurrentPage.JsContent))
+            {
+                string JsPath = Server.MapPath("~/Content/modules/js/p" + CurrentPage.ID + ".js");
+                // add link
+                strContent += "<script src='/Content/modules/js/p" + CurrentPage.ID + ".js' type='text/javascript'></script>\r\n";
+
+                if (!System.IO.File.Exists(JsPath))
+                    VSW.Lib.Global.File.WriteTextUnicode(JsPath, "// " + CurrentPage.Code + "\r\n" + CurrentPage.JsContent, true);
+            }
+
+            return strContent;
+        }
+
+        private string BuildFileCssJsForTemplate()
+        {
+            if (CurrentTemplate == null || CurrentTemplate.ID <= 0)
+                return string.Empty;
+
+            if (string.IsNullOrEmpty(CurrentTemplate.CssContent) && string.IsNullOrEmpty(CurrentTemplate.JsContent))
+                return string.Empty;
+
+            string strContent = string.Empty;
+
+            if (!string.IsNullOrEmpty(CurrentTemplate.CssContent))
+            {
+                string CssPath = Server.MapPath("~/Content/modules/css/t" + CurrentTemplate.ID + ".css");
+                // add link
+                strContent += "<link href='/Content/modules/css/t" + CurrentTemplate.ID + ".css' rel='stylesheet' type='text/css' />\r\n";
+
+                if (!System.IO.File.Exists(CssPath))
+                    VSW.Lib.Global.File.WriteTextUnicode(CssPath, "/*" + CurrentTemplate.Name + "*/ " + "\r\n" + CurrentTemplate.CssContent, true);
+            }
+
+            if (!string.IsNullOrEmpty(CurrentTemplate.JsContent))
+            {
+                string JsPath = Server.MapPath("~/Content/modules/js/t" + CurrentTemplate.ID + ".js");
+                strContent += "<script src='/Content/modules/js/t" + CurrentTemplate.ID + ".js' type='text/javascript'></script>\r\n";
+
+                if (!System.IO.File.Exists(JsPath))
+                    VSW.Lib.Global.File.WriteTextUnicode(JsPath, "// " + CurrentTemplate.Name + "\r\n" + CurrentTemplate.JsContent, true);
+            }
+            
+            return strContent;
         }
 
         protected override VSW.Core.Interface.IPageInterface PageNotFound()
@@ -78,8 +145,9 @@ namespace VSW.Lib.MVC
                 strCssFile = strCssFile != null ? strCssFile.Replace("~", "").Trim(';') : "";
                 strJsFile = strJsFile != null ? strJsFile.Replace("~", "").Trim(';') : "";
 
-                VSW.Lib.Global.Session.SetValue("CssPage", strCssFile);
-                VSW.Lib.Global.Session.SetValue("JsPage", strJsFile);
+                //VSW.Lib.Global.Session.SetValue("CssPage", strCssFile);
+                //VSW.Lib.Global.Session.SetValue("JsPage", strJsFile);
+
                 //Cookies.SetValue("JsPage", strJsFile, 1);
                 //Cookies.SetValue("CssPage", strCssFile, 1);
                 return PageCurrent;

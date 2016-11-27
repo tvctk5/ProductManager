@@ -12,6 +12,9 @@ namespace VSW.Lib.Controllers
         [VSW.Core.MVC.PropertyInfo("Default[Title-true],Left[Title-true],MenuLeft[Title-true]")]
         public string LayoutDefine;
 
+        [VSW.Core.MVC.PropertyInfo("Chuyên mục (slide)", "Type|Adv")]
+        public int MenuID;
+
         [VSW.Core.MVC.PropertyInfo("Trang")]
         public int PageID;
 
@@ -50,6 +53,19 @@ namespace VSW.Lib.Controllers
                 ViewBag.Data = ModMenu_DynamicService.Instance.GetListByMenuType(MenuType);
                 ViewBag.ListAllSysPage = lstSysPageEntity;
                 ViewBag.Page = _Page;
+
+                // Get list product
+                var dbQuery = ModProduct_InfoService.Instance.CreateQuery()
+                            .Where(o => o.Activity == true && o.Deleted == false)
+                            .OrderByDesc(o => o.ID);
+                // Get list Product
+                ViewBag.ListProduct = dbQuery.ToList();
+                // Get list Adv slide
+                var lisSlide = ModAdvService.Instance.CreateQuery()
+                                        .Where(o => o.Activity == true && o.MenuID == MenuID)
+                                        .OrderByAsc(o => o.Order)
+                                        .ToList_Cache();
+                ViewBag.DataSlide = lisSlide; 
             }
 
             ViewBag.Title = Title;

@@ -6,6 +6,8 @@
 
     var listComment = ViewBag.Comment as List<ModCommentEntity>;
     var model = ViewBag.Model as MNewsModel;
+    if (model == null)
+        model = new MNewsModel();
     
     var itemComment = ViewBag.AddComment as ModCommentEntity;
     if (itemComment == null)
@@ -21,8 +23,8 @@
 
 <div class="box100 mg">
     <div class="boxtitle">
-        <h1 class="font_title pl">
-            <%= ViewPage.CurrentPage.Name %></h1>
+        <h5 class="font_title pl">
+            <%= ViewPage.CurrentPage.Name %> >> </h5>
     </div>
     <div class="boxvien" style="padding: 10px;">
         <table cellpadding="0" cellspacing="0" width="100%" border="0">
@@ -46,8 +48,8 @@
                        <%} %>
                     </p>
 
-                    <form method="post" >
-                    <table width="100%">
+<%--                    <form method="post" class="hide">
+                    <table width="100%" class="hide">
                       <tr>
                          <td colspan="2" align="center"><h3> <b><%if (item.getCountComment() > 0)
                                                 { %><%= item.getCountComment()%> <%}
@@ -88,7 +90,7 @@
                          <td colspan="2" align="center"><input name="_vsw_action[AddCommentPOST]" type="submit" value="Gửi bình luận" /></td>
                       </tr>
                     </table>
-                    </form>
+                    </form>--%>
                 </td>
             </tr>
             <tr>
@@ -100,7 +102,7 @@
                         {
                             string urlDetail = ViewPage.GetURL(listOther[i].MenuID, listOther[i].Code);
                             %>
-                        <li><div class="font_titleother"><a href="<%=urlDetail %>"> <%=listOther[i].Name%> </a></div></li>
+                        <div class="font_titleother"><li><a href="<%=urlDetail %>"> <%=listOther[i].Name%> </a></li></div>
                         <%} %>
                     </div>
                 </td>

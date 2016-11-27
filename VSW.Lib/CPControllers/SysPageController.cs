@@ -100,6 +100,9 @@ namespace VSW.Lib.CPControllers
         {
             TryUpdateModel(item);
 
+            if (item.ModuleCode == "0")
+                item.ModuleCode = string.Empty;
+
             ViewBag.Data = item;
             ViewBag.Model = model;
 
@@ -123,6 +126,9 @@ namespace VSW.Lib.CPControllers
                 {
                     //save
                     SysPageService.Instance.Save(item);
+
+                    // save file
+                    BuildFileCssJs(item);
                 }
                 catch (Exception ex)
                 {
@@ -167,6 +173,28 @@ namespace VSW.Lib.CPControllers
             }
         }
 
+        private void BuildFileCssJs(SysPageEntity item)
+        {
+            if (item == null || item.ID <= 0)
+                return;
+
+            if (string.IsNullOrEmpty(item.CssContent) && string.IsNullOrEmpty(item.JsContent))
+                return;
+
+            if (!string.IsNullOrEmpty(item.CssContent))
+            {
+                string CssPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/modules/css/p" + item.ID + ".css");
+
+                VSW.Lib.Global.File.WriteTextUnicode(CssPath, "/*" + item.Code + "*/ \r\n" + item.CssContent, true);
+            }
+
+            if (!string.IsNullOrEmpty(item.JsContent))
+            {
+                string JsPath = System.Web.HttpContext.Current.Server.MapPath("~/Content/modules/js/p" + item.ID + ".js");
+
+                VSW.Lib.Global.File.WriteTextUnicode(JsPath, "// " + item.Code + "\r\n" + item.JsContent, true);
+            }
+        }
         #endregion
     }
 

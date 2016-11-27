@@ -1,5 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="System.Web.UI.MasterPage" %>
-
+<%
+    if (2 > 1)
+    {
+        string a = "asfdasf";
+    }
+     %>
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head id="Head" runat="server">
@@ -51,12 +56,16 @@
     </form>
 </body>
 </html>--%>
-<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head runat="server">
     <title>Free Adidas Website Template | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <link href="/Content/plugins/adidas-pack/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
     <%--<script type="text/javascript" src="/Content/plugins/adidas-pack/js/jquery.min.js"></script>--%>
@@ -117,6 +126,20 @@
             });
         });
     </script>
+    <%
+        if (VSW.Lib.Global.Session.Exists("CssJsForTemplate"))
+        {%>
+        <%= VSW.Lib.Global.Session.GetValue("CssJsForTemplate")%>
+        <%
+            VSW.Lib.Global.Session.Remove("CssJsForTemplate");
+        } %>
+    <%
+        if (VSW.Lib.Global.Session.Exists("CssJsForPage"))
+        {%>
+        <%= VSW.Lib.Global.Session.GetValue("CssJsForPage") %>
+        <%
+            VSW.Lib.Global.Session.Remove("CssJsForPage");
+        } %>
 </head>
 <body>
     <div class="header-top row">
@@ -222,7 +245,8 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-
+//            alert('<=ViewBag.CssPage %>');
+//            alert('<=ViewBag.JsPage %>');
             var defaults = {
                 containerID: 'toTop', // fading element id
                 containerHoverID: 'toTopHover', // fading element hover id

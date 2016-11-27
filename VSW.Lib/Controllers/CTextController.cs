@@ -23,6 +23,11 @@ namespace VSW.Lib.Controllers
                 ViewBag.Text = Global.Data.Base64Decode(Text);
             else
                 ViewBag.Text = string.Empty;
+
+            // Thông tin cần thiết của module
+            ViewBag.ModuleId = ModuleId;
+            ViewBag.CssForModule = getCssForModule(ModuleId, CssForModule);
+            ViewBag.JsForModule = getJsForModule(ModuleId, JsForModule);
         }
     }
 }

@@ -236,6 +236,7 @@
     <Content Include="bin\VSW.Libv1.1.dll" />
     <Content Include="bin\VSW.Websitev1.1.dll" />
     <Content Include="Content\css\default.css" />
+    <Content Include="Content\modules\css\p15_.css" />
     <Content Include="Content\html\images\bg.jpg" />
     <Content Include="Content\html\images\bulet.png" />
     <Content Include="Content\html\images\en.png" />
@@ -247,7 +248,11 @@
     <Content Include="Content\html\scripts\validate.js" />
     <Content Include="Content\html\styles\general.css" />
     <Content Include="Content\html\styles\style.css" />
+    <Content Include="Content\images\title_bg.jpg" />
+    <Content Include="Content\images\title_bg_final.jpg" />
+    <Content Include="Content\images\title_bg_final_v1.jpg" />
     <Content Include="Content\js\default.js" />
+    <Content Include="Content\modules\js\p15_.js" />
     <Content Include="Content\plugins\adidas-pack\css\default.css" />
     <Content Include="Content\plugins\adidas-pack\css\etalage.css" />
     <Content Include="Content\plugins\adidas-pack\css\form.css" />
@@ -1110,6 +1115,11 @@
     <Content Include="CP\Views\SysUser\Index.ascx" />
     <Content Include="CP\Views\UserChangeInfo\Index.ascx" />
     <Content Include="CP\Views\UserChangePass\Index.ascx" />
+    <Content Include="Data\customer\20140717_114633_7790_Tulips.jpg" />
+    <Content Include="Data\customer\20140718_041651_6167_Jellyfish.jpg" />
+    <Content Include="Data\customer\20140718_042045_3551_Jellyfish.jpg" />
+    <Content Include="Data\customer\20140718_042133_8429_Jellyfish.jpg" />
+    <Content Include="Data\customer\20140718_042215_6893_Hydrangeas.jpg" />
     <Content Include="Data\ResizeImage\files\products\Emptyx100x100x2.gif" />
     <Content Include="Data\ResizeImage\files\products\Emptyx100x80x2.gif" />
     <Content Include="Data\ResizeImage\files\products\Emptyx40x40x2.gif" />
@@ -1137,6 +1147,28 @@
     <Content Include="Data\upload\images\Adv\banner-vne-180x300.jpg" />
     <Content Include="Data\upload\images\Adv\banner.gif" />
     <Content Include="Data\upload\images\Adv\resort-allezboo-%28180X300%29.jpg" />
+    <Content Include="Data\upload\images\Banner\Ohido_Banner.jpg" />
+    <Content Include="Data\upload\images\Category\RauAnCu.png" />
+    <Content Include="Data\upload\images\Category\RauAnHoa.jpg" />
+    <Content Include="Data\upload\images\Category\RauAnLa.png" />
+    <Content Include="Data\upload\images\Category\RauAnQua.png" />
+    <Content Include="Data\upload\images\Category\RauAnThan.png" />
+    <Content Include="Data\upload\images\Category\RauBaby.png" />
+    <Content Include="Data\upload\images\Category\RauGiaVi.png" />
+    <Content Include="Data\upload\images\Category\RauHuuCo.png" />
+    <Content Include="Data\upload\images\Category\RauMam.jpg" />
+    <Content Include="Data\upload\images\Category\RauThuyCanh.png" />
+    <Content Include="Data\upload\images\Category\TraiCay.png" />
+    <Content Include="Data\upload\images\Logo\Td-Mart_Logo.png" />
+    <Content Include="Data\upload\images\Logo\Td-Mart_Logo_medium.png" />
+    <Content Include="Data\upload\images\Logo\Td-Mart_Logo_thumb.png" />
+    <Content Include="Data\upload\images\Logo\Td_Mart_NewLogo.png" />
+    <Content Include="Data\upload\images\Logo\Td_Mart_NewLogo_max.png" />
+    <Content Include="Data\upload\images\Logo\Td_Mart_NewLogo_Thin.png" />
+    <Content Include="Data\upload\images\Logo\Td_Mart_NewLogo_Thin_134_135.png" />
+    <Content Include="Data\upload\images\Products\RauAnQua\BapCaiBaoTu.jpg" />
+    <Content Include="Data\upload\images\Products\RauAnQua\ca-chua-anna.jpg" />
+    <Content Include="Data\upload\images\Products\RauThuyCanh\XaLachThuyCanh.jpg" />
     <Content Include="Data\upload\images\slide\1439172838543_234.jpg" />
     <Content Include="Data\upload\images\slide\1439172838580_235.jpg" />
     <Content Include="Data\upload\images\slide\1439172838621_236.jpg" />
@@ -1145,8 +1177,6 @@
     <Content Include="Data\upload\images\slide\1439172838746_239.jpg" />
     <Content Include="Data\upload\images\slide\1439172838788_240.jpg" />
     <Content Include="Data\upload\images\slide\1439172838830_241.jpg" />
-    <Content Include="Data\upload\images\slide\1439172838871_242.jpg" />
-    <Content Include="Data\upload\images\slide\1439172838978_244.jpg" />
     <Content Include="Data\upload\resources\css\default\default-img\body-bg-muti.png" />
     <Content Include="Data\upload\resources\css\default\default-img\bulet.png" />
     <Content Include="Data\upload\resources\css\default\default-img\footer.png" />
@@ -1204,6 +1234,7 @@
     <Content Include="Data\upload\_thumbs\Files\Products\Penguins.jpg" />
     <Content Include="Data\upload\_thumbs\Images\Adv\banner-vne-180x300.jpg" />
     <Content Include="Data\upload\_thumbs\Images\Adv\resort-allezboo-%28180X300%29.jpg" />
+    <Content Include="favicon.ico" />
     <Content Include="Tools\Ajax\Common\PostData.aspx" />
     <Content Include="Tools\Ajax\ModChat\PostData.aspx" />
     <Content Include="Tools\Ajax\ModProduct_Info\PostData.aspx" />
@@ -1215,6 +1246,7 @@
     <Content Include="Views\CAdv\Advs.ascx" />
     <Content Include="Views\CAdv\Banner.ascx" />
     <Content Include="Views\CAdv\Default.ascx" />
+    <Content Include="Views\CAdv\Slide.ascx" />
     <Content Include="Views\CMenu\Banner.ascx" />
     <Content Include="Views\CMenu\CategoryHomePage.ascx" />
     <Content Include="Views\CNews\Slide.ascx" />
@@ -1235,6 +1267,9 @@
     <Content Include="Views\MFeedback\Index.ascx" />
     <Content Include="Views\MNews\Detail.ascx" />
     <Content Include="Views\MNews\Index.ascx" />
+    <Content Include="Views\MProduct_Info\Copy of Index.ascx" />
+    <Content Include="Views\MProduct_Info\Detail.ascx" />
+    <Content Include="Views\MProduct_Info\Index.ascx" />
     <Content Include="Views\MTag\Detail.ascx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1251,7 +1286,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\images\" />
     <Folder Include="CP\Content\add\css\images\" />
     <Folder Include="CP\Content\add\img\htooltip\" />
     <Folder Include="CP\Content\add\img\images\" />
@@ -1291,9 +1325,12 @@
     <None Include="CP\Content\add\datetimepickermaster\datetimepicker.jquery.json" />
     <Content Include="Views\Design\Default.Master" />
     <None Include="CP\Content\plugins\jQuery\jquery-3.1.1.min.map" />
+    <Content Include="Views\Design\SubPage.Master" />
     <None Include="Views\Lang\en-US.ini" />
     <None Include="Views\Lang\vi-VN.ini" />
     <Content Include="Views\Shared\Default.Master" />
+    <None Include="Views\MProduct_Info\vssver2.scc" />
+    <Content Include="Views\Shared\SubPage.Master" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -91,6 +91,25 @@
                         <input class="text_input" type="text" name="Code" value="<%=item.Code %>" maxlength="255" />
                     </td>
                 </tr>
+                <tr>
+                    <td class="key">
+                        <label>
+                            Hình minh họa :</label>
+                    </td>
+                    <td>
+                        <%if (!string.IsNullOrEmpty(item.File))
+                            { %>
+                        <%= Utils.GetMedia(item.File, 100, 80, string.Empty, true, "id='img_view'")%><%}
+                            else
+                            { %>
+                        <img id="img_view" width="100" height="80" />
+                        <%} %>
+                        <br />
+                        <input class="text_input" type="text" name="File" id="File" style="width: 65%" value="<%=item.File %>" />
+                        <input class="text_input" style="width: 75px;" type="button" onclick="ShowFileForm('File');return false;"
+                            value="Chọn ảnh" />
+                    </td>
+                </tr>
                 <%if (model.ParentID == 0)
                   { %>
                 <tr>

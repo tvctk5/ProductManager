@@ -120,7 +120,7 @@
                                 <%} %>" name="Custom" id="Custom"><%=item.Custom%></textarea>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td class="key">
                             <label>
                                 Css File:</label>
@@ -298,7 +298,7 @@
                             </script>
                         </td>
                     </tr>
-                    <tr>
+                    <tr style="display:none;">
                         <td class="key">
                             <label>
                                 Js File:</label>
@@ -474,6 +474,24 @@
                                     $("tr[JsFile] input[title='Xóa']").first().hide();
                                 }
                             </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            <label>
+                                Mã css:</label>
+                        </td>
+                        <td>
+                            <textarea class="text_input" rows="5" name="CssContent" id="CssContent"><%=item.CssContent%></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="key">
+                            <label>
+                                Mã js:</label>
+                        </td>
+                        <td>
+                            <textarea class="text_input" rows="5" name="JsContent" id="JsContent"><%=item.JsContent%></textarea>
                         </td>
                     </tr>
                 </table>

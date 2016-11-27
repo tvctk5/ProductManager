@@ -76,7 +76,12 @@ namespace VSW.Lib.Models
 
         [DataInfo]
         public string JsFile { get; set; }
+        
+        [DataInfo]
+        public string CssContent { get; set; }
 
+        [DataInfo]
+        public string JsContent { get; set; }
         #endregion
 
         public bool HasEnd { get; set; }

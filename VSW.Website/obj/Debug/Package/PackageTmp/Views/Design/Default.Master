@@ -4,32 +4,40 @@
 <html>
 <head id="Head" runat="server">
     <title></title>
-    <meta name="author" content="trai.it.utehy@gmail.com" />
+    <meta name="author" content="Phamlen84@yahoo.com.vn" />
     <meta name="generator" content="VSWv1.0 - AllProject.Net" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
     <form id="vswForm" runat="server">
     <div id="vsw_container">
-        <div>
-            <div style="clear: both">
-                <VSW:DynamicControl ID="DynamicControl1" Code="Top" runat="server" />
-            </div>
-            <div style="clear: both;">
-                <div style="float: left; width: 30%">
-                    <VSW:DynamicControl ID="DynamicControl4" Code="Main-Top-left" runat="server" />
-                </div>
-                <div style="float: right; width: 70%">
-                    <VSW:DynamicControl ID="DynamicControl5" Code="Main-Top-right" runat="server" />
-                </div>
-            </div>
-            <div style="clear: both">
-                <VSW:DynamicControl ID="DynamicControl2" Code="Main" runat="server" />
-            </div>
-            <div style="clear: both">
-                <VSW:DynamicControl ID="DynamicControl3" Code="Bottom" runat="server" />
+        <div class="header-top">
+            <div class="wrap">
+                <%--<VSW:StaticControl ID="StaticControl1" Code="CAdv" VSWID="vswBanner" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl1" Code="Banner" runat="server" />
             </div>
         </div>
+        <div class="header-bottom">
+            <div class="wrap">
+                <!-- start header menu -->
+                <%--<VSW:StaticControl ID="StaticControl2" Code="CMenu" VSWID="vswMenuTop" runat="server" />--%>
+                <VSW:DynamicControl ID="DynamicControl2" Code="Menu" runat="server" />
+            </div>
+        </div>
+    <div class="index-banner">
+        <%--<VSW:StaticControl ID="StaticControl3" Code="CAdv" VSWID="vswSlide" runat="server" />--%>
+        <VSW:DynamicControl ID="DynamicControl3" Code="Slide" runat="server" />
+    </div>
+    <div class="main">
+        <div class="wrap">           
+            <VSW:DynamicControl ID="DynamicControl4" Code="Main" runat="server" />
+        </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <VSW:DynamicControl ID="DynamicControl5" Code="Footer" runat="server" />
+        </div>
+    </div>
         <div style="clear: both">
         </div>
     </div>
